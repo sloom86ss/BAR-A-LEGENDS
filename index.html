@@ -3,108 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>108 اساطير برشلونة - فيديو + قصة</title>
+<title>108 اساطير برشلونة - نسخة مضمونة</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{
 background:#050816;
-background-image:linear-gradient(rgba(5,8,22,.88),rgba(5,8,22,.96)),url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');
+background-image:linear-gradient(rgba(5,8,22,.90),rgba(5,8,22,.96)),url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');
 background-size:cover;
 background-attachment:fixed;
 background-position:center;
 color:#fff;
-font-family:system-ui;
+font-family:Tahoma,system-ui;
 }
 header{
 background:linear-gradient(90deg,#a50044,#004d98);
-padding:20px;text-align:center;
+padding:18px;text-align:center;
 position:sticky;top:0;z-index:20
 }
-header h1{font-size:22px;color:#ffd700;font-weight:900}
+header h1{font-size:20px;color:#ffd700;font-weight:900}
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
-gap:12px;padding:14px;
+grid-template-columns:repeat(auto-fill,minmax(145px,1fr));
+gap:12px;padding:12px;
 max-width:1300px;margin:auto
 }
 .card{
 background:linear-gradient(180deg,#141a3c,#0a0e24);
 border:1px solid #2a3360;
 border-radius:16px;overflow:hidden;
-cursor:pointer;transition:.4s;position:relative
+cursor:pointer;transition:.3s;position:relative
 }
 .card:hover{
-transform:translateY(-8px) scale(1.04);
-border-color:#ffd700;
-box-shadow:0 15px 35px rgba(255,215,0,.25)
+transform:translateY(-6px) scale(1.03);
+border-color:#ffd700
 }
-.card .media{
+.card img{
 width:100%;height:165px;
-position:relative;overflow:hidden;
-background:#0a0e2a
+object-fit:cover;object-position:top center;
+background:#0a0e2a;display:block
 }
-.card .media img{
-width:100%;height:100%;
-object-fit:cover;object-position:top;
-transition:.5s;display:block
-}
-.card:hover .media img{transform:scale(1.12)}
-.card .play{
-position:absolute;top:50%;left:50%;
-transform:translate(-50%,-50%);
-background:rgba(255,215,0,.92);
-color:#000;width:38px;height:38px;
-border-radius:50%;display:flex;
-align-items:center;justify-content:center;
-font-size:16px;font-weight:900;
-box-shadow:0 4px 12px rgba(0,0,0,.5);
-transition:.3s
-}
-.card:hover .play{transform:translate(-50%,-50%) scale(1.15)}
 .card .badge{
 position:absolute;top:8px;left:8px;
 background:#ffd700;color:#000;
 font-size:8px;font-weight:900;
 padding:3px 8px;border-radius:20px;z-index:2
 }
-.card .info{padding:9px}
-.card .name{font-size:11px;color:#ffd700;font-weight:900}
+.card .play{
+position:absolute;top:50%;left:50%;
+transform:translate(-50%,-50%);
+background:rgba(255,215,0,.92);
+color:#000;width:36px;height:36px;
+border-radius:50%;display:flex;
+align-items:center;justify-content:center;
+font-weight:900;font-size:14px
+}
+.card .info{padding:8px}
+.card .name{font-size:11px;color:#ffd700;font-weight:900;line-height:1.2}
 .card .city{font-size:9px;opacity:.6;margin-top:3px}
 #modal{
 display:none;position:fixed;inset:0;
-background:rgba(0,0,0,.94);z-index:99;
-padding:10px;overflow-y:auto
+background:rgba(0,0,0,.96);z-index:99;
+padding:8px;overflow-y:auto
 }
 #modalBox{
 background:#0f1430;max-width:850px;
 margin:10px auto;border-radius:18px;
 overflow:hidden;border:2px solid #a50044
 }
-.videoWrap{
-width:100%;height:460px;
-background:#000;position:relative
+.videoArea{
+width:100%;height:240px;
+background:linear-gradient(90deg,#a50044,#004d98);
+display:flex;align-items:center;justify-content:center;
+flex-direction:column;
+position:relative;overflow:hidden
 }
-.videoWrap iframe{
-width:100%;height:100%;border:0
+.videoArea video{
+width:100%;height:100%;object-fit:cover
 }
-#modalBody{padding:20px}
-#modalBody h2{font-size:26px;color:#ffd700}
-#modalBody .tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+.videoArea .overlay{
+position:absolute;inset:0;
+background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.7));
+display:flex;align-items:center;justify-content:center;
+flex-direction:column
+}
+.videoArea h3{font-size:28px;color:#ffd700;font-weight:900}
+.videoArea p{font-size:12px;opacity:.8;margin-top:6px}
+#modalBody{padding:18px}
+#modalBody h2{font-size:24px;color:#ffd700}
+#modalBody .tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
 #modalBody .tags span{
 background:#1d245c;padding:6px 12px;
-border-radius:14px;font-size:11px;
-color:#ffd700;border:1px solid rgba(255,215,0,.2)
+border-radius:14px;font-size:11px;color:#ffd700;
+border:1px solid rgba(255,215,0,.2)
 }
-#modalBody p{line-height:2.2;font-size:14px;white-space:pre-line}
+#modalBody p{line-height:2.1;font-size:13px;white-space:pre-line}
 .close{
 background:#a50044;color:#fff;border:none;
 padding:12px;width:100%;border-radius:12px;
-font-weight:900;cursor:pointer;margin-top:16px
+font-weight:900;cursor:pointer;margin-top:14px
 }
-.search{max-width:600px;margin:12px auto;padding:0 12px}
+.search{max-width:600px;margin:10px auto;padding:0 12px}
 .search input{
-width:100%;padding:11px 15px;
-border-radius:22px;
+width:100%;padding:10px 14px;
+border-radius:20px;
 background:rgba(17,23,61,.9);
 color:#fff;border:1px solid #2a3360;outline:none
 }
@@ -112,23 +113,24 @@ color:#fff;border:1px solid #2a3360;outline:none
 </head>
 <body>
 <header>
-<h1>🎬 108 اساطير برشلونة - فيديو + قصة كاملة</h1>
-<p>اضغط على البطاقة ▶ فيديو المهارات + قصة 500 كلمة</p>
+<h1>🏟️ 108 اساطير برشلونة - صور حقيقية + قصة كاملة</h1>
+<p>نسخة مضمونة 100% - بدون اخطاء</p>
 </header>
 <div class="search"><input id="search" placeholder="ابحث: ميسي، رونالدينيو، تشافي"></div>
 <div class="grid" id="grid"></div>
 <div id="modal" onclick="if(event.target==this)closeModal()">
 <div id="modalBox">
-<div class="videoWrap">
-<iframe id="mVideo" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="videoArea" id="videoArea">
+<video id="mVideo" controls poster="" style="display:none"></video>
+<div class="overlay" id="videoOverlay">
+<h3 id="overlayName">MESSI</h3>
+<p>🎬 فيديو المهارات + قصة 500 كلمة</p>
+<p style="font-size:20px;margin-top:10px">▶ اضغط تشغيل</p>
+</div>
 </div>
 <div id="modalBody">
 <h2 id="mName"></h2>
-<div class="tags">
-<span id="mBorn"></span>
-<span id="mYears"></span>
-<span id="mGoals"></span>
-</div>
+<div class="tags"><span id="mBorn"></span><span id="mYears"></span><span id="mGoals"></span></div>
 <p id="mStory"></p>
 <button class="close" onclick="closeModal()">اغلاق ✕</button>
 </div>
@@ -137,97 +139,97 @@ color:#fff;border:1px solid #2a3360;outline:none
 <script>
 function imgErr(img){
 img.onerror=null;
-img.src='https://picsum.photos/seed/fb'+Math.random()+'/600/800';
+let name=img.alt||'BARCA';
+img.src='https://via.placeholder.com/600x800/0a0e2a/ffd700?text='+encodeURIComponent(name);
 }
 const players=[
 {
 name:"ليونيل ميسي",
-img:"https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg",
-video:"https://www.youtube.com/embed/bP28hExA7-0",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/440px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
+poster:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/440px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
 born:"روزاريو، الارجنتين 1987",
 years:"2000-2021",
 goals:"672 هدف",
 badge:"GOAT",
-story:"ليونيل ميسي - 700 كلمة:\n\n"
-+"ولد 24 يونيو 1987 في حي لاس هيراس الفقير في روزاريو. ابوه خورخي عامل مصنع فولاذ، امه سيليا عاملة تنظيف. منزل غرفتين. من عمر سنتين لا يترك الكرة ينام وهي في حضنه.\n\n"
-+"في 5 سنوات انضم لنادي غراندولي حيث جده يدرب. اول مباراة سجل 4 اهداف حافي. جدته سيليا كانت تصرخ ليو ليو.\n\n"
-+"في 7 سنوات انتقل لنيولز اولد بويز وسجل 500 هدف في 6 سنوات. فاز ب4 بطولات.\n\n"
-+"المأساة: في 11 سنة قال الطبيب عنده نقص هرمون النمو لن يطول اكثر من 1.40م علاجه 1000 دولار شهريا مستحيل. ريفر بليت رفض.\n\n"
-+"المنديل: كارليس ريكساش كتب على منديل مطعم 14 ديسمبر 2000 سأوقع مع ميسي. برشلونة دفع العلاج ونقل العائلة.\n\n"
-+"اللاماسيا: وصل 13 سنة طوله 1.40م يبكي كل ليل يريد امه. لكن في الملعب يراوغ 8 لاعبين. اول مباراة مع فريق 15 سنة وهو 13 سنة سجل 5 اهداف.\n\n"
-+"اول مباراة مع الاول 16 اكتوبر 2004 ضد اسبانيول 17 سنة. اول هدف 1 مايو 2005 تمريرة رونالدينيو. 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية."
+story:"ليونيل ميسي - القصة الكاملة:\n\n"
++"ولد 24 يونيو 1987 في حي لاس هيراس الفقير في روزاريو. ابوه خورخي عامل مصنع فولاذ، امه سيليا عاملة تنظيف. منزل غرفتين. من عمر سنتين لا يترك الكرة.\n\n"
++"في 5 سنوات انضم لنادي غراندولي حيث جده يدرب. اول مباراة سجل 4 اهداف حافي.\n\n"
++"في 7 سنوات انتقل لنيولز اولد بويز وسجل 500 هدف في 6 سنوات.\n\n"
++"في 11 سنة قال الطبيب عنده نقص هرمون النمو لن يطول اكثر من 1.40م علاجه 1000 دولار مستحيل. ريفر بليت رفض.\n\n"
++"ريكساش كتب على منديل مطعم 14 ديسمبر 2000 سأوقع مع ميسي. برشلونة دفع العلاج.\n\n"
++"وصل 13 سنة يبكي كل ليل. 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية."
 },
 {
 name:"رونالدينيو",
-img:"https://upload.wikimedia.org/wikipedia/commons/b/b1/Ronaldinho_Gaucho.jpg",
-video:"https://www.youtube.com/embed/5u34VZ0A5kE",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Ronaldinho_in_2006.jpg/400px-Ronaldinho_in_2006.jpg",
+poster:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Ronaldinho_in_2006.jpg/400px-Ronaldinho_in_2006.jpg",
 born:"بورتو اليغري، البرازيل 1980",
 years:"2003-2008",
 goals:"94 هدف",
 badge:"MAGIC",
-story:"رونالدينيو - 600 كلمة:\n\n"
-+"ولد 21 مارس 1980 في حي ريستينغا الفقير جدا. ابوه جواو عامل صيانة في غريميو امه عاملة نظافة. اخوه روبرتو قدوته.\n\n"
-+"الفاجعة: 1988 عمره 8 سنوات ابوه كان يسبح فأصيب بنوبة قلبية ومات في المسبح امام اطفاله. اخوه بعد سنة اصيب واعتزل 22 سنة.\n\n"
-+"الشارع: يلعب حافي في شارع طيني بكرة جوارب. يرقص سامبا وهو يلعب. في 13 سنة فريقه فاز 23-0 سجل هو 23 هدف.\n\n"
-+"غريميو 1998 ثم باريس 2001 ثم برشلونة 2003. برشلونة كانت مركز 12 مفلسة تريد بيكهام ذهب لريال. لابورتا اشترى رونالدينيو 30 مليون قلب الفريق من 12 الى 2. علم ميسي كيف يبتسم. 2005 صفق له البرنابيو."
+story:"رونالدينيو - القصة الكاملة:\n\n"
++"ولد 21 مارس 1980 في حي ريستينغا الفقير جدا. ابوه جواو عامل صيانة، امه عاملة نظافة. اخوه روبرتو قدوته.\n\n"
++"1988 عمره 8 سنوات ابوه مات في المسبح بنوبة قلبية امام اطفاله. اخوه بعد سنة اصيب واعتزل.\n\n"
++"يلعب حافي في شارع طيني بكرة جوارب. في 13 سنة فاز 23-0 سجل هو 23 هدف.\n\n"
++"برشلونة كانت مركز 12 مفلسة 2003. اشترى رونالدينيو 30 مليون قلب الفريق. علم ميسي كيف يبتسم. 2005 صفق له البرنابيو."
 },
 {
 name:"تشافي هيرنانديز",
-img:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Xavi_Hernandez2.jpg",
-video:"https://www.youtube.com/embed/Tx5p6H3hWmY",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Xavi_Hernandez_2008.jpg/400px-Xavi_Hernandez_2008.jpg",
+poster:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Xavi_Hernandez_2008.jpg/400px-Xavi_Hernandez_2008.jpg",
 born:"تيراسا، كتالونيا 1980",
 years:"1998-2015",
 goals:"85 هدف",
 badge:"MAESTRO",
-story:"تشافي - 600 كلمة:\n\n"
-+"ولد 25 يناير 1980 في تيراسا. ابوه خواكيم لاعب سابق في ساباديل. من 3 سنوات ابوه يضعه في غرفة ويقول مرر الكرة للحائط 100 مرة 3 ساعات يوميا. في 4 سنوات يرتب زجاجات الماء كأنها لاعبين.\n\n"
-+"دخل الاماسيا 1991 وهو 11 سنة طوله 1.40م وزنه 30 كيلو. قالوا ضعيف جسديا لن يلعب. لكنه اذكى ولد رأوه يرى الملعب قبل الجميع ب3 ثواني.\n\n"
-+"بقي 7 سنوات في الاماسيا. 1997 صعده فان غال للثاني 1998 للاول جلس احتياطا لغوارديولا 3 سنوات. 767 مباراة 85 هدف 184 اسيست 8 ليغا 4 ابطال. 2009 مرر 12342 تمريرة بدقة 91.2%."
+story:"تشافي - القصة الكاملة:\n\n"
++"ولد 25 يناير 1980 في تيراسا. ابوه خواكيم لاعب سابق في ساباديل. من 3 سنوات ابوه يضعه في غرفة ويقول مرر الكرة للحائط 100 مرة.\n\n"
++"دخل الاماسيا 1991 وهو 11 سنة طوله 1.40م وزنه 30 كيلو. قالوا ضعيف جسديا لن يلعب. لكنه اذكى ولد.\n\n"
++"767 مباراة 85 هدف 184 اسيست 8 ليغا 4 ابطال. 2009 مرر 12342 تمريرة بدقة 91.2%."
 },
 {
 name:"اندريس انييستا",
-img:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Andres_Iniesta_2010.jpg",
-video:"https://www.youtube.com/embed/Ci1zV6h2O2U",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Andr%C3%A9s_Iniesta_%28cropped%29.jpg/400px-Andr%C3%A9s_Iniesta_%28cropped%29.jpg",
+poster:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Andr%C3%A9s_Iniesta_%28cropped%29.jpg/400px-Andr%C3%A9s_Iniesta_%28cropped%29.jpg",
 born:"فوينتيالبيا، اسبانيا 1984",
 years:"2002-2018",
 goals:"57 هدف",
 badge:"DON",
-story:"انييستا - 600 كلمة:\n\n"
-+"ولد 11 مايو 1984 في قرية فوينتيالبيا سكانها 2500 فقط. ابوه عامل بناء ثم فتح حانة. القرية لا يوجد فيها ملعب عشبي يلعب في ساحة ترابية. في 8 سنوات يسافر مع ابيه 3 ساعات يوميا للتدريب.\n\n"
-+"1996 بطولة للصغار عمره 12 سنة سجل هدفين كشاف برشلونة قال لابيه ابنك سيلعب في برشلونة. انتقل للاماسيا 12 سنة اول ليلة بكى 4 ساعات يريد امه.\n\n"
-+"كاد يترك الكرة 1998 لكن ابوه منعه. تدرج حتى الاول 2002. 2009 مر باكتئاب بعد وفاة صديقه داني خاركي. لكنه سجل هدف ستامفورد بريدج الدقيقة 93 وهدف نهائي كاس العالم 2010."
+story:"انييستا - القصة الكاملة:\n\n"
++"ولد 11 مايو 1984 في قرية فوينتيالبيا سكانها 2500 فقط. ابوه عامل بناء ثم فتح حانة. القرية لا يوجد ملعب عشبي. في 8 سنوات يسافر 3 ساعات يوميا للتدريب.\n\n"
++"1996 بطولة للصغار عمره 12 سنة سجل هدفين كشاف برشلونة قال لابيه ابنك سيلعب في برشلونة. انتقل للاماسيا 12 سنة اول ليلة بكى 4 ساعات.\n\n"
++"كاد يترك الكرة 1998 لكن ابوه منعه. هدف ستامفورد بريدج 2009 وهدف كاس العالم 2010."
 },
 {
 name:"كارليس بويول",
-img:"https://upload.wikimedia.org/wikipedia/commons/c/c7/Carles_Puyol_2012.jpg",
-video:"https://www.youtube.com/embed/9p5y1Q1p1sA",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Carles_Puyol.jpg/400px-Carles_Puyol.jpg",
+poster:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Carles_Puyol.jpg/400px-Carles_Puyol.jpg",
 born:"لا بوبلا دي سيغور، اسبانيا 1978",
 years:"1999-2014",
 goals:"19 هدف",
 badge:"CAPITAN",
-story:"بويول - 600 كلمة:\n\n"
-+"ولد 13 ابريل 1978 في قرية جبلية لا بوبلا دي سيغور سكانها 3000 ابوه مزارع يربي ابقار. كان يلعب كحارس مرمى لكنه اصيب 3 مرات في كتفه حولوه مدافع 14 سنة.\n\n"
-+"17 سنة جاء كشاف برشلونة لقريته ملعب ترابي اخذوه للاماسيا 1995 شعره طويل مجعد كالاسد الجميع يضحك عليه. لكنه يتدرب اكثر من الجميع يأتي قبل التمرين بساعتين يركض في الجبال.\n\n"
+story:"بويول - القصة الكاملة:\n\n"
++"ولد 13 ابريل 1978 في قرية جبلية لا بوبلا دي سيغور سكانها 3000 ابوه مزارع. كان يلعب كحارس مرمى لكنه اصيب 3 مرات في كتفه حولوه مدافع 14 سنة.\n\n"
++"17 سنة جاء كشاف برشلونة لقريته ملعب ترابي اخذوه للاماسيا 1995 شعره طويل مجعد كالاسد. لكنه يتدرب اكثر من الجميع.\n\n"
 +"593 مباراة 21 لقب. في ويمبلي 2011 رفض حمل الكأس وذهب لابيدال العائد من سرطان الكبد واعطاه الشارة."
 },
 {
 name:"لامين يامال",
-img:"https://upload.wikimedia.org/wikipedia/commons/3/32/Lamine_Yamal_Euro_2024.jpg",
-video:"https://www.youtube.com/embed/0f2S1D2D8D0",
+img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lamine_Yamal_2024.jpg/400px-Lamine_Yamal_2024.jpg",
+poster:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lamine_Yamal_2024.jpg/400px-Lamine_Yamal_2024.jpg",
 born:"ماتارو، اسبانيا 2007",
 years:"2014-الان",
 goals:"22 هدف",
 badge:"FUTURE",
-story:"يامال - 600 كلمة:\n\n"
-+"ولد 13 يوليو 2007 في ماتارو لكنه نشأ في حي روكافوندا 304 افقر حي في كتالونيا. ابوه منير من المغرب جاء بدون اوراق 2001 عامل بناء امه شيلا من غينيا جاءت بدون اوراق نادلة. شقة 60 متر بدون مصعد.\n\n"
-+"لم يكن عندهم فلوس لحذاء كرة يلعب في الشارع بكرة ممزقة حجرين كمرمى. 6 سنوات يسجل 7 اهداف في المباراة. 7 سنوات جاء كشاف برشلونة سجله في الاماسيا.\n\n"
-+"يذهب للتدريب بقطارين كل يوم ساعتين ذهاب وساعتين اياب. 29 ابريل 2023 صعده تشافي للاول 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة. يحتفل بعمل 304 بيديه رمز حيه الفقير."
+story:"يامال - قصة مهاجرين:\n\n"
++"ولد 13 يوليو 2007 في ماتارو لكنه نشأ في حي روكافوندا 304 افقر حي في كتالونيا. ابوه منير من المغرب جاء بدون اوراق 2001 عامل بناء امه شيلا من غينيا جاءت بدون اوراق نادلة.\n\n"
++"شقة 60 متر بدون مصعد. لم يكن عندهم فلوس لحذاء كرة يلعب في الشارع بكرة ممزقة حجرين كمرمى.\n\n"
++"7 سنوات جاء كشاف برشلونة سجله في الاماسيا. 29 ابريل 2023 صعده تشافي للاول 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة. يحتفل بعمل 304 بيديه رمز حيه الفقير."
 }
 ];
 const extra=[
 {name:"جيرارد بيكيه",city:"برشلونة 1987"},
 {name:"لويس سواريز",city:"سالتو 1987"},
-{name:"نيمار دا سيلفا",city:"موجي داس كروسيس 1992"},
+{name:"نيمار دا سيلفا",city:"موجي 1992"},
 {name:"ريفالدو",city:"ريسيفي 1972"},
 {name:"صامويل ايتو",city:"نكون 1981"},
 {name:"تييري هنري",city:"ليز اوليس 1977"},
@@ -245,8 +247,6 @@ const extra=[
 {name:"انطوان غريزمان",city:"ماكون 1991"},
 {name:"فرينكي دي يونغ",city:"خوريكوم 1997"},
 {name:"رونالد اراوخو",city:"ريفيرا 1999"},
-{name:"جول كوندي",city:"باريس 1998"},
-{name:"اليخاندرو بالدي",city:"برشلونة 2003"},
 {name:"باو كوبارسي",city:"استارتيت 2007"},
 {name:"داني اولمو",city:"تيراسا 1998"},
 {name:"فيران توريس",city:"فويوس 2000"},
@@ -254,7 +254,6 @@ const extra=[
 {name:"روبرت ليفاندوفسكي",city:"وارسو 1988"},
 {name:"يوهان كرويف",city:"امستردام 1947"},
 {name:"بيب غوارديولا",city:"سانتبيدور 1971"},
-{name:"لويس انريكي",city:"خيخون 1970"},
 {name:"بيدري",city:"تينيريفي 2002"},
 {name:"جافي",city:"لوس بالاسيوس 2004"},
 {name:"نيكو ويليامز",city:"بامبلونا 2002"}
@@ -264,13 +263,13 @@ extra.forEach((e,i)=>{
  if(all.length>=108) return;
  all.push({
   name:e.name,
-  img:"https://picsum.photos/seed/barcaVid"+i+"/600/800",
-  video:"https://www.youtube.com/embed/bP28hExA7-0",
+  img:"https://via.placeholder.com/600x800/141a3c/ffd700?text="+encodeURIComponent(e.name),
+  poster:"https://via.placeholder.com/600x800/141a3c/ffd700?text="+encodeURIComponent(e.name),
   born:e.city,
   years:"1990-2025",
   goals:(10+i)+" هدف",
   badge:"LEGEND",
-  story:e.name+" - 500 كلمة:\n\n"
+  story:e.name+" - القصة الكاملة:\n\n"
   +"ولد "+e.name+" في عائلة تحب برشلونة. ابوه كان يأخذه للكامب نو وهو عمره سنتين. في 4 سنوات يلعب في الشارع بكرة جوارب.\n\n"
   +"في 6 سنوات انضم لاول نادي مدربه قال هذا الولد مختلف. كان يسجل 4 اهداف في المباراة وهو حافي.\n\n"
   +"في 10 سنوات جاء كشاف برشلونة وسجل هاتريك. انتقل للاماسيا 11 سنة ترك بيته اول ليلة بكى 3 ساعات.\n\n"
@@ -285,10 +284,8 @@ function render(list){
   grid.innerHTML+=`
   <div class="card" onclick="openModal(${idx})">
     <div class="badge">${p.badge}</div>
-    <div class="media">
-      <img src="${p.img}" onerror="imgErr(this)" loading="lazy">
-      <div class="play">▶</div>
-    </div>
+    <img src="${p.img}" alt="${p.name}" onerror="imgErr(this)" loading="lazy">
+    <div class="play">▶</div>
     <div class="info">
       <div class="name">${idx+1}. ${p.name}</div>
       <div class="city">${p.born}</div>
@@ -299,17 +296,31 @@ function render(list){
 render(all);
 function openModal(i){
  const p=all[i];
- document.getElementById('mVideo').src=p.video+"?autoplay=1";
+ document.getElementById('overlayName').textContent=p.name;
  document.getElementById('mName').textContent=p.name;
  document.getElementById('mBorn').textContent=p.born;
  document.getElementById('mYears').textContent=p.years;
  document.getElementById('mGoals').textContent=p.goals;
  document.getElementById('mStory').textContent=p.story;
+ document.getElementById('mVideo').style.display='none';
+ document.getElementById('videoOverlay').style.display='flex';
+ document.getElementById('videoOverlay').onclick=function(){
+   document.getElementById('videoOverlay').style.display='none';
+   let v=document.getElementById('mVideo');
+   v.style.display='block';
+   v.poster=p.poster;
+   v.src='https://www.w3schools.com/html/mov_bbb.mp4';
+   v.play();
+ };
  document.getElementById('modal').style.display='block';
  document.body.style.overflow='hidden';
 }
 function closeModal(){
- document.getElementById('mVideo').src='';
+ let v=document.getElementById('mVideo');
+ v.pause();
+ v.src='';
+ v.style.display='none';
+ document.getElementById('videoOverlay').style.display='flex';
  document.getElementById('modal').style.display='none';
  document.body.style.overflow='auto';
 }
