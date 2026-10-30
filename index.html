@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARÇA LEGENDS | أساطير برشلونة</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #071b55;
+  --red: #a50044;
+  --gold: #f5c451;
+  --dark: #080b18;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* NAVBAR */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(5, 10, 30, .88);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.logo span { color: white; }
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul a {
+  font-size: 14px;
+  transition: .3s;
+}
+
+nav ul a:hover { color: var(--gold); }
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 20px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(165,0,68,.4), transparent 50%),
+    radial-gradient(ellipse at 80% 60%, rgba(7,50,140,.5), transparent 50%),
+    linear-gradient(135deg,#080b18,#101c46,#080b18);
+}
+
+.hero::before {
+  content: "BARÇA";
+  position: absolute;
+  font-size: clamp(100px, 22vw, 280px);
+  font-weight: 900;
+  color: rgba(255,255,255,.025);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 30px;
+  padding: 7px 22px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 9vw, 90px);
+  line-height: 1.2;
+  font-weight: 900;
+  background: linear-gradient(90deg,#fff,#f5c451,#fff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 4vw, 35px);
+  margin: 15px 0;
+}
+
+.hero p {
+  color: #c2c9dc;
+  line-height: 2;
+  max-width: 650px;
+  margin: 15px auto 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 13px 30px;
+  border-radius: 8px;
+  font-weight: 800;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,var(--red),var(--blue));
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.btn-secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(165,0,68,.3);
+}
+
+/* STATS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  max-width: 850px;
+  margin: 55px auto 0;
+  gap: 15px;
+}
+
+.stat {
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+}
+
+.stat h3 {
+  color: var(--gold);
+  font-size: 30px;
+}
+
+/* SECTIONS */
+
+section:not(.hero) {
+  padding: 90px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.section-title h2 span { color: var(--gold); }
+
+.section-title p {
+  color: #aab3ca;
+  margin-top: 10px;
+}
+
+/* PLAYER CARDS */
+
+.players {
+  background: linear-gradient(180deg,#080b18,#10172f,#080b18);
+}
+
+.player-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.player-card {
+  position: relative;
+  min-height: 290px;
+  padding: 25px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(145deg,#111c47,#1d0929);
+  transition: .4s;
+}
+
+.player-card:nth-child(even) {
+  background: linear-gradient(145deg,#390b29,#101b4c);
+}
+
+.player-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+  box-shadow: 0 15px 40px rgba(0,0,0,.4);
+}
+
+.player-number {
+  position: absolute;
+  left: 10px;
+  bottom: -55px;
+  font-size: 180px;
+  font-weight: 900;
+  color: rgba(255,255,255,.045);
+  line-height: 1;
+}
+
+.player-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 15px;
+  background: linear-gradient(135deg,var(--red),var(--blue));
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.player-card h3 {
+  font-size: 23px;
+  position: relative;
+}
+
+.player-card p {
+  color: #bdc5d9;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.9;
+  position: relative;
+}
+
+.player-label {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--gold);
+  font-size: 12px;
+  position: relative;
+}
+
+/* ABOUT */
+
+.about {
+  text-align: center;
+  background:
+    radial-gradient(circle at center,rgba(7,45,120,.35),transparent 65%);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 20px;
+}
+
+.about-content p {
+  color: #c1c9da;
+  line-height: 2.2;
+  margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  background: #050711;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+footer h2 { color: var(--gold); }
+
+footer p {
+  color: #929bb0;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+  .player-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width: 550px) {
+  nav { flex-direction: column; gap: 10px; }
+  nav ul { gap: 18px; }
+  .logo { font-size: 21px; }
+  .player-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .hero { padding-top: 170px; }
+  .section-title h2 { font-size: 28px; }
+  .about-content { padding: 25px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div class="logo">🔵🔴 BARÇA <span>LEGENDS</span></div>
+  <ul>
+    <li><a href="#home">الرئيسية</a></li>
+    <li><a href="#players">الأساطير</a></li>
+    <li><a href="#about">عن الموقع</a></li>
+  </ul>
+</nav>
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+<div class="hero-content">
+
+  <span class="tag">MES QUE UN CLUB</span>
+
+  <h1>BARÇA LEGENDS</h1>
+
+  <h2>هنا تبدأ حكاية الأساطير ❤️💙</h2>
+
+  <p>
+    اكتشف عالم أساطير برشلونة، وتعرّف على النجوم الذين
+    صنعوا التاريخ وكتبوا أجمل صفحات المجد في كرة القدم.
+    أجيال من الإبداع والشغف والوفاء.
+  </p>
+
+  <div class="buttons">
+    <a href="#players" class="btn btn-primary">اكتشف الأساطير</a>
+    <a href="#about" class="btn btn-secondary">عن الموقع</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>1899</h3>
+      <p>تأسيس النادي</p>
+    </div>
+    <div class="stat">
+      <h3>6</h3>
+      <p>أساطير في موقعنا</p>
+    </div>
+    <div class="stat">
+      <h3>❤️💙</h3>
+      <p>حب لا ينتهي</p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- PLAYERS -->
+
+<section class="players" id="players">
+
+<div class="section-title">
+  <h2>أساطير <span>برشلونة</span></h2>
+  <p>نجوم صنعوا التاريخ ولن تنساهم جماهير البلوغرانا</p>
+</div>
+
+<div class="player-grid">
+
+  <article class="player-card">
+    <div class="player-number">10</div>
+    <div class="player-icon">👑</div>
+    <h3>Lionel Messi</h3>
+    <p>البرغوث الأرجنتيني، أحد أعظم اللاعبين في تاريخ كرة القدم وأسطورة برشلونة الخالدة.</p>
+    <span class="player-label">THE GOAT ⭐</span>
+  </article>
+
+  <article class="player-card">
+    <div class="player-number">10</div>
+    <div class="player-icon">✨</div>
+    <h3>Ronaldinho</h3>
+    <p>الساحر البرازيلي الذي أعاد الابتسامة والمتعة إلى جماهير كرة القدم.</p>
+    <span class="player-label">THE MAGICIAN ⭐</span>
+  </article>
+
+  <article class="player-card">
+    <div class="player-number">6</div>
+    <div class="player-icon">🎯</div>
+    <h3>Xavi Hernández</h3>
+    <p>مايسترو خط الوسط وصانع اللعب الذي قاد برشلونة إلى أجمل انتصاراته.</p>
+    <span class="player-label">THE MAESTRO ⭐</span>
+  </article>
+
+  <article class="player-card">
+    <div class="player-number">8</div>
+    <div class="player-icon">🎨</div>
+    <h3>Andrés Iniesta</h3>
+    <p>الفنان الإسباني وصاحب اللمسات الساحرة واللحظات التاريخية.</p>
+    <span class="player-label">THE ARTIST ⭐</span>
+  </article>
+
+  <article class="player-card">
+    <div class="player-number">5</div>
+    <div class="player-icon">🛡️</div>
+    <h3>Carles Puyol</h3>
+    <p>القائد الأسطوري والمحارب الذي جسّد معنى الوفاء لقميص برشلونة.</p>
+    <span class="player-label">THE CAPTAIN ⭐</span>
+  </article>
+
+  <article class="player-card">
+    <div class="player-number">11</div>
+    <div class="player-icon">⚡</div>
+    <h3>Neymar Jr</h3>
+    <p>النجم البرازيلي صاحب المهارات الاستثنائية واللمسات الممتعة.</p>
+    <span class="player-label">THE SKILLER ⭐</span>
+  </article>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="section-title">
+  <h2>عن <span>BARÇA LEGENDS</span></h2>
+  <p>أكثر من مجرد موقع</p>
+</div>
+
+<div class="about-content">
+  <h2>💙❤️ Visca Barça!</h2>
+  <p>
+    BARÇA LEGENDS هو موقع مخصص لعشاق نادي برشلونة،
+    نحتفل فيه باللاعبين الذين صنعوا أمجاد النادي
+    وتركوا بصمتهم في تاريخ كرة القدم.
+    لأن الأساطير لا تُنسى، والتاريخ لا يموت.
+  </p>
+</div>
+
+</section>
+
+<footer>
+  <h2>🔵🔴 BARÇA LEGENDS</h2>
+  <p>© 2026 BARÇA LEGENDS - جميع الحقوق محفوظة</p>
+  <p>MADE FOR TRUE BARÇA FANS ❤️💙</p>
+</footer>
+
+</body>
+</html>
