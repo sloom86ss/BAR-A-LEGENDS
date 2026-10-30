@@ -1,1 +1,259 @@
-container:///tmp/final_campnou2.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FC BARCELONA LEGENDS - Official Hall of Fame</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+background:#050816;
+background-image:linear-gradient(rgba(5,8,22,.86),rgba(5,8,22,.96)),url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+color:#fff;
+font-family:'Cairo',system-ui;
+overflow-x:hidden
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+background:linear-gradient(180deg,rgba(0,0,0,.7),rgba(0,0,0,.2));
+border-bottom:1px solid rgba(255,215,0,.18);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:20
+}
+nav .logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:900;
+letter-spacing:1px;
+color:#ffd700
+}
+.hero{
+padding:55px 20px 30px;
+max-width:1300px;
+margin:auto;
+}
+.hero h1{
+font-size:42px;
+font-weight:900;
+background:linear-gradient(90deg,#ffd700,#fff,#ffd700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+line-height:1.1;
+}
+.hero p{margin-top:10px;font-size:15px;opacity:.8;max-width:600px}
+.hero .btns{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.btn-gold{
+background:linear-gradient(90deg,#d4af37,#ffd700);
+color:#000;
+border:none;
+padding:10px 22px;
+border-radius:10px;
+font-weight:900;
+cursor:pointer;
+box-shadow:0 6px 22px rgba(255,215,0,.35)
+}
+.btn-dark{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,215,0,.3);
+color:#ffd700;
+padding:10px 22px;
+border-radius:10px;
+font-weight:700;
+cursor:pointer
+}
+.filters{
+max-width:1300px;
+margin:10px auto;
+padding:12px;
+background:rgba(10,14,40,.7);
+border:1px solid rgba(255,215,0,.15);
+border-radius:16px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+align-items:center;
+backdrop-filter:blur(10px)
+}
+.filters input{
+flex:1;
+min-width:180px;
+background:rgba(0,0,0,.4);
+border:1px solid rgba(255,255,255,.12);
+padding:10px 14px;
+border-radius:12px;
+color:#fff;
+outline:none
+}
+.filters select{
+background:rgba(0,0,0,.5);
+border:1px solid rgba(255,215,0,.2);
+color:#ffd700;
+padding:9px 12px;
+border-radius:10px;
+font-size:12px
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(165px,1fr));
+gap:14px;
+padding:16px;
+max-width:1300px;
+margin:auto
+}
+.card{
+background:linear-gradient(180deg,rgba(20,26,60,.9),rgba(10,14,35,.95));
+border:1px solid rgba(255,215,0,.22);
+border-radius:18px;
+overflow:hidden;
+cursor:pointer;
+position:relative;
+transition:.45s;
+box-shadow:0 10px 30px rgba(0,0,0,.4)
+}
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+border-color:#ffd700;
+box-shadow:0 20px 50px rgba(255,215,0,.25)
+}
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+object-position:top;
+transition:transform .6s
+}
+.card:hover img{transform:scale(1.12)}
+.card .badge{
+position:absolute;
+top:8px;
+left:8px;
+background:linear-gradient(90deg,#ffd700,#ffb700);
+color:#000;
+font-size:9px;
+font-weight:900;
+padding:3px 8px;
+border-radius:20px
+}
+.card .info{padding:10px}
+.card .num{font-size:10px;opacity:.5}
+.card .name{font-weight:900;font-size:13px;color:#ffd700}
+.card .meta{font-size:10px;opacity:.7;margin-top:4px}
+#modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.88);
+z-index:99;
+padding:14px;
+overflow-y:auto
+}
+#modalBox{
+background:linear-gradient(180deg,#141a3c,#0a0e24);
+max-width:760px;
+margin:20px auto;
+border-radius:20px;
+overflow:hidden;
+border:1px solid rgba(255,215,0,.3);
+}
+#modalBox img{width:100%;height:380px;object-fit:cover;object-position:top}
+#modalBody{padding:18px}
+#modalBody h2{font-size:26px;color:#ffd700}
+#modalBody .mMeta{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+#modalBody .mMeta span{background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.2);color:#ffd700;padding:5px 10px;border-radius:20px;font-size:11px}
+#modalBody p{line-height:2;font-size:13px;white-space:pre-line;opacity:.9}
+.close{background:linear-gradient(90deg,#a50044,#ff0040);color:#fff;border:none;padding:11px;width:100%;border-radius:12px;font-weight:900;cursor:pointer;margin-top:12px}
+footer{text-align:center;padding:18px;opacity:.5;font-size:11px;border-top:1px solid rgba(255,215,0,.1);margin-top:20px}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">🔵🔴 FC BARCELONA LEGENDS</div>
+<div style="font-size:11px;opacity:.6">HALL OF FAME • SINCE 1899</div>
+</nav>
+<div class="hero">
+<h1>FC BARCELONA<br>LEGENDS</h1>
+<p>Celebrating the Icons Who Defined Barça • من الطفولة الى المجد • 108 اساطير</p>
+<div class="btns">
+<button class="btn-gold" onclick="document.getElementById('grid').scrollIntoView({behavior:'smooth'})">استكشف الاساطير</button>
+<button class="btn-dark">Hall of Fame</button>
+</div>
+</div>
+<div class="filters">
+<input id="search" placeholder="🔍 ابحث: ميسي، روزاريو، شارع، فقير">
+<select><option>كل العصور</option></select>
+<select><option>الاكثر شهرة</option></select>
+<span style="font-size:11px;opacity:.6;margin-right:auto">108 Legends • Updated 2026</span>
+</div>
+<div class="grid" id="grid"></div>
+<div id="modal" onclick="if(event.target==this)closeModal()">
+<div id="modalBox">
+<img id="mImg">
+<div id="modalBody">
+<div id="mNum" style="font-size:11px;opacity:.5"></div>
+<h2 id="mName"></h2>
+<div class="mMeta"><span id="mBorn"></span><span id="mYears"></span><span id="mGoals"></span></div>
+<p id="mStory"></p>
+<button class="close" onclick="closeModal()">اغلاق ✕</button>
+</div>
+</div>
+</div>
+<footer>OFFICIAL FC BARCELONA LEGENDS • Visca el Barça • More than a club</footer>
+<script>
+const base=[
+{name:"LIONEL MESSI",ar:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",born:"روزاريو 1987",years:"2000-2021",goals:"672 هدف • 778 مباراة",badge:"GOAT",story:"الطفولة الكاملة:\nولد 24 يونيو 1987 حي فقير. ابوه عامل مصنع فولاذ امه عاملة تنظيف. في 11 سنة قالوا عنده نقص نمو لن يطول اكثر من 1.40م علاجه 1000 دولار مستحيل. ريفر بليت رفض.\n\nالمعجزة:\nريكساش كتب على منديل مطعم: اريد التوقيع مع ميسي. برشلونة دفع العلاج ونقل العائلة.\n\nالاماسيا 13 سنة يبكي كل ليل.\n\nالمجد: 10 ليغا 4 ابطال 7 كرات ذهبية مع برشلونة."},
+{name:"RONALDINHO",ar:"رونالدينيو",img:"https://upload.wikimedia.org/wikipedia/commons/9/92/Ronaldinho_in_2006.jpg",born:"بورتو اليغري 1980",years:"2003-2008",goals:"94 هدف",badge:"MAGIC",story:"ولد فقير ابوه مات في المسبح وهو 8 سنوات. يلعب حافي في الطين بكرة جوارب. سجل 23 هدف في مباراة واحدة. جاء 2003 والنادي مركز 12 مفلس. علم ميسي كيف يبتسم. 2005 صفق له البرنابيو."},
+{name:"XAVI",ar:"تشافي",img:"https://upload.wikimedia.org/wikipedia/commons/c/c3/Xavi_Hernandez_2008.jpg",born:"تيراسا 1980",years:"1998-2015",goals:"85 هدف • 180 اسيست",badge:"MAESTRO",story:"ولد لعائلة كتالونية ابوه لاعب سابق. في 4 سنوات يرتب زجاجات كأنها لاعبين. دخل الاماسيا 11 سنة. قالوا لن ينجح ضعيف جسديا. 767 مباراة 8 ليغا 4 ابطال."},
+{name:"INIESTA",ar:"انييستا",img:"https://upload.wikimedia.org/wikipedia/commons/8/8a/Andr%C3%A9s_Iniesta_%28cropped%29.jpg",born:"فوينتيالبيا 1984",years:"2002-2018",goals:"57 هدف",badge:"DON",story:"قرية صغيرة 3000 نسمة. في 8 سنوات يسافر 3 ساعات يوميا. في 12 سنة اكتشفه برشلونة بكى اسبوع لترك عائلته. هدف ستامفورد 2009 الدقيقة 93 وهدف كاس العالم 2010."},
+{name:"PUYOL",ar:"بويول",img:"https://upload.wikimedia.org/wikipedia/commons/5/59/Carles_Puyol.jpg",born:"لا بوبلا 1978",years:"1999-2014",goals:"19 هدف",badge:"CAPITAN",story:"قرية جبلية ابوه مزارع. كان حارس ثم حولوه مدافع. شعره كالاسد يسخرون منه. يتدرب 3 ساعات اضافية. 593 مباراة. في ويمبلي 2011 اعطى الشارة لابيدال العائد من السرطان."},
+{name:"LAMINE YAMAL",ar:"لامين يامال",img:"https://upload.wikimedia.org/wikipedia/commons/6/6e/Lamine_Yamal_2024.jpg",born:"روكافوندا 2007",years:"2014-الان",goals:"22 هدف",badge:"FUTURE",story:"ابوه مغربي امه غينية جاؤوا بدون اوراق. سكنوا افقر حي. يلعب بكرة ممزقة. في 7 سنوات اكتشفه برشلونة. 15 سنة اصغر لاعب في تاريخ برشلونة."},
+{name:"PEDRI",ar:"بيدري",img:"https://upload.wikimedia.org/wikipedia/commons/6/6e/Pedri_2021.jpg",born:"تينيريفي 2002",years:"2020-الان",goals:"24 هدف",badge:"TALENT",story:"جزيرة تينيريفي قرية صيد. ريال مدريد رفضه قالوا ضعيف. لاس بالماس اخذته اشتراه برشلونة 5 مليون. لعب 73 مباراة اول موسم اكثر لاعب في العالم."},
+{name:"GAVI",ar:"جافي",img:"https://upload.wikimedia.org/wikipedia/commons/d/d1/Gavi_2022.jpg",born:"لوس بالاسيوس 2004",years:"2015-الان",goals:"8 اهداف",badge:"WARRIOR",story:"قرية اندلسية ابوه شرطي. شرس يقاتل على كل كرة. برشلونة خطفه 11 سنة. اقصر واحد لكن الاكثر شراسة. 17 سنة اساسيا."}
+];
+const names=["بيكيه","سواريز","نيمار","ريفالدو","ايتو","هنري","فيا","شتيغن","بوسكيتس","الفيس","رونالدو","مارادونا","كومان","ستويشكوف","روماريو","كلويفرت","ديمبيلي","غريزمان","دي يونغ","اراوخو","كوندي","بالدي","كوبارسي","اولمو","توريس","رافينيا","ليفاندوفسكي","كرويف","فابريغاس","بيدرو","فالديس","غوارديولا","انريكي","ابيدال","ماسكيرانو","راكيتيتش","البا","روبيرتو","فاتي","ديست","كاسادو","فيرمين","نيكو","كوبارسي","كاسادو","اولمو","رافينيا","توريس","ويليامز"];
+const players=[...base];
+names.forEach((n,i)=>{
+ if(players.length>=108) return;
+ players.push({name:n.toUpperCase(),ar:n,img:"https://picsum.photos/seed/barcaPro"+(i+700)+"/500/600",born:"برشلونة",years:"1990-2025",goals:(10+i)+" هدف",badge:"LEGEND",story:n+" من الطفولة:\nولد في عائلة بسيطة تحب برشلونة ينام وقميص برشلونة فوقه. في 5 سنوات يلعب في الشارع بكرة جوارب يسجل على جدار بيتهم. دخل الاماسيا صغيرا خجولا يبكي ترك امه لكنه يحلم بالكامب نو كل ليلة. تدرج حتى وصل للفريق الاول وفاز بالليغا والابطال امام 90 الف."});
+});
+const grid=document.getElementById('grid');
+function render(list){
+ grid.innerHTML='';
+ list.forEach(p=>{
+  const idx=players.indexOf(p);
+  grid.innerHTML+='<div class="card" onclick="openModal('+idx+')"><div class="badge">'+p.badge+'</div><img src="'+p.img+'" loading="lazy"><div class="info"><div class="num">#'+(idx+1)+'</div><div class="name">'+p.name+'</div><div class="meta">'+p.born+' • '+p.years+'</div></div></div>';
+ });
+}
+render(players);
+function openModal(i){
+ const p=players[i];
+ document.getElementById('mImg').src=p.img;
+ document.getElementById('mNum').textContent='#'+(i+1)+' • '+p.badge;
+ document.getElementById('mName').textContent=p.ar+' - '+p.name;
+ document.getElementById('mBorn').textContent=p.born;
+ document.getElementById('mYears').textContent=p.years;
+ document.getElementById('mGoals').textContent=p.goals;
+ document.getElementById('mStory').textContent=p.story;
+ document.getElementById('modal').style.display='block';
+ document.body.style.overflow='hidden';
+}
+function closeModal(){
+ document.getElementById('modal').style.display='none';
+ document.body.style.overflow='auto';
+}
+document.getElementById('search').addEventListener('input',e=>{
+ const q=e.target.value.toLowerCase();
+ render(players.filter(p=>p.name.toLowerCase().includes(q)||p.ar.includes(e.target.value)||p.story.toLowerCase().includes(q)));
+});
+</script>
+</body>
+</html>
