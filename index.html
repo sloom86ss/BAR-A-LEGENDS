@@ -3,76 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BARCA FAMILY - مقالات بدون بطاقات</title>
+<title>BARCA FAMILY - بدون صورة الكامب نو</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@800&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#04081a;color:#fff;font-family:'Amiri','Cairo',Tahoma;line-height:1.8}
-.hero{position:relative;height:88vh;min-height:600px;background:#000;overflow:hidden}
-.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom, rgba(4,8,26,0.1) 0%, rgba(4,8,26,0.6) 70%, rgba(4,8,26,1) 100%)}
-.top-nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;padding:16px 22px}
-.logo{font-family:'Amiri';background:linear-gradient(135deg,#a50044,#004d98);padding:10px 18px;border-radius:14px;border:2px solid #ffd700;font-weight:900}
-.hero-content{position:absolute;bottom:0;left:0;right:0;z-index:4;padding:36px 22px;text-align:center}
-.zakhrafa{font-family:'Amiri';font-size:22px;color:#ffd700;letter-spacing:5px;margin-bottom:12px}
-.hero h1{font-family:'Amiri';font-size:52px;font-weight:900;line-height:1.1}
-.hero h1 span{color:#ffd700}
-.hero .sub{font-size:16px;margin-top:16px;max-width:700px;margin:auto;background:rgba(0,0,0,0.5);padding:14px 22px;border-radius:14px;border:1px solid rgba(255,255,255,0.15)}
+.hero{
+position:relative;
+height:62vh;
+min-height:380px;
+background:linear-gradient(145deg,#0a0e2a 0%, #151b3d 30%, #1a1140 70%, #0e1230 100%);
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+border-bottom:2px solid #a50044;
+}
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 30%, rgba(165,0,68,0.15) 0%, transparent 50%),
+radial-gradient(circle at 80% 70%, rgba(0,77,152,0.15) 0%, transparent 50%),
+radial-gradient(circle at 50% 50%, rgba(255,215,0,0.05) 0%, transparent 70%);
+}
+.hero::after{
+content:'✦ ━━━ ❖ ━━━ ✦ ✦ ━━━ ❖ ━━━ ✦ ✦ ━━━ ❖ ━━━ ✦';
+position:absolute;
+bottom:20px;
+left:0;
+right:0;
+text-align:center;
+font-family:'Amiri';
+color:rgba(255,215,0,0.15);
+font-size:14px;
+letter-spacing:4px;
+}
+.top-nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:center;padding:20px 22px}
+.logo{
+font-family:'Cairo';
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,215,0,0.3);
+color:#ffd700;
+padding:12px 28px;
+border-radius:30px;
+font-weight:900;
+font-size:16px;
+letter-spacing:3px;
+box-shadow:0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+transition:0.3s;
+}
+.logo span{color:#fff}
+.logo:hover{transform:translateY(-2px);border-color:#ffd700;box-shadow:0 12px 40px rgba(255,215,0,0.15)}
+.hero-content{position:relative;z-index:4;padding:20px 22px}
+.zakhrafa{font-family:'Amiri';font-size:20px;color:#ffd700;letter-spacing:5px;margin-bottom:12px;opacity:0.9}
+.hero h1{font-family:'Amiri';font-size:48px;font-weight:900;line-height:1.1}
+.hero h1 span{color:#ffd700;background:linear-gradient(90deg,#ffd700,#ffed4e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .sub{font-size:15px;margin-top:16px;max-width:650px;margin-left:auto;margin-right:auto;background:rgba(0,0,0,0.35);backdrop-filter:blur(16px);padding:12px 20px;border-radius:14px;border:1px solid rgba(255,255,255,0.1)}
 .container{max-width:850px;margin:auto;padding:0 20px}
 .toc{background:linear-gradient(145deg,#151b3d,#0e1230);border:2px solid #a50044;border-radius:20px;padding:24px;margin:30px 0}
 .toc h3{font-family:'Amiri';color:#ffd700;text-align:center;margin-bottom:16px;font-size:22px}
 .toc a{display:block;padding:10px 16px;margin:6px 0;background:rgba(0,0,0,0.3);border-radius:12px;border:1px solid rgba(255,215,0,0.1);color:#fff;text-decoration:none;transition:0.3s;font-size:14px}
 .toc a:hover{background:linear-gradient(90deg,#a50044,#004d98);border-color:#ffd700;transform:translateX(-6px)}
-.article{margin:50px 0;background:linear-gradient(145deg,#151b3d 0%, #0e1230 100%);border:2px solid rgba(165,0,68,0.5);border-radius:24px;overflow:hidden;transition:0.4s}
-.article:hover{border-color:#ffd700;box-shadow:0 20px 60px rgba(255,215,0,0.1)}
+.article{margin:50px 0;background:linear-gradient(145deg,#151b3d 0%, #0e1230 100%);border:2px solid rgba(165,0,68,0.5);border-radius:24px;overflow:hidden}
 .article img{width:100%;height:380px;object-fit:cover}
 .article-body{padding:32px}
 .article-badge{display:inline-block;background:#ffd700;color:#000;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:900;margin-bottom:14px}
 .article-body h2{font-family:'Amiri';font-size:28px;line-height:1.3;margin-bottom:12px;color:#ffd700}
-.article-meta{display:flex;gap:16px;font-size:12px;opacity:0.5;margin-bottom:16px;flex-wrap:wrap}
-.article-body p{font-size:15px;line-height:2.7;text-align:justify;opacity:0.95;white-space:pre-line}
+.article-body p{font-size:15px;line-height:2.7;text-align:justify;white-space:pre-line}
 .divider{text-align:center;margin:60px 0;font-family:'Amiri';font-size:24px;color:#ffd700;letter-spacing:8px}
-.quote{background:rgba(255,215,0,0.08);border-right:4px solid #ffd700;padding:18px 22px;border-radius:12px;margin:20px 0;font-style:italic;color:#ffed4e}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0}
-.stat-box{background:rgba(0,0,0,0.3);border:1px solid rgba(255,215,0,0.15);border-radius:14px;padding:16px;text-align:center}
-.stat-box b{display:block;font-size:28px;color:#ffd700} .stat-box span{font-size:11px;opacity:0.6}
-@media(max-width:700px){.hero h1{font-size:36px}.article img{height:250px}.article-body{padding:20px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.hero h1{font-size:34px}.hero{height:50vh;min-height:320px}}
 </style>
 </head>
 <body>
 <div class="hero">
-<img class="bg" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg">
 <div class="top-nav">
-<div class="logo">🔵 BARCA FAMILY 🔴</div>
+<div class="logo">🔵 <span>BARCA</span> FAMILY 🔴</div>
 </div>
 <div class="hero-content">
 <div class="zakhrafa">✦ ━━━━ ❖ ━━━━ ✦</div>
 <h1>كامب نو<br><span>حكايات لا تنتهي</span></h1>
 <div class="zakhrafa">✦ ━━━━ ❖ ━━━━ ✦</div>
-<div class="sub">۞ من 1899 إلى اليوم - كل المقالات مفتوحة - scroll واقرأ مباشرة ۞</div>
+<div class="sub">۞ بدون صورة الملعب - خلفية نظيفة فخمة - مقالات مفتوحة ۞</div>
 </div>
 </div>
 
 <div class="container">
-
 <div class="toc">
-<h3>✦ فهرس المقالات - اضغط وانتقل مباشرة ✦</h3>
-<a href="#flick">🔥 1. كيف أنقذ فليك برشلونة من 8-2 إلى 4-0 في البرنابيو؟</a>
-<a href="#1899">۞ 2. 1899: سويسري فقير يؤسس برشلونة بـ11 لاعب</a>
-<a href="#remontada">❖ 3. ريمونتادا 6-1 ضد باريس - المستحيل حدث</a>
-<a href="#messi">👑 4. ميسي من 1.40م إلى أفضل لاعب في التاريخ</a>
-<a href="#lamasia">۞ 5. لاماسيا - 20 سرير يصنع أساطير العالم</a>
-<a href="#sextuple">❖ 6. السداسية 2009 - 6 بطولات في سنة واحدة</a>
-<a href="#yamal">👑 7. يامال 304 - من أفقر حي إلى نجم اليورو</a>
+<h3>✦ فهرس المقالات ✦</h3>
+<a href="#flick">🔥 كيف أنقذ فليك برشلونة من 8-2 إلى 4-0؟</a>
+<a href="#messi">👑 ميسي من 1.40م إلى أفضل لاعب</a>
+<a href="#remontada">❖ ريمونتادا 6-1 ضد باريس</a>
+<a href="#lamasia">۞ لاماسيا - 20 سرير يصنع أساطير العالم</a>
 </div>
 
-<!-- مقال 1 -->
 <div class="article" id="flick">
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg">
 <div class="article-body">
-<div class="article-badge">🔥 الأكثر قراءة - فليك 2024-25</div>
+<div class="article-badge">🔥 فليك 2024-25</div>
 <h2>كيف أنقذ هانزي فليك برشلونة في 9 أشهر؟ من 8-2 إلى 4-0 في البرنابيو</h2>
-<div class="article-meta"><span>⏱️ 8 دقائق</span><span>👁️ 24K قراءة</span><span>📅 2024-25</span></div>
 <p>في 29 مايو 2024 الساعة 11 مساءً، كان خوان لابورتا يجلس في مكتبه في كامب نو وحيداً. أمامه ورقة ديون 1.2 مليار يورو، وبرشلونة خسر الليغا بفارق 10 نقاط عن ريال مدريد، وخرج من الأبطال 4-1 ضد باريس سان جيرمان في مونتجويك. الجماهير تصرخ "لابورتا استقيل". في تلك اللحظة رن هاتفه... ديكو: "لقيت الرجل... ألماني مجنون اسمه هانزي فليك..."
 
 هل تتذكر 14 أغسطس 2020؟ برشلونة 2 - بايرن ميونخ 8 في لشبونة ربع نهائي الأبطال. من كان مدرب بايرن؟ نعم... فليك نفسه! نفس الرجل اللي دمر برشلونة 8-2 هو اللي جاء لينقذه 4 سنوات بعدها.
@@ -83,75 +115,41 @@ body{background:#04081a;color:#fff;font-family:'Amiri','Cairo',Tahoma;line-heigh
 1. أعاد الثقة للشباب: يامال 17 سنة صار أساسي، كوبارسي 17 سنة صار قلب دفاع، كاسادو 21 سنة صار قائد، فيرمين 12 هدف، بالدي عاد للحياة.
 2. ضغط عالي مجنون: برشلونة يستحوذ 70% ويضغط في ملعب الخصم حتى الدقيقة 95.
 3. هجوم لا يرحم: 102 هدف في الليغا! ليفا 42 هدف، رافينيا 34، يامال 18 هدف 21 أسيست.
-4. شخصية: يركب دراجة كل صباح في شوارع برشلونة، يشرب قهوة مع العمال.
 
-النتائج:
 26 أكتوبر 2024: ريال مدريد 0 - برشلونة 4 في البرنابيو! ليفا هدفين، يامال هدف، رافينيا هدف.
 12 يناير 2025: برشلونة 5 - ريال مدريد 2 نهائي السوبر في جدة!
 26 أبريل 2025: برشلونة 3 - ريال مدريد 2 نهائي كأس الملك!
 الليغا: 88 نقطة! بطل!
 
 جماهير كامب نو تسميه "بابا فليك". ليس لأنه أب، بل لأنه يعطي الأمان.</p>
-<div class="stats">
-<div class="stat-box"><b>4-0</b><span>برنابيو</span></div>
-<div class="stat-box"><b>5-2</b><span>سوبر</span></div>
-<div class="stat-box"><b>3-2</b><span>كأس ملك</span></div>
-<div class="stat-box"><b>102</b><span>هدف</span></div>
-</div>
 </div>
 </div>
 
 <div class="divider">✦ ━━━ ❖ ━━━ ✦</div>
 
-<div class="article" id="1899">
+<div class="article" id="messi">
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg">
 <div class="article-body">
-<div class="article-badge">۞ التاريخ - 1899</div>
-<h2>1899: كيف أسس سويسري فقير نادي برشلونة بـ11 لاعب؟</h2>
-<div class="article-meta"><span>⏱️ 6 دقائق</span><span>👁️ 18K</span><span>📅 1899</span></div>
-<p>22 أكتوبر 1899: إعلان صغير في صحيفة "لوس ديبورتيس" في برشلونة: "صديقنا هانز غامبر، من قسم كرة القدم في جمعية الرياضة، يريد تأسيس نادي كرة قدم. كل من يريد المشاركة، فليأت إلى مكتب الصحيفة مساء الثلاثاء".
+<div class="article-badge">👑 الأساطير - ميسي</div>
+<h2>ميسي: من طفل طوله 1.40م إلى أفضل لاعب في التاريخ</h2>
+<p>11 سنة: ليونيل ميسي طوله 1.40م فقط. الأطباء: نقص هرمون نمو، يحتاج 1000 دولار شهرياً لمدة 3 سنوات. أبوه خورخي عامل مصنع حديد لا يملك 100 دولار. ريفر بليت الأرجنتيني رفض: "قصير جداً".
 
-من هو هانز غامبر؟ سويسري ولد 22 نوفمبر 1877 في وينترتور سويسرا. أبوه تاجر، أمه يهودية. جاء برشلونة 1898 للعمل محاسب. يحب كرة القدم. كان يلعب وحيداً في الشارع.
+14 ديسمبر 2000: مطعم في روزاريو. كارليس ريكساش المدير الرياضي لبرشلونة جاء ليشاهد لاعب آخر. شاهد ميسي يسجل هدفين يراوغ 6. اتصل فوراً. لا يوجد ورق؟ كتب على منديل ورقي: "أريد أن أوقع مع ليونيل ميسي تحت مسؤوليتي".
 
-29 نوفمبر 1899: في صالة جمناسيو سولي، اجتمع 11 رجل: غامبر و8 سويسريين وإنجليزيان وكتالوني واحد. أسسوا "Foot-Ball Club Barcelona". أول رئيس والتر وايلد إنجليزي. أول مباراة 8 ديسمبر 1899 خسروا 1-0 ضد فريق إنجليز.
+17 فبراير 2001: ميسي وصل برشلونة 13 سنة. سكن لاماسيا 20 ولد. يبكي كل ليل يريد أمه. أول سنة 38 هدف 30 مباراة.
 
-غامبر لعب 48 مباراة سجل 120 هدف! كان مهاجم. مات منتحراً 30 يوليو 1930 بسبب ديون. ترك نادياً أصبح أكثر من مجرد نادي.
+778 مباراة 672 هدف 10 ليغا 4 أبطال 7 كرات ذهبية. 2022 كأس العالم قطر.
 
-<div class="quote">قال غامبر: "برشلونة ليس نادي كرة قدم فقط، هو شعور، هو عائلة".</div>
-
-هذا هو تاريخ برشلونة... بدأ بإعلان صغير في صحيفة.</p>
-</div>
-</div>
-
-<div class="divider">✦ ━━━ ❖ ━━━ ✦</div>
-
-<div class="article" id="remontada">
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg">
-<div class="article-body">
-<div class="article-badge">❖ الانجازات - ريمونتادا 6-1</div>
-<h2>6-1: ريمونتادا التاريخ - كيف عاد برشلونة من 4-0 إلى 6-1 ضد باريس؟</h2>
-<div class="article-meta"><span>⏱️ 7 دقائق</span><span>👁️ 32K</span><span>📅 8 مارس 2017</span></div>
-<p>14 فبراير 2017: حديقة الأمراء باريس. باريس سان جيرمان 4 - برشلونة 0. دي ماريا هدفين، دراكسلر، كافاني. برشلونة ميت. الصحف: "برشلونة انتهى". بيكيه قال بعد المباراة: "لا يمكن العودة".
-
-لكن لويس إنريكي قال في المؤتمر: "إذا سجلوا 4، نحن نسجل 6".
-
-8 مارس 2017: كامب نو 96,290 متفرج. الدقيقة 3: سواريز 1-0. الدقيقة 40: كورزاوا بالخطأ 2-0. الدقيقة 50: ميسي ركلة جزاء 3-0. الدقيقة 62: كافاني 3-1. انتهى؟ لا.
-
-الدقيقة 88: نيمار فاول خرافي 4-1. الدقيقة 90+1: نيمار ركلة جزاء 5-1. الدقيقة 90+5: سيرجي روبرتو 6-1!!!!!
-
-كامب نو انفجر! المعلق: "إنها معجزة! معجزة! معجزة!"
-
-نيمار بكى. ميسي قفز على الجماهير. إنريكي سقط على الأرض.
-
-هذه هي برشلونة... لا تستسلم أبداً.</p>
+من 1.40م إلى 1.70م... من منديل إلى كأس العالم...</p>
 </div>
 </div>
 
 </div>
 
-<div style="text-align:center;padding:50px 20px;background:linear-gradient(145deg,#151b3d,#0e1230);border-top:2px solid #a50044;margin-top:40px">
+<div style="text-align:center;padding:40px 20px;background:linear-gradient(145deg,#151b3d,#0e1230);border-top:2px solid #a50044;margin-top:40px">
 <div class="zakhrafa">✦ ━━━━ ❖ ━━━━ ✦</div>
-<h3 style="font-family:'Amiri';font-size:26px;color:#ffd700">۞ عائلة برشلونة - أكثر من مجرد نادي ۞</h3>
+<h3 style="font-family:'Amiri';font-size:22px;color:#ffd700">۞ عائلة برشلونة - أكثر من مجرد نادي ۞</h3>
+<p style="margin-top:10px;opacity:0.5;font-size:12px">بدون صورة ملعب كامب نو في الأعلى - خلفية نظيفة</p>
 </div>
 
 </body>
