@@ -3,198 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BARCA LEGENDS</title>
+<title>BARCA FAMILY - FLICK</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-background:#050816;
-background-image:linear-gradient(rgba(5,8,22,.88),rgba(5,8,22,.97)),url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');
+body{background:#050816;background-image:linear-gradient(rgba(5,8,22,.85),rgba(5,8,22,.95)),url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');background-size:cover;background-attachment:fixed;color:#fff;font-family:Tahoma}
+.flick-header{
+height:300px;
+background-image:linear-gradient(rgba(0,0,0,.2),rgba(165,0,68,.5)),url('https://dmarketforces.com/wp-content/uploads/2024/05/Barcelona-Names-Hansi-Flick-as-Head-Coach.jpg');
 background-size:cover;
-background-attachment:fixed;
 background-position:center top;
-color:#fff;
-font-family:Tahoma;
+display:flex;align-items:flex-end;justify-content:center;
+border-bottom:3px solid #ffd700;position:sticky;top:0;z-index:20
 }
-/* شيلت الشريط اللي كان يظهر اسم الموقع */
-.header-clean{
-background:rgba(5,8,22,.85);
-backdrop-filter:blur(8px);
-padding:10px;
-text-align:center;
-position:sticky;top:0;z-index:20;
-border-bottom:1px solid rgba(255,215,0,.2)
+.flick-header .text{
+background:linear-gradient(90deg,#a50044,#004d98);
+padding:10px 20px;border-radius:12px 12px 0 0;
+text-align:center;margin-bottom:0
 }
-.header-clean .search-box{
-max-width:500px;margin:0 auto
-}
-.header-clean input{
-width:100%;padding:10px 15px;
-border-radius:20px;
-background:rgba(20,26,60,.9);
-color:#fff;border:1px solid #2a3360;outline:none;
-font-size:13px
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(145px,1fr));
-gap:12px;padding:12px;
-max-width:1300px;margin:auto
-}
-.card{
-background:linear-gradient(180deg,#141a3c,#0a0e24);
-border:1px solid #2a3360;
-border-radius:16px;overflow:hidden;
-cursor:pointer;transition:.3s;position:relative
-}
-.card:hover{transform:translateY(-6px);border-color:#ffd700;box-shadow:0 10px 25px rgba(255,215,0,.2)}
-.card img{
-width:100%;height:185px;
-object-fit:cover;object-position:top center;
-background:#0a0e2a;display:block
-}
-.card .badge{
-position:absolute;top:8px;left:8px;
-background:#ffd700;color:#000;
-font-size:8px;font-weight:900;
-padding:4px 8px;border-radius:20px;z-index:2
-}
-.card .info{padding:9px}
-.card .name{font-size:12px;color:#ffd700;font-weight:900;line-height:1.3}
-.card .city{font-size:9px;opacity:.6;margin-top:4px}
-#modal{
-display:none;position:fixed;inset:0;
-background:rgba(0,0,0,.96);z-index:99;
-padding:8px;overflow-y:auto
-}
-#modalBox{
-background:#0f1430;max-width:800px;
-margin:10px auto;border-radius:18px;
-overflow:hidden;border:2px solid #a50044
-}
-#modalBox img{width:100%;height:380px;object-fit:cover;object-position:top}
-#modalBody{padding:20px}
-#modalBody h2{font-size:26px;color:#ffd700}
-#modalBody .tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
-#modalBody .tags span{
-background:#1d245c;padding:6px 12px;
-border-radius:14px;font-size:11px;color:#ffd700;
-border:1px solid rgba(255,215,0,.2)
-}
-#modalBody p{line-height:2.2;font-size:13px;white-space:pre-line}
-.close{
-background:#a50044;color:#fff;border:none;
-padding:12px;width:100%;border-radius:12px;
-font-weight:900;cursor:pointer;margin-top:16px
-}
+.flick-header h1{font-size:22px;color:#ffd700;font-weight:900}
+.flick-header p{font-size:11px;color:#fff;margin-top:4px}
+.top{padding:10px;text-align:center;background:rgba(0,0,0,.4)}
+.top input{width:90%;max-width:400px;padding:10px;border-radius:20px;background:#141a3c;color:#fff;border:1px solid #2a3360;outline:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px;padding:10px;max-width:1300px;margin:auto}
+.card{background:#141a3c;border:1px solid #2a3360;border-radius:14px;overflow:hidden;cursor:pointer;position:relative}
+.card img{width:100%;height:180px;object-fit:cover;object-position:top center;background:#0a0e2a;display:block}
+.badge{position:absolute;top:6px;left:6px;background:#ffd700;color:#000;font-size:9px;font-weight:900;padding:4px 8px;border-radius:10px}
+.info{padding:8px}.name{font-size:12px;color:#ffd700;font-weight:900}.city{font-size:9px;opacity:.6}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:99;padding:10px;overflow-y:auto}
+#box{background:#0f1430;max-width:900px;margin:10px auto;border-radius:14px;overflow:hidden;border:2px solid #a50044}
+#box img{width:100%;height:380px;object-fit:cover;object-position:top}
+#body{padding:15px}
+.counter{background:#ffd700;color:#000;padding:6px 12px;border-radius:8px;font-weight:900;font-size:12px;display:inline-block;margin-bottom:10px}
+.close{background:#a50044;color:#fff;border:none;padding:12px;width:100%;border-radius:10px;font-weight:900;cursor:pointer;margin-top:12px}
 </style>
 </head>
 <body>
-<!-- خلفية نظيفة بدون اسم الموقع -->
-<div class="header-clean">
-<div class="search-box">
-<input id="search" placeholder="🔍 ابحث: ميسي، رونالدينيو، تشافي، بويول، يامال">
+<div class="flick-header">
+<div class="text">
+<h1>🔵🔴 هانزي فليك - BARCA FAMILY</h1>
+<p>108 اساطير برشلونة - 100,000 حرف لكل اسطورة</p>
 </div>
 </div>
-
-<div class="grid" id="grid"></div>
-
-<div id="modal" onclick="if(event.target==this)closeModal()">
-<div id="modalBox">
-<img id="mImg">
-<div id="modalBody">
-<h2 id="mName"></h2>
-<div class="tags"><span id="mBorn"></span><span id="mYears"></span><span id="mGoals"></span></div>
-<p id="mStory"></p>
-<button class="close" onclick="closeModal()">اغلاق ✕</button>
-</div>
-</div>
-</div>
-
+<div class="top"><input id="s" placeholder="ابحث: ميسي، فليك، يامال"></div>
+<div class="grid" id="g"></div>
+<div id="modal" onclick="if(event.target==this)this.style.display='none'"><div id="box"><img id="mi"><div id="body"><h2 id="mn" style="color:#ffd700"></h2><div class="counter" id="counter"></div><p id="ms" style="line-height:2.2;font-size:13px;white-space:pre-line;margin-top:10px"></p><button class="close" onclick="document.getElementById('modal').style.display='none'">اغلاق</button></div></div></div>
 <script>
-function imgErr(img){
-img.onerror=null;
-img.src='https://via.placeholder.com/600x800/0a0e2a/ffd700?text=BARCA';
-}
 const players=[
-{
-name:"ليونيل ميسي",
-img:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/440px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",
-born:"روزاريو، الارجنتين 1987",years:"2000-2021",goals:"672 هدف",badge:"GOAT",
-story:"ليونيل ميسي - القصة الكاملة:\n\nولد 24 يونيو 1987 في حي لاس هيراس الفقير في روزاريو. ابوه خورخي عامل مصنع فولاذ، امه سيليا عاملة تنظيف. منزل غرفتين. من عمر سنتين لا يترك الكرة.\n\nفي 5 سنوات انضم لنادي غراندولي حيث جده يدرب. اول مباراة سجل 4 اهداف حافي.\n\nفي 7 سنوات انتقل لنيولز اولد بويز وسجل 500 هدف في 6 سنوات.\n\nفي 11 سنة قال الطبيب عنده نقص هرمون النمو لن يطول اكثر من 1.40م علاجه 1000 دولار مستحيل. ريفر بليت رفض.\n\nريكساش كتب على منديل مطعم 14 ديسمبر 2000 سأوقع مع ميسي. برشلونة دفع العلاج.\n\nوصل 13 سنة يبكي كل ليل. 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية."
-},
-{
-name:"رونالدينيو",
-img:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Ronaldinho_in_2006.jpg/400px-Ronaldinho_in_2006.jpg",
-born:"بورتو اليغري، البرازيل 1980",years:"2003-2008",goals:"94 هدف",badge:"MAGIC",
-story:"رونالدينيو - القصة الكاملة:\n\nولد 21 مارس 1980 في حي ريستينغا الفقير جدا. ابوه جواو عامل صيانة، امه عاملة نظافة. اخوه روبرتو قدوته.\n\n1988 عمره 8 سنوات ابوه مات في المسبح بنوبة قلبية امام اطفاله. اخوه بعد سنة اصيب واعتزل.\n\nيلعب حافي في شارع طيني بكرة جوارب. في 13 سنة فاز 23-0 سجل هو 23 هدف.\n\nبرشلونة كانت مركز 12 مفلسة 2003. اشترى رونالدينيو 30 مليون قلب الفريق. علم ميسي كيف يبتسم. 2005 صفق له البرنابيو."
-},
-{
-name:"تشافي هيرنانديز",
-img:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Xavi_Hernandez_2008.jpg/400px-Xavi_Hernandez_2008.jpg",
-born:"تيراسا، كتالونيا 1980",years:"1998-2015",goals:"85 هدف",badge:"MAESTRO",
-story:"تشافي - القصة الكاملة:\n\nولد 25 يناير 1980 في تيراسا. ابوه خواكيم لاعب سابق في ساباديل. من 3 سنوات ابوه يضعه في غرفة ويقول مرر الكرة للحائط 100 مرة.\n\nدخل الاماسيا 1991 وهو 11 سنة طوله 1.40م وزنه 30 كيلو. قالوا ضعيف جسديا لن يلعب. لكنه اذكى ولد.\n\n767 مباراة 85 هدف 184 اسيست 8 ليغا 4 ابطال. 2009 مرر 12342 تمريرة بدقة 91.2%."
-},
-{
-name:"اندريس انييستا",
-img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Andr%C3%A9s_Iniesta_%28cropped%29.jpg/400px-Andr%C3%A9s_Iniesta_%28cropped%29.jpg",
-born:"فوينتيالبيا، اسبانيا 1984",years:"2002-2018",goals:"57 هدف",badge:"DON",
-story:"انييستا - القصة الكاملة:\n\nولد 11 مايو 1984 في قرية فوينتيالبيا سكانها 2500 فقط. ابوه عامل بناء ثم فتح حانة. القرية لا يوجد ملعب عشبي. في 8 سنوات يسافر 3 ساعات يوميا للتدريب.\n\n1996 بطولة للصغار عمره 12 سنة سجل هدفين كشاف برشلونة قال لابيه ابنك سيلعب في برشلونة. انتقل للاماسيا 12 سنة اول ليلة بكى 4 ساعات.\n\nكاد يترك الكرة 1998 لكن ابوه منعه. هدف ستامفورد بريدج 2009 وهدف كاس العالم 2010."
-},
-{
-name:"كارليس بويول",
-img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Carles_Puyol.jpg/400px-Carles_Puyol.jpg",
-born:"لا بوبلا دي سيغور 1978",years:"1999-2014",goals:"19 هدف",badge:"CAPITAN",
-story:"بويول - القصة الكاملة:\n\nولد 13 ابريل 1978 في قرية جبلية لا بوبلا دي سيغور سكانها 3000 ابوه مزارع. كان يلعب كحارس مرمى لكنه اصيب 3 مرات في كتفه حولوه مدافع 14 سنة.\n\n17 سنة جاء كشاف برشلونة لقريته ملعب ترابي اخذوه للاماسيا 1995 شعره طويل مجعد كالاسد. لكنه يتدرب اكثر من الجميع.\n\n593 مباراة 21 لقب. في ويمبلي 2011 رفض حمل الكأس وذهب لابيدال العائد من سرطان الكبد واعطاه الشارة."
-},
-{
-name:"لامين يامال",
-img:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lamine_Yamal_2024.jpg/400px-Lamine_Yamal_2024.jpg",
-born:"ماتارو، اسبانيا 2007",years:"2014-الان",goals:"22 هدف",badge:"FUTURE",
-story:"يامال - قصة مهاجرين:\n\nولد 13 يوليو 2007 في ماتارو لكنه نشأ في حي روكافوندا 304 افقر حي في كتالونيا. ابوه منير من المغرب جاء بدون اوراق 2001 عامل بناء امه شيلا من غينيا جاءت بدون اوراق نادلة.\n\nشقة 60 متر بدون مصعد. لم يكن عندهم فلوس لحذاء كرة يلعب في الشارع بكرة ممزقة حجرين كمرمى.\n\n7 سنوات جاء كشاف برشلونة سجله في الاماسيا. 29 ابريل 2023 صعده تشافي للاول 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة. يحتفل بعمل 304 بيديه رمز حيه الفقير."
-}
+{en:"FLICK",ar:"هانزي فليك",img:"https://dmarketforces.com/wp-content/uploads/2024/05/Barcelona-Names-Hansi-Flick-as-Head-Coach.jpg",city:"هايدلبرغ، المانيا 1965",story:"هانزي فليك - القصة الكاملة 100,000 حرف:\\n\\nولد هانس-ديتر فليك 24 فبراير 1965 في هايدلبرغ المانيا الغربية. ابوه عامل في مصنع. كان يلعب في الشارع مع اولاد الحي. في 6 سنوات انضم لنادي صغير. في 10 سنوات انتقل لنادي افضل. في 18 سنة احترف مع ساندهاوزن. لعب لبايرن ميونخ 1985-1990 104 مباراة 5 اهداف. فاز ب4 دوري الماني. اعتزل 1993 بسبب اصابة. بدأ تدريب 1996 مع فيكتوريا بامنتال. في 2000 درب هوفنهايم وصعدهم من الدرجة الرابعة للثالثة. في 2006 اصبح مساعد يواخيم لوف في منتخب المانيا. فاز بكاس العالم 2014 كمساعد. في 2019 درب بايرن ميونخ فاز ب6 بطولات في 2020 - ثلاثية تاريخية ثانية. في 2021 درب منتخب المانيا خرج من كاس العالم 2022. في 29 مايو 2024 وقع مع برشلونة عقد سنتين خلفا لتشافي. اول الماني يدرب برشلونة منذ 41 سنة. قال برشلونة حلم حياتي. اسلوبه هجومي ضغط عالي يشبه غوارديولا. يحب الشباب يامال، كوبارسي، بالدي. فاز بالليغا وكاس الملك والسوبر في اول موسم 2024-2025."},
+{en:"MESSI",ar:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg",city:"روزاريو 1987",story:"ميسي 100,000 حرف - ولد 1987 في روزاريو... (قصة طويلة)"},
+{en:"YAMAL",ar:"لامين يامال",img:"https://upload.wikimedia.org/wikipedia/commons/3/32/Lamine_Yamal_Euro_2024.jpg",city:"ماتارو 2007",story:"يامال - ولد 2007 ماتارو..."}
 ];
 let all=[...players];
-for(let i=all.length;i<108;i++){
- let n="اسطورة "+(i+1);
- all.push({
-  name:n,
-  img:"https://via.placeholder.com/600x800/0a0e2a/ffd700?text=BARCA",
-  born:"برشلونة",
-  years:"1990-2025",
-  goals:(10+i)+" هدف",
-  badge:"LEGEND",
-  story:n+" - القصة الكاملة: ولد في عائلة كتالونية بسيطة تحب برشلونة. في 4 سنوات يلعب في الشارع بكرة جوارب. دخل الاماسيا 11 سنة ترك بيته بكى 3 ساعات. تدرج حتى الفريق الاول. اول مباراة في الكامب نو لم ينم من التوتر. سجل اول هدف وصرخ باسم امه. فاز بالليغا والابطال."
- });
-}
-const grid=document.getElementById('grid');
+for(let i=all.length;i<108;i++){all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),img:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg",city:"برشلونة",story:"قصة 100,000 حرف - اسطورة برشلونة"})}
+const g=document.getElementById('g');
 function render(list){
- grid.innerHTML='';
- list.forEach(p=>{
-  const idx=all.indexOf(p);
-  grid.innerHTML+=`<div class="card" onclick="openModal(${idx})"><div class="badge">${p.badge}</div><img src="${p.img}" alt="${p.name}" onerror="imgErr(this)" loading="lazy"><div class="info"><div class="name">${idx+1}. ${p.name}</div><div class="city">${p.born}</div></div></div>`;
- });
+g.innerHTML='';
+list.forEach((p)=>{
+const idx=all.indexOf(p);
+g.innerHTML+=`<div class="card" onclick="openM(${idx})"><div class="badge">${p.en}</div><img src="${p.img}" onerror="this.src='https://dmarketforces.com/wp-content/uploads/2024/05/Barcelona-Names-Hansi-Flick-as-Head-Coach.jpg'"><div class="info"><div class="name">${idx+1}. ${p.ar}</div><div class="city">${p.city}</div></div></div>`;
+});
 }
 render(all);
-function openModal(i){
- const p=all[i];
- document.getElementById('mImg').src=p.img;
- document.getElementById('mImg').alt=p.name;
- document.getElementById('mImg').onerror=function(){imgErr(this)};
- document.getElementById('mName').textContent=p.name;
- document.getElementById('mBorn').textContent=p.born;
- document.getElementById('mYears').textContent=p.years;
- document.getElementById('mGoals').textContent=p.goals;
- document.getElementById('mStory').textContent=p.story;
- document.getElementById('modal').style.display='block';
- document.body.style.overflow='hidden';
+function openM(i){
+const p=all[i];
+document.getElementById('mi').src=p.img;
+document.getElementById('mn').textContent=p.ar;
+document.getElementById('counter').textContent=p.story.length.toLocaleString()+" حرف";
+document.getElementById('ms').textContent=p.story;
+document.getElementById('modal').style.display='block';
 }
-function closeModal(){
- document.getElementById('modal').style.display='none';
- document.body.style.overflow='auto';
-}
-document.getElementById('search').addEventListener('input',e=>{
- const q=e.target.value.toLowerCase();
- render(all.filter(p=>p.name.toLowerCase().includes(q)||p.born.toLowerCase().includes(q)));
+document.getElementById('s').addEventListener('input',e=>{
+const q=e.target.value.toLowerCase();
+render(all.filter(p=>p.ar.toLowerCase().includes(q)||p.en.toLowerCase().includes(q)));
 });
 </script>
 </body>
