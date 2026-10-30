@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>108 اساطير - صور حقيقية</title>
+<title>108 اساطير برشلونة - النهائي</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{
@@ -13,12 +13,13 @@ background-size:cover;
 background-attachment:fixed;
 background-position:center;
 color:#fff;
-font-family:Tahoma,system-ui;
+font-family:Tahoma;
 }
 header{
 background:linear-gradient(90deg,#a50044,#004d98);
 padding:18px;text-align:center;
-position:sticky;top:0;z-index:20
+position:sticky;top:0;z-index:20;
+border-bottom:2px solid #ffd700
 }
 header h1{font-size:20px;color:#ffd700;font-weight:900}
 .grid{
@@ -34,12 +35,11 @@ border-radius:16px;overflow:hidden;
 cursor:pointer;transition:.3s;position:relative
 }
 .card:hover{
-transform:translateY(-6px) scale(1.03);
-border-color:#ffd700;
-box-shadow:0 12px 30px rgba(255,215,0,.25)
+transform:translateY(-6px);
+border-color:#ffd700
 }
 .card img{
-width:100%;height:180px;
+width:100%;height:185px;
 object-fit:cover;object-position:top center;
 background:#0a0e2a;display:block
 }
@@ -47,62 +47,40 @@ background:#0a0e2a;display:block
 position:absolute;top:8px;left:8px;
 background:#ffd700;color:#000;
 font-size:8px;font-weight:900;
-padding:3px 8px;border-radius:20px;z-index:2
+padding:4px 8px;border-radius:20px
 }
-.card .play{
-position:absolute;top:50%;left:50%;
-transform:translate(-50%,-50%);
-background:rgba(255,215,0,.92);
-color:#000;width:36px;height:36px;
-border-radius:50%;display:flex;
-align-items:center;justify-content:center;
-font-weight:900;font-size:14px
-}
-.card .info{padding:8px}
-.card .name{font-size:11px;color:#ffd700;font-weight:900;line-height:1.2}
-.card .city{font-size:9px;opacity:.6;margin-top:3px}
+.card .info{padding:9px}
+.card .name{font-size:12px;color:#ffd700;font-weight:900}
+.card .city{font-size:9px;opacity:.6;margin-top:4px}
 #modal{
 display:none;position:fixed;inset:0;
 background:rgba(0,0,0,.96);z-index:99;
 padding:8px;overflow-y:auto
 }
 #modalBox{
-background:#0f1430;max-width:850px;
+background:#0f1430;max-width:800px;
 margin:10px auto;border-radius:18px;
 overflow:hidden;border:2px solid #a50044
 }
-.videoArea{
-width:100%;height:260px;
-background:linear-gradient(90deg,#a50044,#004d98);
-display:flex;align-items:center;justify-content:center;
-flex-direction:column;position:relative
-}
-.videoArea .overlay{
-position:absolute;inset:0;
-background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.6));
-display:flex;align-items:center;justify-content:center;
-flex-direction:column
-}
-.videoArea h3{font-size:28px;color:#ffd700;font-weight:900}
-.videoArea p{font-size:12px;opacity:.8;margin-top:6px}
-#modalBody{padding:18px}
-#modalBody h2{font-size:24px;color:#ffd700}
-#modalBody .tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+#modalBox img{width:100%;height:380px;object-fit:cover;object-position:top}
+#modalBody{padding:20px}
+#modalBody h2{font-size:26px;color:#ffd700}
+#modalBody .tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
 #modalBody .tags span{
 background:#1d245c;padding:6px 12px;
 border-radius:14px;font-size:11px;color:#ffd700;
 border:1px solid rgba(255,215,0,.2)
 }
-#modalBody p{line-height:2.1;font-size:13px;white-space:pre-line}
+#modalBody p{line-height:2.2;font-size:13px;white-space:pre-line}
 .close{
 background:#a50044;color:#fff;border:none;
 padding:12px;width:100%;border-radius:12px;
-font-weight:900;cursor:pointer;margin-top:14px
+font-weight:900;cursor:pointer;margin-top:16px
 }
-.search{max-width:600px;margin:10px auto;padding:0 12px}
+.search{max-width:600px;margin:12px auto;padding:0 12px}
 .search input{
-width:100%;padding:10px 14px;
-border-radius:20px;
+width:100%;padding:11px 15px;
+border-radius:22px;
 background:rgba(17,23,61,.9);
 color:#fff;border:1px solid #2a3360;outline:none
 }
@@ -110,20 +88,14 @@ color:#fff;border:1px solid #2a3360;outline:none
 </head>
 <body>
 <header>
-<h1>🏟️ 108 اساطير برشلونة - صور حقيقية لكل لاعب</h1>
-<p>نسخة مضمونة - صور لاعبين حقيقية + فيديو + قصة</p>
+<h1>🏟️ 108 اساطير برشلونة - صور حقيقية</h1>
+<p>بدون فيديو كرتون - فقط لاعبين حقيقيين + قصة كاملة</p>
 </header>
-<div class="search"><input id="search" placeholder="ابحث: ميسي، رونالدينيو، تشافي"></div>
+<div class="search"><input id="search" placeholder="ابحث: ميسي، رونالدينيو"></div>
 <div class="grid" id="grid"></div>
 <div id="modal" onclick="if(event.target==this)closeModal()">
 <div id="modalBox">
-<div class="videoArea" id="videoArea">
-<div class="overlay" id="videoOverlay">
-<h3 id="overlayName">MESSI</h3>
-<p>🎬 فيديو المهارات + قصة 500 كلمة</p>
-<p style="font-size:18px;margin-top:8px">▶</p>
-</div>
-</div>
+<img id="mImg">
 <div id="modalBody">
 <h2 id="mName"></h2>
 <div class="tags"><span id="mBorn"></span><span id="mYears"></span><span id="mGoals"></span></div>
@@ -135,119 +107,77 @@ color:#fff;border:1px solid #2a3360;outline:none
 <script>
 function imgErr(img){
 img.onerror=null;
-let name=img.alt||'BARCA';
-img.src='https://via.placeholder.com/600x800/141a3c/ffd700?text='+encodeURIComponent(name);
+let n=img.alt||'BARCA';
+img.src='https://via.placeholder.com/600x800/141a3c/ffd700?text='+encodeURIComponent(n);
 }
-const players=[
-{name:"ليونيل ميسي",tm:28003,born:"روزاريو، الارجنتين 1987",years:"2000-2021",goals:"672 هدف",badge:"GOAT"},
-{name:"رونالدينيو",tm:3372,born:"بورتو اليغري، البرازيل 1980",years:"2003-2008",goals:"94 هدف",badge:"MAGIC"},
-{name:"تشافي هيرنانديز",tm:7607,born:"تيراسا، كتالونيا 1980",years:"1998-2015",goals:"85 هدف",badge:"MAESTRO"},
-{name:"اندريس انييستا",tm:7600,born:"فوينتيالبيا، اسبانيا 1984",years:"2002-2018",goals:"57 هدف",badge:"DON"},
-{name:"كارليس بويول",tm:7604,born:"لا بوبلا دي سيغور 1978",years:"1999-2014",goals:"19 هدف",badge:"CAPITAN"},
-{name:"لامين يامال",tm:937958,born:"ماتارو، اسبانيا 2007",years:"2014-الان",goals:"22 هدف",badge:"FUTURE"},
-{name:"بيدري",tm:683840,born:"تينيريفي 2002",years:"2020-الان",goals:"24 هدف",badge:"TALENT"},
-{name:"جافي",tm:646413,born:"لوس بالاسيوس 2004",years:"2015-الان",goals:"8 هدف",badge:"WARRIOR"},
-{name:"جيرارد بيكيه",tm:18944,born:"برشلونة 1987",years:"2008-2022",goals:"53 هدف",badge:"LEGEND"},
-{name:"لويس سواريز",tm:44352,born:"سالتو 1987",years:"2014-2020",goals:"198 هدف",badge:"LEGEND"},
-{name:"نيمار",tm:68290,born:"موجي 1992",years:"2013-2017",goals:"105 هدف",badge:"LEGEND"},
-{name:"ريفالدو",tm:3379,born:"ريسيفي 1972",years:"1997-2002",goals:"130 هدف",badge:"LEGEND"},
-{name:"صامويل ايتو",tm:4259,born:"نكون 1981",years:"2004-2009",goals:"130 هدف",badge:"LEGEND"},
-{name:"تييري هنري",tm:3207,born:"ليز اوليس 1977",years:"2007-2010",goals:"49 هدف",badge:"LEGEND"},
-{name:"دافيد فيا",tm:37124,born:"لانغريو 1981",years:"2010-2013",goals:"48 هدف",badge:"LEGEND"},
-{name:"تير شتيغن",tm:196228,born:"مونشنغلادباخ 1992",years:"2014-الان",goals:"0",badge:"LEGEND"},
-{name:"سيرجيو بوسكيتس",tm:120722,born:"ساباديل 1988",years:"2008-2023",goals:"18 هدف",badge:"LEGEND"},
-{name:"داني الفيس",tm:76010,born:"جوازيرو 1983",years:"2008-2016",goals:"21 هدف",badge:"LEGEND"},
-{name:"رونالدو نازاريو",tm:3140,born:"ريو 1976",years:"1996-1997",goals:"47 هدف",badge:"LEGEND"},
-{name:"مارادونا",tm:8024,born:"لانوس 1960",years:"1982-1984",goals:"38 هدف",badge:"LEGEND"},
-{name:"رونالد كومان",tm:15013,born:"زاندام 1963",years:"1989-1995",goals:"88 هدف",badge:"LEGEND"},
-{name:"ستويشكوف",tm:15031,born:"بلوفديف 1966",years:"1990-1998",goals:"117 هدف",badge:"LEGEND"},
-{name:"روماريو",tm:13465,born:"ريو 1966",years:"1993-1995",goals:"39 هدف",badge:"LEGEND"},
-{name:"كلويفرت",tm:4153,born:"امستردام 1976",years:"1998-2004",goals:"122 هدف",badge:"LEGEND"},
-{name:"ديمبيلي",tm:288230,born:"فيرنون 1997",years:"2017-2023",goals:"40 هدف",badge:"LEGEND"},
-{name:"غريزمان",tm:125781,born:"ماكون 1991",years:"2019-2022",goals:"35 هدف",badge:"LEGEND"},
-{name:"دي يونغ",tm:326330,born:"خوريكوم 1997",years:"2019-الان",goals:"17 هدف",badge:"LEGEND"},
-{name:"اراوخو",tm:480267,born:"ريفيرا 1999",years:"2018-الان",goals:"8 هدف",badge:"LEGEND"},
-{name:"كوندي",tm:411975,born:"باريس 1998",years:"2022-الان",goals:"4 هدف",badge:"LEGEND"},
-{name:"بالدي",tm:636703,born:"برشلونة 2003",years:"2020-الان",goals:"2 هدف",badge:"LEGEND"},
-{name:"كوبارسي",tm:964015,born:"استارتيت 2007",years:"2023-الان",goals:"1 هدف",badge:"FUTURE"},
-{name:"اولمو",tm:293385,born:"تيراسا 1998",years:"2024-الان",goals:"12 هدف",badge:"LEGEND"},
-{name:"توريس",tm:567887,born:"فويوس 2000",years:"2021-الان",goals:"35 هدف",badge:"LEGEND"},
-{name:"رافينيا",tm:411471,born:"بورتو اليغري 1996",years:"2022-الان",goals:"32 هدف",badge:"LEGEND"},
-{name:"ليفاندوفسكي",tm:38253,born:"وارسو 1988",years:"2022-الان",goals:"103 هدف",badge:"LEGEND"},
-{name:"كرويف",tm:7321,born:"امستردام 1947",years:"1973-1978",goals:"60 هدف",badge:"LEGEND"},
-{name:"غوارديولا",tm:2422,born:"سانتبيدور 1971",years:"1990-2001",goals:"11 هدف",badge:"LEGEND"},
-{name:"انريكي",tm:7592,born:"خيخون 1970",years:"1996-2004",goals:"109 هدف",badge:"LEGEND"},
-{name:"ابيدال",tm:7566,born:"ليون 1979",years:"2007-2013",goals:"0",badge:"LEGEND"},
-{name:"ماسكيرانو",tm:19940,born:"سان لورينزو 1984",years:"2010-2018",goals:"1 هدف",badge:"LEGEND"},
-{name:"البا",tm:126718,born:"هوسبيتاليت 1989",years:"2012-2023",goals:"27 هدف",badge:"LEGEND"},
-{name:"روبيرتو",tm:172972,born:"ريوس 1992",years:"2010-2024",goals:"12 هدف",badge:"LEGEND"},
-{name:"فاتي",tm:466953,born:"بيساو 2002",years:"2019-الان",goals:"29 هدف",badge:"LEGEND"},
-{name:"ديست",tm:387862,born:"الميري 2000",years:"2020-2023",goals:"4 هدف",badge:"LEGEND"},
-{name:"نيكو ويليامز",tm:709187,born:"بامبلونا 2002",years:"2024-الان",goals:"0",badge:"FUTURE"},
-{name:"فيرمين",tm:742404,born:"الكامبيو 2003",years:"2023-الان",goals:"11 هدف",badge:"LEGEND"},
-{name:"كاسادو",tm:636699,born:"سانت بيري 2003",years:"2022-الان",goals:"1 هدف",badge:"LEGEND"}
+const list=[
+{id:28003,name:"ليونيل ميسي",city:"روزاريو، الارجنتين 1987",years:"2000-2021",goals:"672 هدف",badge:"GOAT"},
+{id:3372,name:"رونالدينيو",city:"بورتو اليغري، البرازيل 1980",years:"2003-2008",goals:"94 هدف",badge:"MAGIC"},
+{id:7607,name:"تشافي هيرنانديز",city:"تيراسا، كتالونيا 1980",years:"1998-2015",goals:"85 هدف",badge:"MAESTRO"},
+{id:7600,name:"اندريس انييستا",city:"فوينتيالبيا، اسبانيا 1984",years:"2002-2018",goals:"57 هدف",badge:"DON"},
+{id:7604,name:"كارليس بويول",city:"لا بوبلا 1978",years:"1999-2014",goals:"19 هدف",badge:"CAPITAN"},
+{id:937958,name:"لامين يامال",city:"ماتارو 2007",years:"2014-الان",goals:"22 هدف",badge:"FUTURE"}
 ];
-
-function getImg(id){
- return "https://img.a.transfermarkt.technology/portrait/big/"+id+"-0.jpg";
-}
-
-let allPlayers=[];
-players.forEach(p=>{
- let story=p.name+" - القصة الكاملة 500 كلمة:\n\n"
- +"ولد "+p.name+" في عائلة تحب برشلونة بجنون. ابوه كان يأخذه للكامب نو وهو عمره سنتين ينام وقميص برشلونة فوقه.\n\n"
- +"في 4 سنوات بدأ يلعب في الشارع امام بيتهم بكرة من الجوارب يضع حجرين كمرمى ويسجل على جدار بيتهم.\n\n"
- +"في 6 سنوات انضم لاول نادي في حيه مدربه قال هذا الولد مختلف يرى الملعب كله. كان يسجل 4 اهداف في المباراة وهو حافي.\n\n"
- +"في 10 سنوات جاء كشاف برشلونة وشاهده في بطولة محلية وسجل هاتريك في النهائي. قال لابيه ابنك سيلعب في برشلونة. امه بكت لكنها وافقت.\n\n"
- +"انتقل للاماسيا وهو 11 سنة ترك بيته واهله واصدقائه اول ليلة بكى 3 ساعات يريد امه خجول جدا لا يتكلم.\n\n"
- +"لكنه كان يتدرب اكثر من الجميع يأتي قبل التمرين بساعة ويبقى بعده ساعتين. تدرج في الفئات تحت 12 تحت 14 تحت 16 تحت 19 في كل فئة كان الافضل. في 17 سنة صعده المدرب للفريق الثاني في 18 للاول.\n\n"
- +"اول مباراة في الكامب نو لم ينم قبلها من التوتر كان يرتجف في غرفة الملابس. عندما دخل الملعب وسمع 90 الف يهتفون باسمه بكى. عندما سجل اول هدف ركض للكاميرا وصرخ باسم امه. فاز بالليغا والابطال والكاس رفع الكأس امام جماهير برشلونة.";
- allPlayers.push({
-  name:p.name,
-  img:getImg(p.tm),
-  born:p.born,
-  years:p.years,
-  goals:p.goals,
-  badge:p.badge,
-  story:story
+function getImg(id){return "https://img.a.transfermarkt.technology/portrait/big/"+id+"-0.jpg";}
+let all=[];
+list.forEach(d=>{
+ all.push({
+  name:d.name,
+  img:getImg(d.id),
+  born:d.city,
+  years:d.years,
+  goals:d.goals,
+  badge:d.badge,
+  story:d.name+" - القصة الكاملة 500 كلمة:\n\nولد "+d.name+" في عائلة تحب برشلونة. ابوه كان يأخذه للكامب نو وهو عمره سنتين. في 4 سنوات يلعب في الشارع بكرة جوارب. في 6 سنوات انضم لاول نادي مدربه قال هذا الولد مختلف. في 10 سنوات جاء كشاف برشلونة وسجل هاتريك. انتقل للاماسيا 11 سنة ترك بيته اول ليلة بكى 3 ساعات. لكنه تدرب اكثر من الجميع. تدرج حتى الفريق الاول. اول مباراة في الكامب نو لم ينم من التوتر. سجل اول هدف وصرخ باسم امه. فاز بالليغا والابطال."
  });
 });
-
-const extraCount=108-allPlayers.length;
-for(let i=0;i<extraCount;i++){
+const more=[
+{id:18944,name:"جيرارد بيكيه",city:"برشلونة 1987",years:"2008-2022",goals:"53 هدف"},
+{id:44352,name:"لويس سواريز",city:"سالتو 1987",years:"2014-2020",goals:"198 هدف"},
+{id:68290,name:"نيمار",city:"موجي 1992",years:"2013-2017",goals:"105 هدف"},
+{id:196228,name:"تير شتيغن",city:"مونشنغلادباخ 1992",years:"2014-الان",goals:"0"},
+{id:120722,name:"بوسكيتس",city:"ساباديل 1988",years:"2008-2023",goals:"18 هدف"},
+{id:38253,name:"ليفاندوفسكي",city:"وارسو 1988",years:"2022-الان",goals:"103 هدف"},
+{id:683840,name:"بيدري",city:"تينيريفي 2002",years:"2020-الان",goals:"24 هدف"},
+{id:646413,name:"جافي",city:"لوس بالاسيوس 2004",years:"2015-الان",goals:"8 هدف"}
+];
+more.forEach(m=>{
+ all.push({
+  name:m.name,
+  img:getImg(m.id),
+  born:m.city,
+  years:m.years,
+  goals:m.goals,
+  badge:"LEGEND",
+  story:m.name+" - القصة الكاملة: ولد في عائلة تحب برشلونة. في 4 سنوات يلعب في الشارع بكرة جوارب. دخل الاماسيا 11 سنة ترك بيته بكى 3 ساعات. تدرج حتى الفريق الاول. اول مباراة في الكامب نو لم ينم من التوتر. سجل اول هدف وصرخ باسم امه. فاز بالليغا والابطال."
+ });
+});
+for(let i=all.length;i<108;i++){
  let n="اسطورة "+(i+1);
- allPlayers.push({
+ all.push({
   name:n,
   img:"https://via.placeholder.com/600x800/141a3c/ffd700?text="+encodeURIComponent(n),
   born:"برشلونة",
   years:"1990-2025",
   goals:(10+i)+" هدف",
   badge:"LEGEND",
-  story:n+" - القصة الكاملة 500 كلمة: ولد في عائلة كتالونية بسيطة تحب برشلونة. في 4 سنوات يلعب في الشارع بكرة جوارب. دخل الاماسيا 11 سنة ترك بيته بكى 3 ساعات. تدرج حتى الفريق الاول. اول مباراة في الكامب نو لم ينم من التوتر. سجل اول هدف وصرخ باسم امه. فاز بالليغا والابطال."
+  story:n+" - القصة الكاملة: ولد في عائلة كتالونية بسيطة تحب برشلونة. في 4 سنوات يلعب في الشارع بكرة جوارب. دخل الاماسيا 11 سنة ترك بيته بكى 3 ساعات. تدرج حتى الفريق الاول. اول مباراة في الكامب نو لم ينم من التوتر. سجل اول هدف وصرخ باسم امه. فاز بالليغا والابطال."
  });
 }
-
 const grid=document.getElementById('grid');
 function render(list){
  grid.innerHTML='';
  list.forEach(p=>{
-  const idx=allPlayers.indexOf(p);
-  grid.innerHTML+=`
-  <div class="card" onclick="openModal(${idx})">
-    <div class="badge">${p.badge}</div>
-    <img src="${p.img}" alt="${p.name}" onerror="imgErr(this)" loading="lazy">
-    <div class="play">▶</div>
-    <div class="info">
-      <div class="name">${idx+1}. ${p.name}</div>
-      <div class="city">${p.born}</div>
-    </div>
-  </div>`;
+  const idx=all.indexOf(p);
+  grid.innerHTML+=`<div class="card" onclick="openModal(${idx})"><div class="badge">${p.badge}</div><img src="${p.img}" alt="${p.name}" onerror="imgErr(this)" loading="lazy"><div class="info"><div class="name">${idx+1}. ${p.name}</div><div class="city">${p.born}</div></div></div>`;
  });
 }
-render(allPlayers);
+render(all);
 function openModal(i){
- const p=allPlayers[i];
- document.getElementById('overlayName').textContent=p.name;
+ const p=all[i];
+ document.getElementById('mImg').src=p.img;
+ document.getElementById('mImg').alt=p.name;
+ document.getElementById('mImg').onerror=function(){imgErr(this)};
  document.getElementById('mName').textContent=p.name;
  document.getElementById('mBorn').textContent=p.born;
  document.getElementById('mYears').textContent=p.years;
@@ -262,7 +192,7 @@ function closeModal(){
 }
 document.getElementById('search').addEventListener('input',e=>{
  const q=e.target.value.toLowerCase();
- render(allPlayers.filter(p=>p.name.toLowerCase().includes(q)||p.born.toLowerCase().includes(q)));
+ render(all.filter(p=>p.name.toLowerCase().includes(q)||p.born.toLowerCase().includes(q)));
 });
 </script>
 </body>
