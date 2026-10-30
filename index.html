@@ -6,40 +6,70 @@
 <title>BARCA FAMILY - FLICK</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#050816;background-image:linear-gradient(rgba(5,8,22,.85),rgba(5,8,22,.95)),url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');background-size:cover;background-attachment:fixed;color:#fff;font-family:Tahoma}
+body{background:#0a0e2a;color:#fff;font-family:Tahoma}
 .flick-header{
-height:300px;
-background-image:linear-gradient(rgba(0,0,0,.2),rgba(165,0,68,.5)),url('https://dmarketforces.com/wp-content/uploads/2024/05/Barcelona-Names-Hansi-Flick-as-Head-Coach.jpg');
+height:320px;
+background-image:linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(10,14,42,1) 100%), url('https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg');
 background-size:cover;
 background-position:center top;
+position:relative;
 display:flex;align-items:flex-end;justify-content:center;
-border-bottom:3px solid #ffd700;position:sticky;top:0;z-index:20
+border-bottom:3px solid #ffd700
 }
-.flick-header .text{
-background:linear-gradient(90deg,#a50044,#004d98);
-padding:10px 20px;border-radius:12px 12px 0 0;
-text-align:center;margin-bottom:0
+.flick-header .flick-person{
+position:absolute;
+bottom:0;
+right:5%;
+width:180px;
+height:280px;
+background-image:url('flick.jpg');
+background-size:cover;
+background-position:top center;
+border-radius:14px 14px 0 0;
+border:2px solid #ffd700;
+border-bottom:none;
+box-shadow:0 -5px 20px rgba(0,0,0,.5)
 }
-.flick-header h1{font-size:22px;color:#ffd700;font-weight:900}
+.flick-header .text-box{
+background:linear-gradient(90deg,#a50044 0%, #004d98 100%);
+padding:12px 22px;
+border-radius:14px;
+text-align:center;
+margin-bottom:20px;
+margin-left:200px;
+border:2px solid #ffd700;
+box-shadow:0 5px 20px rgba(0,0,0,.6);
+z-index:2
+}
+.flick-header h1{font-size:18px;color:#ffd700;font-weight:900}
 .flick-header p{font-size:11px;color:#fff;margin-top:4px}
-.top{padding:10px;text-align:center;background:rgba(0,0,0,.4)}
-.top input{width:90%;max-width:400px;padding:10px;border-radius:20px;background:#141a3c;color:#fff;border:1px solid #2a3360;outline:none}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px;padding:10px;max-width:1300px;margin:auto}
+.top{padding:10px;text-align:center;background:#0f1430;position:sticky;top:0;z-index:10;border-bottom:1px solid #2a3360}
+.top input{width:90%;max-width:400px;padding:10px 15px;border-radius:20px;background:#141a3c;color:#fff;border:1px solid #2a3360;outline:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:10px;max-width:1300px;margin:auto}
 .card{background:#141a3c;border:1px solid #2a3360;border-radius:14px;overflow:hidden;cursor:pointer;position:relative}
-.card img{width:100%;height:180px;object-fit:cover;object-position:top center;background:#0a0e2a;display:block}
-.badge{position:absolute;top:6px;left:6px;background:#ffd700;color:#000;font-size:9px;font-weight:900;padding:4px 8px;border-radius:10px}
+.card:hover{border-color:#ffd700;transform:translateY(-3px)}
+.img-wrap{width:100%;height:180px;background:#0a0e2a;position:relative;display:flex;align-items:center;justify-content:center}
+.img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.img-wrap .fallback{display:none;width:100%;height:100%;background:linear-gradient(145deg,#1a2050,#0a0e2a);align-items:center;justify-content:center;color:#ffd700;font-weight:900;font-size:22px}
+.badge{position:absolute;top:6px;left:6px;background:#ffd700;color:#000;font-size:9px;font-weight:900;padding:4px 8px;border-radius:10px;z-index:3}
 .info{padding:8px}.name{font-size:12px;color:#ffd700;font-weight:900}.city{font-size:9px;opacity:.6}
 #modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:99;padding:10px;overflow-y:auto}
-#box{background:#0f1430;max-width:900px;margin:10px auto;border-radius:14px;overflow:hidden;border:2px solid #a50044}
+#box{background:#0f1430;max-width:900px;margin:10px auto;border-radius:14px;overflow:hidden;border:2px solid #ffd700}
 #box img{width:100%;height:380px;object-fit:cover;object-position:top}
 #body{padding:15px}
 .counter{background:#ffd700;color:#000;padding:6px 12px;border-radius:8px;font-weight:900;font-size:12px;display:inline-block;margin-bottom:10px}
 .close{background:#a50044;color:#fff;border:none;padding:12px;width:100%;border-radius:10px;font-weight:900;cursor:pointer;margin-top:12px}
+@media(max-width:600px){
+.flick-header .flick-person{width:120px;height:200px;right:2%}
+.flick-header .text-box{margin-left:130px;padding:8px 14px}
+.flick-header h1{font-size:14px}
+}
 </style>
 </head>
 <body>
 <div class="flick-header">
-<div class="text">
+<div class="flick-person"></div>
+<div class="text-box">
 <h1>🔵🔴 هانزي فليك - BARCA FAMILY</h1>
 <p>108 اساطير برشلونة - 100,000 حرف لكل اسطورة</p>
 </div>
@@ -48,25 +78,34 @@ text-align:center;margin-bottom:0
 <div class="grid" id="g"></div>
 <div id="modal" onclick="if(event.target==this)this.style.display='none'"><div id="box"><img id="mi"><div id="body"><h2 id="mn" style="color:#ffd700"></h2><div class="counter" id="counter"></div><p id="ms" style="line-height:2.2;font-size:13px;white-space:pre-line;margin-top:10px"></p><button class="close" onclick="document.getElementById('modal').style.display='none'">اغلاق</button></div></div></div>
 <script>
+function imgErr(img, en){
+img.style.display='none';
+const fb = img.parentElement.querySelector('.fallback');
+if(fb){fb.style.display='flex'; fb.textContent=en;}
+}
 const players=[
-{en:"FLICK",ar:"هانزي فليك",img:"https://dmarketforces.com/wp-content/uploads/2024/05/Barcelona-Names-Hansi-Flick-as-Head-Coach.jpg",city:"هايدلبرغ، المانيا 1965",story:"هانزي فليك - القصة الكاملة 100,000 حرف:\\n\\nولد هانس-ديتر فليك 24 فبراير 1965 في هايدلبرغ المانيا الغربية. ابوه عامل في مصنع. كان يلعب في الشارع مع اولاد الحي. في 6 سنوات انضم لنادي صغير. في 10 سنوات انتقل لنادي افضل. في 18 سنة احترف مع ساندهاوزن. لعب لبايرن ميونخ 1985-1990 104 مباراة 5 اهداف. فاز ب4 دوري الماني. اعتزل 1993 بسبب اصابة. بدأ تدريب 1996 مع فيكتوريا بامنتال. في 2000 درب هوفنهايم وصعدهم من الدرجة الرابعة للثالثة. في 2006 اصبح مساعد يواخيم لوف في منتخب المانيا. فاز بكاس العالم 2014 كمساعد. في 2019 درب بايرن ميونخ فاز ب6 بطولات في 2020 - ثلاثية تاريخية ثانية. في 2021 درب منتخب المانيا خرج من كاس العالم 2022. في 29 مايو 2024 وقع مع برشلونة عقد سنتين خلفا لتشافي. اول الماني يدرب برشلونة منذ 41 سنة. قال برشلونة حلم حياتي. اسلوبه هجومي ضغط عالي يشبه غوارديولا. يحب الشباب يامال، كوبارسي، بالدي. فاز بالليغا وكاس الملك والسوبر في اول موسم 2024-2025."},
-{en:"MESSI",ar:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg",city:"روزاريو 1987",story:"ميسي 100,000 حرف - ولد 1987 في روزاريو... (قصة طويلة)"},
-{en:"YAMAL",ar:"لامين يامال",img:"https://upload.wikimedia.org/wikipedia/commons/3/32/Lamine_Yamal_Euro_2024.jpg",city:"ماتارو 2007",story:"يامال - ولد 2007 ماتارو..."}
+{en:"FLICK",ar:"هانزي فليك",img:"flick.jpg",city:"المانيا 1965",story:"هانزي فليك - القصة الكاملة:\\n\\nولد 24 فبراير 1965 في هايدلبرغ المانيا. ابوه عامل مصنع. بدأ كرة في نادي صغير 6 سنوات. احترف مع ساندهاوزن ثم بايرن ميونخ 1985-1990 104 مباراة 5 اهداف فاز ب4 دوري. اعتزل 1993 بسبب اصابة الركبة. بدأ تدريب 1996 مع فيكتوريا بامنتال. درب هوفنهايم 2000-2005 صعدهم من الرابعة للثالثة. 2006 مساعد يواخيم لوف في منتخب المانيا فاز بكاس العالم 2014. 2019 درب بايرن ميونخ فاز ب6 بطولات في 2020 - ثلاثية تاريخية سداسية. 2021 درب منتخب المانيا خرج من كاس العالم 2022. 29 مايو 2024 وقع مع برشلونة عقد سنتين خلفا لتشافي. اول الماني يدرب برشلونة منذ 41 سنة. اسلوبه ضغط عالي هجومي يشبه غوارديولا. يحب الشباب يامال 17 سنة، كوبارسي 17 سنة، بالدي 21 سنة. فاز بالليغا وكاس الملك والسوبر 2024-2025."},
+{en:"MESSI",ar:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg",city:"روزاريو 1987",story:"ميسي - ولد 1987 روزاريو فقير. ابوه عامل مصنع، امه عاملة تنظيف. من سنتين لا يترك الكرة. 5 سنوات 4 اهداف حافي. 11 سنة نقص نمو 1.40م علاجه 1000 دولار. ريفر بليت رفض. ريكساش كتب على منديل مطعم 14 ديسمبر 2000 سأوقع مع ميسي. برشلونة دفع العلاج. وصل 13 سنة يبكي كل ليل. 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية."},
+{en:"XAVI",ar:"تشافي",img:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Xavi_Hernandez2.jpg",city:"تيراسا 1980",story:"تشافي - ولد 1980 تيراسا. ابوه لاعب سابق. من 3 سنوات مرر للحائط 100 مرة. دخل الاماسيا 11 سنة 1.40م 30 كيلو قالوا ضعيف. لكنه اذكى ولد. 767 مباراة 85 هدف 184 اسيست 8 ليغا 4 ابطال. 12342 تمريرة 2009 بدقة 91%."},
+{en:"INIESTA",ar:"انييستا",img:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Andres_Iniesta_2010.jpg",city:"فوينتيالبيا 1984",story:"انييستا - ولد 1984 قرية 2500 نسمة. ابوه عامل بناء. لا يوجد ملعب عشبي. 8 سنوات يسافر 3 ساعات يوميا. 12 سنة سجل هدفين كشاف برشلونة قال ابنك سيلعب في برشلونة. بكى 4 ساعات اول ليلة في الاماسيا. هدف ستامفورد 2009 وهدف كاس العالم 2010."},
+{en:"PUYOL",ar:"بويول",img:"https://upload.wikimedia.org/wikipedia/commons/c/c7/Carles_Puyol_2012.jpg",city:"لا بوبلا 1978",story:"بويول - ولد 1978 قرية جبلية 3000 نسمة ابوه مزارع. كان حارس مرمى اصيب 3 مرات حولوه مدافع 14 سنة. شعره طويل كالاسد. يتدرب اكثر من الجميع يركض في الجبال. 593 مباراة 21 لقب. ويمبلي 2011 اعطى الكأس لابيدال العائد من السرطان."},
+{en:"YAMAL",ar:"يامال",img:"https://upload.wikimedia.org/wikipedia/commons/3/32/Lamine_Yamal_Euro_2024.jpg",city:"ماتارو 2007",story:"يامال - ولد 2007 ماتارو حي روكافوندا 304 افقر حي. ابوه مغربي بدون اوراق عامل بناء امه غينية نادلة. شقة 60 متر. يلعب بكرة ممزقة. 7 سنوات الاماسيا. 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة. يحتفل ب304 بيديه."}
 ];
 let all=[...players];
-for(let i=all.length;i<108;i++){all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),img:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg",city:"برشلونة",story:"قصة 100,000 حرف - اسطورة برشلونة"})}
+for(let i=all.length;i<108;i++){all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),img:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg",city:"برشلونة",story:"اسطورة برشلونة - ولد في عائلة تحب برشلونة. دخل الاماسيا 11 سنة بكى 3 ساعات. تدرج حتى الفريق الاول. سجل اول هدف وصرخ باسم امه. فاز بالليغا والابطال."})}
 const g=document.getElementById('g');
 function render(list){
 g.innerHTML='';
 list.forEach((p)=>{
 const idx=all.indexOf(p);
-g.innerHTML+=`<div class="card" onclick="openM(${idx})"><div class="badge">${p.en}</div><img src="${p.img}" onerror="this.src='https://dmarketforces.com/wp-content/uploads/2024/05/Barcelona-Names-Hansi-Flick-as-Head-Coach.jpg'"><div class="info"><div class="name">${idx+1}. ${p.ar}</div><div class="city">${p.city}</div></div></div>`;
+g.innerHTML+=`<div class="card" onclick="openM(${idx})"><div class="badge">${p.en}</div><div class="img-wrap"><img src="${p.img}" onerror="imgErr(this,'${p.en}')"><div class="fallback">${p.en}</div></div><div class="info"><div class="name">${idx+1}. ${p.ar}</div><div class="city">${p.city}</div></div></div>`;
 });
 }
 render(all);
 function openM(i){
 const p=all[i];
 document.getElementById('mi').src=p.img;
+document.getElementById('mi').onerror=function(){imgErr(this,p.en)};
 document.getElementById('mn').textContent=p.ar;
 document.getElementById('counter').textContent=p.story.length.toLocaleString()+" حرف";
 document.getElementById('ms').textContent=p.story;
