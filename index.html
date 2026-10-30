@@ -3,33 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BARCA FAMILY</title>
+<title>BARCA FAMILY - PRO</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#060a1f;color:#fff;font-family:Tahoma}
-.hero{
-height:75vh;min-height:480px;
-background:linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(6,10,31,0.95)), url('flick.jpg');
-background-size:cover;background-position:center top;
-display:flex;align-items:flex-end;justify-content:center;
-border-bottom:3px solid #a50044
-}
-.hero h1{font-size:38px;font-weight:900;color:#fff;text-shadow:0 4px 20px #000;text-align:center;padding:20px}
-.hero h1 span{color:#ffd700}
+body{background:#04081a;color:#fff;font-family:Tahoma}
+.hero{position:relative;height:82vh;min-height:500px;background:linear-gradient(to bottom, rgba(0,0,0,0.1), #04081a), url('flick.jpg');background-size:cover;background-position:center top;display:flex;align-items:flex-end;justify-content:center;border-bottom:3px solid #a50044}
+.hero-content{text-align:center;padding:24px;margin-bottom:30px;background:linear-gradient(135deg, rgba(165,0,68,0.85), rgba(0,77,152,0.85));backdrop-filter:blur(12px);border-radius:20px;border:2px solid #ffd700;box-shadow:0 20px 60px rgba(0,0,0,0.6);width:90%;max-width:700px}
+.hero h1{font-size:36px;font-weight:900;color:#fff} .hero h1 span{color:#ffd700}
+.hero p{font-size:13px;margin-top:8px;opacity:0.9}
 .top{padding:12px;text-align:center;background:#0f1430;position:sticky;top:0;z-index:10;border-bottom:1px solid #2a3360}
 .top input{width:90%;max-width:400px;padding:11px 18px;border-radius:25px;background:#141a3c;color:#fff;border:1px solid #2a3360;outline:none;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:12px;max-width:1300px;margin:auto}
-.card{background:#141a3c;border:1px solid #2a3360;border-radius:16px;overflow:hidden;cursor:pointer;position:relative;transition:0.3s}
-.card:hover{transform:translateY(-5px);border-color:#ffd700}
-.img-wrap{width:100%;height:190px;background:#0a0e2a;position:relative;display:flex;align-items:center;justify-content:center}
-.img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
-.fb{display:none;width:100%;height:100%;align-items:center;justify-content:center;font-weight:900;font-size:22px;color:#fff}
-.fb-messi{background:linear-gradient(135deg,#00bcd4,#004d98)}
-.fb-yamal{background:linear-gradient(135deg,#ff4081,#a50044)}
-.fb-xavi{background:linear-gradient(135deg,#4caf50,#0a4d2a)}
-.fb-iniesta{background:linear-gradient(135deg,#ff9800,#a50044)}
-.fb-puyol{background:linear-gradient(135deg,#9c27b0,#4a1942)}
-.fb-barca{background:linear-gradient(135deg,#151b3d,#0f1430)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;padding:12px;max-width:1300px;margin:auto}
+.card{background:#141a3c;border:1px solid #2a3360;border-radius:16px;overflow:hidden;cursor:pointer;position:relative;transition:0.35s}
+.card:hover{transform:translateY(-6px);border-color:#ffd700;box-shadow:0 12px 30px rgba(255,215,0,0.2)}
+.img-wrap{width:100%;height:195px;background:#0a0e2a;position:relative;display:flex;align-items:center;justify-content:center}
+.img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.fb{display:none;width:100%;height:100%;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:22px}
+.fb-flick{background:linear-gradient(135deg,#151b3d,#0f1430)} .fb-messi{background:linear-gradient(135deg,#00acc1,#004d98)} .fb-yamal{background:linear-gradient(135deg,#ec407a,#a50044)} .fb-xavi{background:linear-gradient(135deg,#66bb6a,#1b5e20)} .fb-iniesta{background:linear-gradient(135deg,#ffa726,#a50044)} .fb-puyol{background:linear-gradient(135deg,#ab47bc,#4a148c)} .fb-barca{background:linear-gradient(135deg,#1a237e,#0f1430)}
 .badge{position:absolute;top:7px;left:7px;background:#ffd700;color:#000;font-size:9px;font-weight:900;padding:4px 9px;border-radius:10px;z-index:3}
 .info{padding:9px}.name{font-size:12px;color:#ffd700;font-weight:900}.city{font-size:10px;opacity:.6}
 #modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.97);z-index:99;padding:12px;overflow-y:auto}
@@ -40,60 +30,43 @@ border-bottom:3px solid #a50044
 </style>
 </head>
 <body>
-
 <div class="hero">
+<div class="hero-content">
 <h1>🔵🔴 هانزي فليك<br><span>عائلة برشلونة</span></h1>
+<p>108 أساطير برشلونة • تصميم احترافي عالمي</p>
 </div>
-
+</div>
 <div class="top"><input id="s" placeholder="ابحث: ميسي، يامال، تشافي"></div>
 <div class="grid" id="g"></div>
-
-<div id="modal" onclick="if(event.target==this)this.style.display='none'">
-<div id="box"><img id="mi"><div id="body"><h2 id="mn"></h2><p id="ms"></p><button class="close" onclick="document.getElementById('modal').style.display='none'">اغلاق</button></div></div>
-</div>
-
+<div id="modal" onclick="if(event.target==this)this.style.display='none'"><div id="box"><img id="mi"><div id="body"><h2 id="mn"></h2><p id="ms"></p><button class="close" onclick="document.getElementById('modal').style.display='none'">اغلاق</button></div></div></div>
 <script>
-function err(img, type){
+function err(img){
 img.style.display='none';
 const fb = img.parentElement.querySelector('.fb');
 if(fb){fb.style.display='flex';}
 }
-
 const players=[
-{en:"FLICK",ar:"هانزي فليك",img:"flick.jpg",type:"fb-barca",city:"المانيا 1965",story:"هانزي فليك - ولد 1965 هايدلبرغ المانيا. 1985 بايرن ميونخ 104 مباراة 4 دوري. اعتزل 1993 ركبة. درب هوفنهايم صعدهم من الرابعة للثانية. 2006 مساعد لوف فاز كاس العالم 2014. 2019 بايرن مؤقت فاز 6 بطولات في 9 اشهر 8-2 برشلونة. 2021 منتخب المانيا. 29 مايو 2024 وقع برشلونة اول الماني منذ 41 سنة. فاز 4-0 برنابيو 5-2 سوبر 3-2 كاس الملك نهائي. الليغا 88 نقطة كاس الملك سوبر نصف نهائي ابطال خسر انتر 6-7. ليفا 42 هدف رافينيا 34 يامال 18 هدف 21 اسيست."},
-{en:"MESSI",ar:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg",type:"fb-messi",city:"روزاريو 1987",story:"ميسي - 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية. ولد 1987 روزاريو فقير. نقص نمو 1.40م. ريكساش كتب على منديل مطعم 14 ديسمبر 2000 سأوقع مع ميسي. برشلونة دفع العلاج."},
-{en:"YAMAL",ar:"لامين يامال",img:"https://upload.wikimedia.org/wikipedia/commons/3/32/Lamine_Yamal_Euro_2024.jpg",type:"fb-yamal",city:"ماتارو 2007",story:"يامال - 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة. ولد 2007 ماتارو حي روكافوندا 304 افقر حي. ابوه مغربي امه غينية. يحتفل ب304 بيديه."},
-{en:"XAVI",ar:"تشافي",img:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Xavi_Hernandez2.jpg",type:"fb-xavi",city:"تيراسا 1980",story:"تشافي - 767 مباراة 85 هدف 184 اسيست 8 ليغا 4 ابطال. ولد 1980 تيراسا ابوه لاعب سابق. من 3 سنوات مرر للحائط 100 مرة. 12342 تمريرة 2009 بدقة 91%."},
-{en:"INIESTA",ar:"انييستا",img:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Andres_Iniesta_2010.jpg",type:"fb-iniesta",city:"فوينتيالبيا 1984",story:"انييستا - هدف ستامفورد 2009 وهدف كاس العالم 2010. ولد 1984 قرية 2500 نسمة ابوه عامل بناء. 8 سنوات يسافر 3 ساعات يوميا. 12 سنة سجل هدفين كشاف برشلونة."},
-{en:"PUYOL",ar:"بويول",img:"https://upload.wikimedia.org/wikipedia/commons/c/c7/Carles_Puyol_2012.jpg",type:"fb-puyol",city:"لا بوبلا 1978",story:"بويول - 593 مباراة 21 لقب. ويمبلي 2011 اعطى الكأس لابيدال العائد من السرطان. ولد 1978 قرية جبلية 3000 نسمة ابوه مزارع كان حارس مرمى اصيب 3 مرات حولوه مدافع."}
+{en:"FLICK",ar:"هانزي فليك",img:"flick.jpg",cls:"fb-flick",city:"المانيا 1965",story:"هانزي فليك - ولد 1965 هايدلبرغ المانيا. 1985 بايرن 104 مباراة 4 دوري. اعتزل 1993 ركبة. درب هوفنهايم صعدهم من الرابعة للثانية. 2006 مساعد لوف كاس العالم 2014. 2019 بايرن مؤقت فاز 6 بطولات في 9 اشهر 8-2 برشلونة. 2021 منتخب المانيا. 29 مايو 2024 وقع برشلونة اول الماني منذ 41 سنة. فاز 4-0 برنابيو 5-2 سوبر 3-2 كاس الملك نهائي. الليغا 88 نقطة كاس الملك سوبر نصف نهائي ابطال خسر انتر 6-7. ليفا 42 رافينيا 34 يامال 18 هدف 21 اسيست."},
+{en:"MESSI",ar:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg",cls:"fb-messi",city:"روزاريو 1987",story:"ميسي - 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية."},
+{en:"YAMAL",ar:"لامين يامال",img:"https://upload.wikimedia.org/wikipedia/commons/3/32/Lamine_Yamal_Euro_2024.jpg",cls:"fb-yamal",city:"ماتارو 2007",story:"يامال - 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة."},
+{en:"XAVI",ar:"تشافي",img:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Xavi_Hernandez2.jpg",cls:"fb-xavi",city:"تيراسا 1980",story:"تشافي - 767 مباراة 85 هدف 184 اسيست 8 ليغا 4 ابطال."},
+{en:"INIESTA",ar:"انييستا",img:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Andres_Iniesta_2010.jpg",cls:"fb-iniesta",city:"فوينتيالبيا 1984",story:"انييستا - هدف ستامفورد 2009 وهدف كاس العالم 2010."},
+{en:"PUYOL",ar:"بويول",img:"https://upload.wikimedia.org/wikipedia/commons/c/c7/Carles_Puyol_2012.jpg",cls:"fb-puyol",city:"لا بوبلا 1978",story:"بويول - 593 مباراة 21 لقب ويمبلي 2011."}
 ];
-
 let all=[...players];
-for(let i=all.length;i<108;i++){
-all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),img:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg",type:"fb-barca",city:"برشلونة",story:"اسطورة برشلونة..."});
-}
-
+for(let i=all.length;i<108;i++){all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),img:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg",cls:"fb-barca",city:"برشلونة",story:"اسطورة برشلونة..."});}
 const g=document.getElementById('g');
 function render(list){
 g.innerHTML='';
 list.forEach((p)=>{
 const idx=all.indexOf(p);
-g.innerHTML+=`<div class="card" onclick="openM(${idx})">
-<div class="badge">${p.en}</div>
-<div class="img-wrap">
-<img src="${p.img}" onerror="err(this)">
-<div class="fb ${p.type}">${p.en.substring(0,5)}</div>
-</div>
-<div class="info"><div class="name">${idx+1}. ${p.ar}</div><div class="city">${p.city}</div></div>
-</div>`;
+g.innerHTML+=`<div class="card" onclick="openM(${idx})"><div class="badge">${p.en}</div><div class="img-wrap"><img src="${p.img}" onerror="err(this)"><div class="fb ${p.cls}">${p.en.substring(0,5)}</div></div><div class="info"><div class="name">${idx+1}. ${p.ar}</div><div class="city">${p.city}</div></div></div>`;
 });
 }
 render(all);
-
 function openM(i){
 const p=all[i];
 document.getElementById('mi').src=p.img;
-document.getElementById('mi').onerror=function(){this.style.display='none';};
 document.getElementById('mn').textContent=p.ar;
 document.getElementById('ms').textContent=p.story;
 document.getElementById('modal').style.display='block';
