@@ -1,1 +1,42 @@
-container:///mnt/data/barca_108_childhood_final.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>108 أساطير برشلونة - من الطفولة</title>
+<style>
+body{background:#060a1f;color:#fff;font-family:system-ui;margin:0}
+header{background:linear-gradient(90deg,#a50044,#004d98);padding:40px 20px;text-align:center;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:32px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:18px;padding:20px;max-width:1400px;margin:auto}
+.card{background:linear-gradient(180deg,#171d44,#0e1330);border-radius:18px;overflow:hidden;border:1px solid #2a3360;cursor:pointer;transition:.4s;animation:float 3.5s infinite alternate}
+.card:hover{transform:translateY(-10px) scale(1.05);border-color:#ff0040}
+.card img{width:100%;height:175px;object-fit:cover;background:#000}
+.card .info{padding:11px;text-align:right}
+.card .name{font-weight:900;font-size:15px}
+.card .birth{font-size:11px;opacity:.7;margin-top:3px}
+@keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-7px)}}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:100;padding:18px;overflow-y:auto}
+#modalBox{background:#121840;max-width:760px;margin:20px auto;border-radius:22px;overflow:hidden;border:2px solid #a50044}
+#modalBox img{width:100%;height:400px;object-fit:cover}
+#modalBody{padding:22px}
+#modalBody h2{margin:0;font-size:28px;color:#ffcc00}
+#modalBody .meta{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+#modalBody .meta span{background:#1d245c;padding:6px 12px;border-radius:20px;font-size:12px}
+#modalBody p{line-height:2;font-size:16px;white-space:pre-line}
+.close{background:#a50044;color:#fff;border:none;padding:13px;width:100%;border-radius:12px;font-weight:900;cursor:pointer;margin-top:16px}
+.search{max-width:650px;margin:20px auto;padding:0 20px}
+.search input{width:100%;padding:14px 18px;border-radius:30px;background:#11173d;color:#fff;border:1px solid #2a3360;font-size:15px}
+</style>
+</head>
+<body>
+<header>
+<h1>108 أساطير برشلونة - من الطفولة إلى المجد</h1>
+<p>اضغط على أي لاعب لقراءة قصته الكاملة منذ الصغر</p>
+</header>
+<div class="search"><input id="search" placeholder="ابحث: ميسي، روزاريو، فقير، شارع، لاماسيا"></div>
+<div class="grid" id="grid"></div>
+<div id="modal" onclick="if(event.target==this)closeModal()"><div id="modalBox"><img id="mImg"><div id="modalBody"><h2 id="mName"></h2><div class="meta"><span id="mBorn"></span><span id="mYears"></span><span id="mGoals"></span></div><p id="mStory"></p><button class="close" onclick="closeModal()">إغلاق ✕</button></div></div></div>
+<script>
+const players=[
+{name:"ليونيل ميسي",img:"https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg",born:"روزاريو 1987",years:"2000-2021",goals:"672 هدف",story:"الطفولة الفقيرة:\nولد في حي فقير، أبوه عامل مصنع فولاذ، أمه عاملة تنظيف. في عمر 3 سنوات ينام والكرة في حضنه.\n\nالمأساة:\nفي 11 سنة قالوا عنده نقص هرمون النمو، لن يطول أكثر من 1.40م، علاجه 1000 دولار شهريا مستحيل. ريفر بليت رفض.\n\nالمعجزة:\nكارليس ريكساش كتب على منديل مطعم
