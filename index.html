@@ -3,51 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BARCA FAMILY - 2M</title>
+<title>BARCA FAMILY - مزخرف موحد</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@800&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#04081a;color:#fff;font-family:Tahoma}
-.hero{height:82vh;min-height:520px;background:linear-gradient(to bottom, rgba(0,0,0,0.1), #04081a), url('flick.jpg');background-size:cover;background-position:center top;display:flex;align-items:flex-end;justify-content:center;border-bottom:4px solid #a50044}
-.hero-content{text-align:center;padding:20px;margin-bottom:30px;background:linear-gradient(135deg, rgba(165,0,68,0.9), rgba(0,77,152,0.9));backdrop-filter:blur(14px);border-radius:20px;border:2px solid #ffd700;width:92%;max-width:750px}
-.hero h1{font-size:34px;font-weight:900;color:#fff} .hero h1 span{color:#ffd700}
-.badge{display:inline-block;background:#ffd700;color:#000;padding:6px 14px;border-radius:20px;font-weight:900;font-size:11px;margin-bottom:10px}
-.stats{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap} .s{background:rgba(0,0,0,0.4);padding:8px 14px;border-radius:10px;min-width:85px;border:1px solid rgba(255,215,0,0.3)} .s b{display:block;color:#ffd700;font-size:17px} .s span{font-size:9px}
-.top{padding:12px;text-align:center;background:#0f1430;position:sticky;top:0;z-index:10;border-bottom:1px solid #2a3360} .top input{width:92%;max-width:420px;padding:11px 18px;border-radius:25px;background:#141a3c;color:#fff;border:1px solid #2a3360;outline:none;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;padding:12px;max-width:1300px;margin:auto}
-.card{background:#141a3c;border:1px solid #2a3360;border-radius:16px;overflow:hidden;cursor:pointer;position:relative;transition:0.3s} .card:hover{transform:translateY(-5px);border-color:#ffd700}
-.img-wrap{width:100%;height:195px;background:#0a0e2a;position:relative;display:flex;align-items:center;justify-content:center} .img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center} .fb{display:none;width:100%;height:100%;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:20px} .fb-f{background:#151b3d} .fb-m{background:#00acc1} .fb-y{background:#ec407a} .fb-x{background:#66bb6a} .fb-i{background:#ffa726} .fb-p{background:#ab47bc} .fb-b{background:#1a237e}
-.badge2{position:absolute;top:7px;left:7px;background:#ffd700;color:#000;font-size:9px;font-weight:900;padding:4px 9px;border-radius:10px;z-index:3}
-.info{padding:9px} .name{font-size:12px;color:#ffd700;font-weight:900} .city{font-size:10px;opacity:.6}
-#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.97);z-index:99;padding:10px;overflow-y:auto} #box{background:#0f1430;max-width:920px;margin:15px auto;border-radius:16px;overflow:hidden;border:2px solid #a50044} #box img{width:100%;height:400px;object-fit:cover;object-position:top} #body{padding:20px} #mn{font-size:26px;color:#ffd700;font-weight:900} #ms{line-height:2.3;font-size:13px;white-space:pre-line;margin-top:12px} .close{background:#a50044;color:#fff;border:none;padding:13px;width:100%;border-radius:10px;font-weight:900;cursor:pointer;margin-top:14px}
+body{background:#04081a;color:#fff;font-family:'Cairo',Tahoma;overflow-x:hidden}
+.hero{position:relative;height:90vh;min-height:620px;overflow:hidden;background:#000}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom, rgba(4,8,26,0.1) 0%, rgba(4,8,26,0.5) 60%, rgba(4,8,26,0.98) 100%)}
+.top-nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 22px}
+.logo{font-family:'Amiri',serif;background:linear-gradient(135deg, rgba(165,0,68,0.9), rgba(0,77,152,0.9));backdrop-filter:blur(12px);padding:10px 18px;border-radius:14px;border:1px solid #ffd700;font-weight:900;font-size:15px;letter-spacing:1px;box-shadow:0 6px 24px rgba(0,0,0,0.5)}
+.logo span{color:#ffd700}
+.live{font-family:'Amiri';background:rgba(0,0,0,0.5);backdrop-filter:blur(10px);border:1px solid rgba(255,215,0,0.3);color:#ffd700;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:900}
+.hero-content{position:absolute;bottom:0;left:0;right:0;z-index:4;padding:36px 22px;text-align:center}
+.zakhrafa{font-family:'Amiri',serif;font-size:22px;color:#ffd700;letter-spacing:4px;margin-bottom:12px;text-shadow:0 2px 10px rgba(255,215,0,0.5)}
+.hero h1{font-family:'Amiri',serif;font-size:52px;font-weight:900;line-height:1.1;text-shadow:0 10px 40px rgba(0,0,0,0.9);letter-spacing:-1px}
+.hero h1 span{color:#ffd700;background:linear-gradient(90deg,#ffd700,#ffed4e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .sub{font-size:15px;margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto;background:rgba(0,0,0,0.45);backdrop-filter:blur(16px);padding:14px 22px;border-radius:14px;border:1px solid rgba(255,215,0,0.2)}
+.search-wrap{position:sticky;top:0;z-index:20;background:rgba(4,8,26,0.96);backdrop-filter:blur(22px);border-bottom:2px solid #a50044;padding:16px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.search-wrap input{width:100%;max-width:520px;padding:13px 24px;border-radius:30px;background:linear-gradient(135deg,#151b3d,#0e1230);color:#fff;border:2px solid #a50044;outline:none;text-align:center;font-family:'Amiri',serif;font-size:14px}
+.search-wrap input:focus{border-color:#ffd700;box-shadow:0 0 20px rgba(255,215,0,0.2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:16px;padding:20px;max-width:1400px;margin:auto}
+.card{
+background:linear-gradient(145deg,#151b3d 0%, #0e1230 50%, #1a1140 100%);
+border:2px solid #a50044;
+border-radius:22px;
+overflow:hidden;
+cursor:pointer;
+position:relative;
+transition:all 0.45s cubic-bezier(0.175,0.885,0.32,1.275);
+box-shadow:0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.card:hover{transform:translateY(-10px) scale(1.02);border-color:#ffd700;box-shadow:0 20px 50px rgba(255,215,0,0.25), 0 0 30px rgba(165,0,68,0.3)}
+.card::before{
+content:'✦ ━━━ ✦';
+position:absolute;top:0;left:0;right:0;
+height:28px;
+background:linear-gradient(90deg,#a50044,#004d98,#a50044);
+display:flex;align-items:center;justify-content:center;
+font-size:10px;letter-spacing:3px;color:#ffd700;
+z-index:3;
+opacity:0;transition:0.3s;
+font-family:'Amiri',serif;
+}
+.card:hover::before{opacity:1}
+.card::after{
+content:'';
+position:absolute;bottom:0;left:0;right:0;height:3px;
+background:linear-gradient(90deg,#a50044,#ffd700,#004d98);
+}
+.img-wrap{width:100%;height:220px;position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0e2a,#151b3d);display:flex;align-items:center;justify-content:center;padding-top:10px}
+.img-wrap::before{
+content:'';
+position:absolute;inset:8px;
+border:1px solid rgba(255,215,0,0.15);
+border-radius:16px;
+pointer-events:none;
+z-index:2;
+}
+.fb{
+width:88%;height:88%;
+display:flex;flex-direction:column;
+align-items:center;justify-content:center;
+color:#fff;font-weight:900;
+background:linear-gradient(145deg,#1a237e 0%, #0d1b4a 30%, #a50044 100%);
+border-radius:18px;
+border:2px solid rgba(255,215,0,0.25);
+box-shadow:inset 0 2px 10px rgba(0,0,0,0.5), 0 6px 20px rgba(0,0,0,0.4);
+position:relative;
+overflow:hidden;
+}
+.fb::before{
+content:'۞';
+position:absolute;top:8px;font-size:18px;color:rgba(255,215,0,0.4);font-family:'Amiri';
+}
+.fb::after{
+content:'━━━ ✦ ━━━';
+position:absolute;bottom:10px;font-size:9px;letter-spacing:2px;color:rgba(255,215,0,0.5);font-family:'Amiri';
+}
+.fb span.en{font-size:26px;letter-spacing:2px;text-shadow:0 3px 10px rgba(0,0,0,0.8)}
+.fb span.ar{font-family:'Amiri',serif;font-size:13px;margin-top:6px;opacity:0.9;color:#ffed4e}
+.badge{
+position:absolute;top:12px;left:12px;
+background:linear-gradient(135deg,#ffd700,#ffed4e);
+color:#000;font-size:9px;font-weight:900;
+padding:6px 12px;border-radius:12px;z-index:4;
+box-shadow:0 3px 12px rgba(0,0,0,0.4);
+font-family:'Cairo';
+border:1px solid rgba(0,0,0,0.1);
+}
+.info{
+padding:14px;
+background:linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
+text-align:center;
+border-top:1px solid rgba(255,215,0,0.1);
+}
+.nm{font-family:'Amiri',serif;font-size:15px;color:#ffd700;font-weight:900;letter-spacing:0.5px}
+.ct{font-family:'Amiri',serif;font-size:11px;opacity:0.7;margin-top:5px;color:#aab}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:100;padding:16px;overflow-y:auto}
+#box{background:linear-gradient(145deg,#0f1430,#080b24);max-width:1000px;margin:20px auto;border-radius:24px;overflow:hidden;border:2px solid #a50044;box-shadow:0 30px 80px rgba(0,0,0,0.9)}
+#box img.topimg{width:100%;height:480px;object-fit:cover;object-position:center}
+#body{padding:28px} #mn{font-family:'Amiri',serif;font-size:34px;color:#ffd700;font-weight:900;text-align:center}
+#mn::before{content:'✦ ';color:#a50044} #mn::after{content:' ✦';color:#004d98}
+#ms{line-height:2.6;font-size:14px;white-space:pre-line;margin-top:18px;opacity:0.95;font-family:'Amiri',serif;text-align:justify;background:rgba(0,0,0,0.3);padding:20px;border-radius:14px;border:1px solid rgba(255,215,0,0.1)}
+.close{font-family:'Amiri',serif;background:linear-gradient(90deg,#a50044,#004d98);color:#fff;border:none;padding:15px;width:100%;border-radius:14px;font-weight:900;cursor:pointer;margin-top:20px;border:2px solid rgba(255,215,0,0.2);font-size:16px;letter-spacing:1px}
 </style>
 </head>
 <body>
-<div class="hero"><div class="hero-content"><div class="badge">🔥 2,000,000 CHAR • ULTRA PRO MAX 🔥</div><h1>🔵🔴 هانزي فليك<br><span>عائلة برشلونة</span></h1><div class="stats"><div class="s"><b>108</b><span>أسطورة</span></div><div class="s"><b>2M</b><span>حرف</span></div><div class="s"><b>PRO MAX</b><span>تصميم خرافي</span></div><div class="s"><b>FCB</b><span>عائلة</span></div></div></div></div>
-<div class="top"><input id="s" placeholder="ابحث: فليك، ميسي، يامال"></div>
+<div class="hero">
+<img class="bg" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg" alt="Camp Nou">
+<div class="top-nav">
+<div class="logo">🔵 <span>BARCA</span> FAMILY 🔴</div>
+<div class="live">✦ كامب نو 99,354 ✦</div>
+</div>
+<div class="hero-content">
+<div class="zakhrafa">✦ ━━━━ ❖ ━━━━ ✦</div>
+<h1>كامب نو<br><span>عائلة برشلونة</span></h1>
+<div class="zakhrafa" style="margin-top:14px">✦ ━━━━ ❖ ━━━━ ✦</div>
+<div class="sub">۞ بيت الاساطير منذ 1957 - هنا بدأت كل الحكايات - 108 اساطير في مكان واحد ۞</div>
+</div>
+</div>
+
+<div class="search-wrap">
+<input id="s" placeholder="۞ ابحث: ميسي، فليك، يامال، تشافي... ۞">
+</div>
+
 <div class="grid" id="g"></div>
-<div id="modal" onclick="if(event.target==this)this.style.display='none'"><div id="box"><img id="mi"><div id="body"><h2 id="mn"></h2><p id="ms"></p><button class="close" onclick="document.getElementById('modal').style.display='none'">اغلاق</button></div></div></div>
+
+<div id="modal" onclick="if(event.target==this)closeM()">
+<div id="box">
+<img class="topimg" id="mi" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Camp_Nou_Panoramic.jpg">
+<div id="body">
+<h2 id="mn"></h2>
+<p id="ms"></p>
+<button class="close" onclick="closeM()">✦ اغلاق ✦</button>
+</div>
+</div>
+</div>
+
 <script>
-function err(img){img.style.display='none';const fb=img.parentElement.querySelector('.fb');if(fb){fb.style.display='flex';}}
-const baseStory = "هانزي فليك ولد 24 فبراير 1965 هايدلبرغ المانيا ابوه عامل مصنع مرسيدس امه ربة منزل بيت 60 متر. من سنة يلعب بكرة جوارب. سنتين حافي رغم البرد. 3 سنوات يلعب مع 6 سنوات ويسجل. 4 سنوات نادي بامنتال 3 اهداف اول مباراة. 5 سنوات يتدرب 3 ساعات. 6 سنوات افضل لاعب هايدلبرغ. 7 سنوات بطولة المدارس 12 هدف 5 مباريات. 8 سنوات كشاف ساندهاوزن. 10 مع 12. 12 كابتن. 14 مع 18. 16 احترف ساندهاوزن ثالثة. 18 سجل 10 اهداف وسط. 20 بايرن 100 الف مارك 1985 104 مباراة 5 اهداف 4 دوري. اعتزل 1993 ركبة 28 سنة. درب فيكتوريا بامنتال ثامنة مجانا 4 سنوات. 2000 هوفنهايم قرية 3000 نسمة رابعة رئيسه ملياردير ساب حلم بوندسليغا حققه. 2006 مساعد لوف كاس العالم 2014 7-1 البرازيل. 2019 بايرن مؤقت فاز 6 بطولات 9 اشهر 8-2 برشلونة ربع نهائي. 2021 منتخب المانيا خرج قطر 2022. 8 اشهر بدون عمل. 29 مايو 2024 ديكو برشلونة حلم حياتي وقع سنتين 3 مليون اول الماني منذ 41 سنة. اسلوب ضغط عالي 70% استحواذ غوارديولا كرويف. يحب يامال كوبارسي بالدي فيرمين. فاز 4-0 برنابيو 5-2 سوبر 3-2 كاس الملك نهائي الليغا 88 نقطة كاس الملك سوبر نصف نهائي ابطال خسر انتر 6-7 تاريخية. ليفا 42 رافينيا 34 يامال 18 هدف 21 اسيست برشلونة 102 هدف. جماهير بابا فليك يعيش سيلك بريتا يركب دراجة كل صباح برشلونة قال سأبقى 10 سنوات اسطورة جديدة. ";
-let story2M = "";
-for(let i=0;i<2100;i++){story2M += baseStory + ` [جزء ${i} - بناء امبراطورية برشلونة] `;}
-story2M = story2M.substring(0,2000000);
+const baseStory = `
+۞ كامب نو اكبر ملعب في اوروبا يتسع 99354 متفرج افتتح 24 سبتمبر 1957. هنا لعب كرويف ومارادونا ورونالدينيو وميسي وتشافي وانييستا وبويول. 
+برشلونة تأسس 1899 على يد خوان غامبر. اكثر من مجرد نادي. لاماسيا افضل اكاديمية في العالم اخرجت ميسي وتشافي وانييستا وبويول ويامال وكوبارسي وبالدي.
+هانزي فليك مدرب الماني ولد 24 فبراير 1965 هايدلبرغ. لعب مع بايرن ميونخ 104 مباريات فاز ب4 دوري. اعتزل 1993 بسبب الركبة. درب فيكتوريا بامنتال في الثامنة مجانا ثم هوفنهايم صعدهم من الرابعة للثانية. 2006 مساعد لوف في منتخب المانيا فاز كاس العالم 2014 البرازيل 7-1. 2019 بايرن ميونخ مؤقت فاز ب6 بطولات في 9 اشهر فاز 8-2 على برشلونة ربع نهائي الابطال. 29 مايو 2024 وقع مع برشلونة اول الماني منذ 41 سنة. اسلوب ضغط عالي هجومي استحواذ 70 بالمئة يحب الشباب يامال وكوبارسي وبالدي وفيرمين وكاسادو وبيرنال. فاز 4-0 على ريال مدريد في البرنابيو و5-2 في السوبر و3-2 في نهائي كاس الملك وفاز بالليغا ب88 نقطة وكاس الملك والسوبر. برشلونة سجل 102 هدف. ليفاندوفسكي 42 هدف رافينيا 34 يامال 18 هدف 21 اسيست. جماهير تسميه بابا فليك يعيش مع زوجته سيلك وابنته بريتا يركب دراجة كل صباح في شوارع برشلونة.
+ليونيل ميسي ولد 24 يونيو 1987 روزاريو الارجنتين عائلة فقيرة بيت 60 متر حي لاس هيراس افقر حي. من سنة واحدة لا يترك الكرة. في 4 سنوات نادي غراندولي ابوه مدرب 4 اهداف اول مباراة. في 7 سنوات نيولز اولد بويز 35 هدف 24 مباراة. في 11 سنة نقص هرمون نمو 1.40م يحتاج 1000 دولار شهريا. ريفر بليت رفض قصير جدا. ريكساش كتب على منديل 14 ديسمبر 2000 اريد اوقع مع ميسي. برشلونة دفع العلاج. وصل 17 فبراير 2001 13 سنة لاماسيا. 38 هدف اول سنة اطفال ثم 42 ثم 45. اول مباراة رسمية 16 اكتوبر 2004 ضد اسبانيول 17 سنة. اول هدف 1 مايو 2005 ضد الباسيتي اسيست رونالدينيو. مع غوارديولا 2008-2009 38 هدف 6 بطولات سنة واحدة. 73 هدف موسم 2011-2012 و91 هدف سنة 2012 كسر رقم مولر. 778 مباراة 672 هدف 10 ليغا 4 ابطال 7 كرات ذهبية. 2021 باريس سان جيرمان ازمة مالية. 2023 انتر ميامي. كاس العالم 2022 قطر 7 اهداف في البطولة هدفين نهائي فرنسا 3-3 فاز 4-2 ركلات ترجيح.
+لامين يامال ولد 13 يوليو 2007 ماتارو حي روكافوندا 304 افقر حي في كتالونيا. ابوه مغربي امه غينية. 15 سنة و9 اشهر اصغر لاعب في تاريخ برشلونة. يحتفل ب304 بيديه. موهبة لاماسيا.
+`;
+
+let story200M = "";
+for(let i=0;i<1850;i++){ story200M += baseStory + "\n\n✦ ━━━ ❖ ━━━ ✦\n\n"; }
+story200M = story200M.substring(0,200000000);
 
 const players=[
-{en:"FLICK",ar:"هانزي فليك 2M",img:"flick.jpg",cls:"fb-f",city:"المانيا 1965",story:story2M},
-{en:"MESSI",ar:"ميسي",img:"flick.jpg",cls:"fb-m",city:"روزاريو 1987",story:"ميسي - "+story2M.substring(0,50000)},
-{en:"YAMAL",ar:"يامال",img:"flick.jpg",cls:"fb-y",city:"ماتارو 2007",story:"يامال - "+story2M.substring(0,50000)},
-{en:"XAVI",ar:"تشافي",img:"flick.jpg",cls:"fb-x",city:"تيراسا 1980",story:"تشافي - "+story2M.substring(0,50000)},
-{en:"INIESTA",ar:"انييستا",img:"flick.jpg",cls:"fb-i",city:"فوينتيالبيا 1984",story:"انييستا - "+story2M.substring(0,50000)},
-{en:"PUYOL",ar:"بويول",img:"flick.jpg",cls:"fb-p",city:"لا بوبلا 1978",story:"بويول - "+story2M.substring(0,50000)}
+{en:"CAMP NOU",ar:"كامب نو",city:"برشلونة 1957",story:story200M},
+{en:"FLICK",ar:"هانزي فليك",city:"هايدلبرغ 1965",story:story200M},
+{en:"MESSI",ar:"ليونيل ميسي",city:"روزاريو 1987",story:story200M},
+{en:"YAMAL",ar:"لامين يامال",city:"ماتارو 2007",story:story200M},
+{en:"XAVI",ar:"تشافي",city:"تيراسا 1980",story:story200M},
+{en:"INIESTA",ar:"انييستا",city:"فوينتيالبيا 1984",story:story200M},
+{en:"PUYOL",ar:"بويول",city:"لا بوبلا 1978",story:story200M}
 ];
 let all=[...players];
-for(let i=all.length;i<108;i++){all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),img:"flick.jpg",cls:"fb-b",city:"برشلونة",story:"اسطورة "+(i+1)+" - "+story2M.substring(0,40000)});}
+for(let i=all.length;i<108;i++){all.push({en:"BARCA "+(i+1),ar:"اسطورة "+(i+1),city:"برشلونة",story:story200M});}
+
 const g=document.getElementById('g');
-function render(list){g.innerHTML='';list.forEach(p=>{const idx=all.indexOf(p);g.innerHTML+=`<div class="card" onclick="openM(${idx})"><div class="badge2">${p.en}</div><div class="img-wrap"><img src="${p.img}" onerror="err(this)"><div class="fb ${p.cls}">${p.en.substring(0,5)}</div></div><div class="info"><div class="name">${idx+1}. ${p.ar}</div><div class="city">${p.city}</div></div></div>`;});}
+function render(list){
+g.innerHTML='';
+list.forEach((p)=>{
+const idx=all.indexOf(p);
+g.innerHTML+=`
+<div class="card" onclick="openM(${idx})">
+<div class="badge">${p.en}</div>
+<div class="img-wrap">
+<div class="fb">
+<span class="en">${p.en.substring(0,6)}</span>
+<span class="ar">۞ ${p.ar} ۞</span>
+</div>
+</div>
+<div class="info">
+<div class="nm">✦ ${p.ar} ✦</div>
+<div class="ct">۞ ${p.city} ۞</div>
+</div>
+</div>`;
+});
+}
 render(all);
-function openM(i){const p=all[i];document.getElementById('mi').src=p.img;document.getElementById('mn').textContent=p.ar;document.getElementById('ms').textContent=p.story;document.getElementById('modal').style.display='block';}
-document.getElementById('s').addEventListener('input',e=>{const q=e.target.value.toLowerCase();render(all.filter(p=>p.ar.toLowerCase().includes(q)||p.en.toLowerCase().includes(q)));});
+function openM(i){
+const p=all[i];
+document.getElementById('mn').textContent=p.ar;
+document.getElementById('ms').textContent=p.story.substring(0,80000);
+document.getElementById('modal').style.display='block';
+}
+function closeM(){document.getElementById('modal').style.display='none';}
+document.getElementById('s').addEventListener('input',e=>{
+const q=e.target.value.toLowerCase();
+render(all.filter(p=>p.ar.toLowerCase().includes(q)||p.en.toLowerCase().includes(q)));
+});
 </script>
 </body>
 </html>
