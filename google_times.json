@@ -1,0 +1,23 @@
+{
+  "source": "Google via SerpApi",
+  "api_key": "d48c30e2... (250 free/month)",
+  "last_update": "2026-10-31T13:28:39.243698",
+  "matches": [
+    {
+      "match": "التعاون - الاتفاق",
+      "time": "4:30 م KSA",
+      "status": "Google verified"
+    },
+    {
+      "match": "الفيحاء - الفيصلي",
+      "time": "5:55 م KSA",
+      "status": "Google verified"
+    },
+    {
+      "match": "الهلال - الفتح",
+      "time": "9:00 م KSA",
+      "status": "Google verified"
+    }
+  ],
+  "note": "مربوط مع جوجل 100% - مطابق لجوجل"
+}
