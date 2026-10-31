@@ -3,62 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي | SLOOMTV - زخرفة احترافية - ذكاء اصطناعي</title>
+<title>سلوم تيفي | SLOOMTV - زخرفة رياضية احترافية</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:'Tajawal',Tahoma;background:#050510;color:#fff;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(0,255,136,.12),transparent 50%),radial-gradient(circle at 80% 80%,rgba(255,0,64,.12),transparent 50%),radial-gradient(circle at 50% 0%,rgba(255,235,59,.08),transparent 60%);pointer-events:none;z-index:-1}
-.h{background:linear-gradient(135deg,rgba(10,10,30,.95),rgba(30,10,60,.95));backdrop-filter:blur(20px);padding:28px 20px;text-align:center;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#00ff88,#ffeb3b,#ff0040) 1;position:relative;overflow:hidden}
-.h::after{content:'﷽';position:absolute;top:10px;right:20px;font-size:18px;color:rgba(255,235,59,.3);font-family:serif}
-.logo{font-size:56px;font-weight:900;line-height:.9;letter-spacing:-1px;background:linear-gradient(90deg,#fff,#ffeb3b,#00ff88);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 20px rgba(0,255,136,.6))}
-.sub{font-size:12px;color:#aaa;margin-top:12px;letter-spacing:1px}
-.badge{background:linear-gradient(90deg,#0f2815,#1a4a2a);border:2px solid #00ff88;color:#00ff88;padding:12px 24px;border-radius:50px;display:inline-flex;align-items:center;gap:10px;font-size:12px;margin-top:14px;font-weight:900;box-shadow:0 0 30px rgba(0,255,136,.4)}
-.live-dot{width:12px;height:12px;background:#00ff88;border-radius:50%;animation:blink 1s infinite;box-shadow:0 0 10px #00ff88}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.ticker{background:linear-gradient(90deg,#00ff88,#ffeb3b,#ff0040);color:#000;padding:14px 0;overflow:hidden;white-space:nowrap;font-weight:900;font-size:13px;border-top:2px solid #fff;border-bottom:2px solid #fff}
-.ticker div{display:inline-block;animation:sc 80s linear infinite} @keyframes sc{0%{transform:translateX(0)}100%{transform:translateX(100%)}}
-.menu{max-width:1280px;margin:18px auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px;background:rgba(20,20,50,.6);backdrop-filter:blur(15px);border-radius:50px;border:1px solid rgba(255,255,255,.1);position:sticky;top:10px;z-index:30}
-.menu button{background:rgba(30,30,60,.8);border:1px solid rgba(255,255,255,.15);color:#ccc;padding:13px 20px;border-radius:50px;font-size:13px;cursor:pointer;transition:.3s;font-weight:700}
-.menu button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.4)}
-.menu button.active{background:linear-gradient(90deg,#fff,#ffeb3b);color:#000;font-weight:900;transform:scale(1.1);box-shadow:0 0 25px rgba(255,235,59,.6)}
-.wrap{max-width:1280px;margin:auto;padding:14px;display:grid;grid-template-columns:1fr 380px;gap:16px}
+*{box-sizing:border-box}body{margin:0;font-family:'Tajawal',Tahoma;background:#05050f;color:#fff;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 15% 20%,rgba(0,255,136,.14),transparent 45%),radial-gradient(circle at 85% 15%,rgba(255,235,59,.12),transparent 45%),radial-gradient(circle at 50% 100%,rgba(59,130,246,.12),transparent 50%),linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.4) 100%);pointer-events:none;z-index:-1}
+.h{background:linear-gradient(135deg,rgba(10,15,35,.97),rgba(25,10,50,.97));backdrop-filter:blur(20px);padding:30px 20px;text-align:center;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#00ff88,#ffeb3b,#3b82f6,#ff0040) 1;position:relative}
+.logo{font-size:60px;font-weight:900;line-height:.9;letter-spacing:-1px;background:linear-gradient(90deg,#fff 0%,#ffeb3b 30%,#00ff88 60%,#3b82f6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 25px rgba(0,255,136,.7));position:relative}
+.logo::before{content:'⚽';position:absolute;left:-10px;top:-10px;font-size:22px;-webkit-text-fill-color:#fff;animation:ball 2s infinite}
+@keyframes ball{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(180deg)}}
+.sub{font-size:13px;color:#aaa;margin-top:14px;letter-spacing:1px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;align-items:center}
+.badge{background:linear-gradient(90deg,#0f2815,#1a4a2a);border:2px solid #00ff88;color:#00ff88;padding:13px 26px;border-radius:50px;display:inline-flex;align-items:center;gap:12px;font-size:12px;margin-top:16px;font-weight:900;box-shadow:0 0 35px rgba(0,255,136,.5)}
+.live-dot{width:14px;height:14px;background:#00ff88;border-radius:50%;animation:blink 1s infinite;box-shadow:0 0 15px #00ff88}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.2)}}
+.ticker{background:linear-gradient(90deg,#00ff88 0%,#ffeb3b 25%,#3b82f6 50%,#ff0040 75%,#00ff88 100%);color:#000;padding:15px 0;overflow:hidden;white-space:nowrap;font-weight:900;font-size:14px;border-top:3px solid #fff;border-bottom:3px solid #fff;box-shadow:0 5px 20px rgba(0,0,0,.5)}
+.ticker div{display:inline-block;animation:sc 70s linear infinite} @keyframes sc{0%{transform:translateX(0)}100%{transform:translateX(100%)}}
+.menu{max-width:1300px;margin:20px auto;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:16px;background:rgba(20,20,50,.7);backdrop-filter:blur(20px);border-radius:60px;border:1px solid rgba(255,255,255,.12);position:sticky;top:12px;z-index:30;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.menu button{background:rgba(30,30,60,.9);border:1px solid rgba(255,255,255,.15);color:#ccc;padding:14px 22px;border-radius:50px;font-size:13px;cursor:pointer;transition:.35s;font-weight:800;display:flex;align-items:center;gap:6px}
+.menu button:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,.5);border-color:rgba(0,255,136,.4)}
+.menu button.active{background:linear-gradient(90deg,#fff,#ffeb3b);color:#000;font-weight:900;transform:scale(1.12);box-shadow:0 0 30px rgba(255,235,59,.7)}
+.wrap{max-width:1300px;margin:auto;padding:16px;display:grid;grid-template-columns:1fr 390px;gap:18px}
 @media(max-width:1100px){.wrap{grid-template-columns:1fr}}
-.card{background:linear-gradient(135deg,rgba(21,21,45,.9),rgba(26,26,61,.9));backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:24px;overflow:hidden;box-shadow:0 15px 50px rgba(0,0,0,.6);transition:.4s}
-.card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.8);border-color:rgba(0,255,136,.3)}
-.hd{background:linear-gradient(90deg,rgba(30,30,70,.9),rgba(50,30,100,.9));padding:18px 20px;font-weight:900;font-size:15px;border-right:6px solid #00ff88;display:flex;justify-content:space-between;align-items:center}
-.match{padding:18px;display:grid;grid-template-columns:100px 1fr 110px;gap:16px;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
-.team{background:linear-gradient(135deg,#1e1e40,#2a2a60);padding:12px;border-radius:14px;text-align:center;font-weight:900;border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
-.score{background:#000;padding:14px;border-radius:16px;color:#00ff88;text-align:center;font-weight:900;font-size:24px;border:2px solid #00ff88;box-shadow:0 0 20px rgba(0,255,136,.3),inset 0 0 10px rgba(0,255,136,.1)}
-.detail{grid-column:1/-1;background:rgba(10,10,30,.8);padding:16px;border-radius:16px;margin-top:14px;font-size:12.5px;line-height:2.3;border:1px solid rgba(255,255,255,.08)}
-.video-box{position:relative;width:100%;height:270px;border-radius:20px;background:#000;margin-top:16px;border:3px solid #00ff88;cursor:pointer;overflow:hidden;box-shadow:0 0 30px rgba(0,255,136,.2)}
+.card{background:linear-gradient(135deg,rgba(22,22,50,.92),rgba(28,28,70,.92));backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);transition:.45s;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00ff88,#ffeb3b,#3b82f6)}
+.card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 30px 80px rgba(0,0,0,.8);border-color:rgba(0,255,136,.4)}
+.hd{background:linear-gradient(90deg,rgba(30,30,75,.95),rgba(50,30,110,.95));padding:20px 22px;font-weight:900;font-size:16px;border-right:7px solid #00ff88;display:flex;justify-content:space-between;align-items:center}
+.match{padding:20px;display:grid;grid-template-columns:110px 1fr 120px;gap:18px;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.team{background:linear-gradient(135deg,#1e1e45,#2e2e70);padding:14px;border-radius:16px;text-align:center;font-weight:900;border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 4px 15px rgba(0,0,0,.3);position:relative;overflow:hidden}
+.team::after{content:'⚽';position:absolute;top:2px;right:6px;font-size:10px;opacity:.5}
+.score{background:radial-gradient(circle,#111,#000);padding:16px;border-radius:18px;color:#00ff88;text-align:center;font-weight:900;font-size:26px;border:3px solid #00ff88;box-shadow:0 0 25px rgba(0,255,136,.4),inset 0 0 15px rgba(0,255,136,.15)}
+.detail{grid-column:1/-1;background:rgba(10,12,35,.85);padding:18px;border-radius:18px;margin-top:16px;font-size:13px;line-height:2.4;border:1px solid rgba(255,255,255,.08)}
+.video-box{position:relative;width:100%;height:290px;border-radius:22px;background:#000;margin-top:18px;border:3px solid #00ff88;cursor:pointer;overflow:hidden;box-shadow:0 0 40px rgba(0,255,136,.25)}
 .video-box canvas{position:absolute;inset:0;width:100%;height:100%}
-.video-box .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:88px;height:66px;background:linear-gradient(135deg,#ff0000,#cc0000);border-radius:18px;display:flex;align-items:center;justify-content:center;z-index:5;box-shadow:0 10px 30px rgba(255,0,0,.6);animation:pulse 1.2s infinite}
-@keyframes pulse{0%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12)}100%{transform:translate(-50%,-50%) scale(1)}}
-.video-box .play::after{content:'▶';color:#fff;font-size:28px;margin-left:4px}
-.video-box .label{position:absolute;top:16px;left:16px;background:linear-gradient(90deg,#00ff88,#00cc6a);color:#000;padding:7px 16px;border-radius:50px;font-size:10px;font-weight:900;z-index:5;box-shadow:0 4px 15px rgba(0,255,136,.4)}
-.video-box .title{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.98));padding:16px;font-size:13px;font-weight:800;z-index:5}
+.video-box .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:92px;height:68px;background:linear-gradient(135deg,#ff0000,#cc0000);border-radius:20px;display:flex;align-items:center;justify-content:center;z-index:5;box-shadow:0 12px 35px rgba(255,0,0,.7);animation:pulse 1.2s infinite}
+@keyframes pulse{0%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.15)}100%{transform:translate(-50%,-50%) scale(1)}}
+.video-box .play::after{content:'▶';color:#fff;font-size:30px;margin-left:5px}
+.video-box .label{position:absolute;top:18px;left:18px;background:linear-gradient(90deg,#00ff88,#00cc6a);color:#000;padding:8px 18px;border-radius:50px;font-size:11px;font-weight:900;z-index:5;box-shadow:0 6px 20px rgba(0,255,136,.5)}
+.video-box .title{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.98));padding:18px;font-size:14px;font-weight:800;z-index:5}
 .video-box.playing .play{display:none}
-.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl th{background:rgba(10,10,30,.9);color:#ffeb3b;padding:14px;font-size:12px}.tbl td{padding:13px;border-bottom:1px solid rgba(255,255,255,.06);text-align:center}
-.num{width:32px;height:32px;background:linear-gradient(135deg,#1e1e3a,#2a2a5a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;box-shadow:0 2px 10px rgba(0,0,0,.3)}.pts{color:#ffeb3b;font-weight:900;font-size:16px}
-.side{background:linear-gradient(135deg,rgba(21,21,45,.9),rgba(26,26,61,.9));backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:20px;box-shadow:0 15px 40px rgba(0,0,0,.5)}
-.side h3{margin:0 0 16px;color:#00ff88;border-right:5px solid #ffeb3b;padding-right:14px;font-size:15px;font-weight:900}
-.article{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12.5px;line-height:2}
-.poll{background:rgba(10,10,30,.8);border-radius:16px;padding:16px;border:1px solid rgba(255,255,255,.08);margin-top:12px}.poll-bar{height:14px;background:#1e1e3a;border-radius:20px;overflow:hidden;margin:12px 0;box-shadow:inset 0 2px 5px rgba(0,0,0,.5)}.poll-fill{height:100%;background:linear-gradient(90deg,#00ff88,#ffeb3b);border-radius:20px;transition:1.2s;box-shadow:0 0 15px rgba(0,255,136,.5)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}.tbl th{background:rgba(10,12,35,.95);color:#ffeb3b;padding:15px;font-size:12px}.tbl td{padding:14px;border-bottom:1px solid rgba(255,255,255,.06);text-align:center}
+.num{width:34px;height:34px;background:linear-gradient(135deg,#1e1e3a,#2a2a5a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;box-shadow:0 3px 12px rgba(0,0,0,.4)}.pts{color:#ffeb3b;font-weight:900;font-size:17px}
+.side{background:linear-gradient(135deg,rgba(22,22,50,.92),rgba(28,28,70,.92));backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.6);position:relative}
+.side::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00ff88,#ffeb3b)}
+.side h3{margin:0 0 18px;color:#00ff88;border-right:6px solid #ffeb3b;padding-right:16px;font-size:16px;font-weight:900;display:flex;align-items:center;gap:8px}
+.article{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;line-height:2.1}
+.poll{background:rgba(10,12,35,.9);border-radius:18px;padding:18px;border:1px solid rgba(255,255,255,.08);margin-top:14px}.poll-bar{height:16px;background:#1e1e3a;border-radius:20px;overflow:hidden;margin:14px 0;box-shadow:inset 0 3px 8px rgba(0,0,0,.6)}.poll-fill{height:100%;background:linear-gradient(90deg,#00ff88,#ffeb3b,#3b82f6);border-radius:20px;transition:1.3s;box-shadow:0 0 20px rgba(0,255,136,.6)}
 .hidden{display:none !important}#confetti{position:fixed;inset:0;pointer-events:none;z-index:9999}
-.zakhrafa{font-size:20px;letter-spacing:6px;color:rgba(255,235,59,.4);text-align:center;margin:8px 0}
+.sport-deco{font-size:16px;letter-spacing:8px;text-align:center;margin:10px 0;opacity:.6}
 </style>
 </head>
 <body>
 <canvas id="confetti"></canvas>
 <div class="h">
-<div class="zakhrafa">✦ • ─── • ﷽ • ─── • ✦</div>
+<div class="sport-deco">⚽ 🏟️ ⚽ 🏆 ⚽ 🏟️ ⚽</div>
 <div class="logo">سلوم تيفي<br>SLOOMTV</div>
-<div class="sub">زخرفة احترافية - 14 دوري عالمي وعربي - كامل بالذكاء الاصطناعي - رابط واحد</div>
-<div class="badge"><span class="live-dot"></span>🤖 ذكاء اصطناعي يتحكم - <span id="liveViews">2,847</span> مشاهد - <span id="aiStatus">يولد 14 دوري...</span> - <span id="clock">--:--:--</span></div>
-<div class="zakhrafa">✦ ── • ── ✦ ── • ── ✦</div>
+<div class="sub"><span>⚽ زخرفة رياضية احترافية</span><span>•</span><span>🏟️ 14 دوري عالمي وعربي</span><span>•</span><span>🤖 ذكاء اصطناعي كامل</span><span>•</span><span>🔥 رابط واحد</span></div>
+<div class="badge"><span class="live-dot"></span>🤖 ذكاء اصطناعي يتحكم - <span id="liveViews">2,847</span> مشاهد LIVE - <span id="aiStatus">يولد 14 دوري...</span> - <span id="clock">--:--:--</span> 🏟️</div>
+<div class="sport-deco">🏆 ⚽ ─── 🏟️ ─── ⚽ 🏆</div>
 </div>
 
-<div class="ticker"><div id="tickerText">🤖 زخرفة احترافية - 14 دوري - 🇩🇪 ألماني 🇮🇹 إيطالي 🇫🇷 فرنسي 🇪🇸 إسباني 🏴󠁧󠁢󠁥󠁮󠁧󠁿 إنجليزي 🇧🇷 برازيلي 🇸🇦 سعودي 🇶🇦 قطري 🇦🇪 إماراتي 🇴🇲 عماني 🇮🇶 عراقي 🇳🇱 هولندي 🇧🇪 بلجيكي 🇵🇹 برتغالي - يحدث كل 30 ثانية - https://sloom86ss.github.io/</div></div>
+<div class="ticker"><div id="tickerText">⚽ زخرفة رياضية احترافية 🏟️ 14 دوري 🏆 🇩🇪 ألماني 🇮🇹 إيطالي 🇫🇷 فرنسي 🇪🇸 إسباني 🏴󠁧󠁢󠁥󠁮󠁧󠁿 إنجليزي 🇧🇷 برازيلي 🇸🇦 سعودي 🇶🇦 قطري 🇦🇪 إماراتي 🇴🇲 عماني 🇮🇶 عراقي 🇳🇱 هولندي 🇧🇪 بلجيكي 🇵🇹 برتغالي ⚽ يحدث كل 30 ثانية 🤖 https://sloom86ss.github.io/ 🏟️</div></div>
 
 <div class="menu" id="menu"></div>
 
@@ -68,44 +72,40 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle
 </div>
 
 <script>
-// ذكاء اصطناعي يتحكم بـ 14 دوري
 let views=2847,votes=4847,goalsToday=47;
 let currentFilter='all';
 const leagues={
- de:{name:'ألماني',flag:'🇩🇪',color:'#ff0000'}, it:{name:'إيطالي',flag:'🇮🇹',color:'#00aa00'},
- fr:{name:'فرنسي',flag:'🇫🇷',color:'#0000ff'}, es:{name:'إسباني',flag:'🇪🇸',color:'#ffcc00'},
- en:{name:'إنجليزي',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',color:'#ffffff'}, br:{name:'برازيلي',flag:'🇧🇷',color:'#00ff00'},
- sa:{name:'سعودي',flag:'🇸🇦',color:'#00a651'}, qa:{name:'قطري',flag:'🇶🇦',color:'#8d1b3d'},
- ae:{name:'إماراتي',flag:'🇦🇪',color:'#ff0000'}, om:{name:'عماني',flag:'🇴🇲',color:'#ff0000'},
- iq:{name:'عراقي',flag:'🇮🇶',color:'#000000'}, nl:{name:'هولندي',flag:'🇳🇱',color:'#ff6600'},
- be:{name:'بلجيكي',flag:'🇧🇪',color:'#ff0000'}, pt:{name:'برتغالي',flag:'🇵🇹',color:'#006600'}
+ de:{name:'ألماني',flag:'🇩🇪',color:'#ff0000',emoji:'⚽'}, it:{name:'إيطالي',flag:'🇮🇹',color:'#00aa00',emoji:'🏟️'},
+ fr:{name:'فرنسي',flag:'🇫🇷',color:'#0000ff',emoji:'🥅'}, es:{name:'إسباني',flag:'🇪🇸',color:'#ffcc00',emoji:'⚽'},
+ en:{name:'إنجليزي',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',color:'#ffffff',emoji:'🏆'}, br:{name:'برازيلي',flag:'🇧🇷',color:'#00ff00',emoji:'⚽'},
+ sa:{name:'سعودي',flag:'🇸🇦',color:'#00a651',emoji:'🏟️'}, qa:{name:'قطري',flag:'🇶🇦',color:'#8d1b3d',emoji:'🥅'},
+ ae:{name:'إماراتي',flag:'🇦🇪',color:'#ff0000',emoji:'⚽'}, om:{name:'عماني',flag:'🇴🇲',color:'#ff0000',emoji:'🏆'},
+ iq:{name:'عراقي',flag:'🇮🇶',color:'#000000',emoji:'⚽'}, nl:{name:'هولندي',flag:'🇳🇱',color:'#ff6600',emoji:'🏟️'},
+ be:{name:'بلجيكي',flag:'🇧🇪',color:'#ff0000',emoji:'🥅'}, pt:{name:'برتغالي',flag:'🇵🇹',color:'#006600',emoji:'⚽'}
 };
 
 const aiData={
- de:[{home:'بايرن',away:'دورتموند',score:'-:-',goals:[],status:'9:30 م',time:'9:30 م',channel:'beIN 1',analysis:'كلاسيكو ألمانيا - كين 14 هدف ضد غيراسي 12 هدف - توقع AI 2-1 بايرن - أليانز أرينا 75 ألف'},{home:'إلفرسبرغ',away:'ماينز',score:'4-1',goals:[12,32,54,67,89],status:'انتهت',time:'11:30 م',channel:'beIN 3',analysis:'مفاجأة الموسم - إلفرسبرغ خامس الترتيب - 4-1 على ماينز - تكتيك 4-2-3-1'}],
- it:[{home:'إنتر',away:'ميلان',score:'-:-',goals:[],status:'10:45 م',time:'10:45 م',channel:'beIN 1',analysis:'ديربي ميلانو - إنتر متصدر 24 نقطة - ميلان ثالث 20 نقطة - سان سيرو ممتلئ'},{home:'نابولي',away:'يوفنتوس',score:'2-1',goals:[18,55,88],status:'انتهت',time:'9:00 م',channel:'beIN 2',analysis:'نابولي يفوز 2-1 - هدف قاتل د88 - لوكاكو يسجل'}],
- fr:[{home:'باريس',away:'مارسيليا',score:'-:-',goals:[],status:'10:00 م',time:'10:00 م',channel:'beIN 4',analysis:'كلاسيكو فرنسا - باريس متصدر 25 نقطة - توريس جديد باريس 55م من برشلونة - ثنائية آخر مباراة'},{home:'لوهافر',away:'باريس',score:'1-5',goals:[8,15,33,61,78,85],status:'انتهت',time:'10:00 م',channel:'beIN 4',analysis:'باريس 5-1 لوهافر - ثنائية توريس - ديمبيلي - باركولا - راموس - تقييم توريس 9.2'}],
- es:[{home:'برشلونة',away:'ريال مدريد',score:'-:-',goals:[],status:'11:00 م',time:'11:00 م',channel:'beIN 1',analysis:'الكلاسيكو - برشلونة 26 نقطة - ريال 23 نقطة - بدون ليفا مصاب - روني باردجي 19 البديل'},{home:'فياريال',away:'إسبانيول',score:'0-1',goals:[73],status:'انتهت',time:'9:00 م',channel:'beIN 2',analysis:'إسبانيول يفوز 0-1 في فياريال - هدف د73'}],
- en:[{home:'سيتي',away:'أرسنال',score:'-:-',goals:[],status:'7:30 م',time:'7:30 م',channel:'beIN 1',analysis:'قمة إنجلترا - سيتي 22 نقطة - أرسنال 21 نقطة - هالاند 13 هدف ضد ساكا 8 أهداف'},{home:'ليفربول',away:'يونايتد',score:'2-0',goals:[34,67],status:'انتهت',time:'6:00 م',channel:'beIN 1',analysis:'ليفربول 2-0 يونايتد - صلاح هدف + أسيست - أنفيلد'}],
- br:[{home:'فلامينغو',away:'بالميراس',score:'2-2',goals:[22,45,61,89],status:'انتهت',time:'2:00 ص',channel:'beIN 5',analysis:'كلاسيكو البرازيل 2-2 - تعادل مثير - هدف د89'}],
- sa:[{home:'الهلال',away:'النصر',score:'-:-',goals:[],status:'9:00 م',time:'9:00 م',channel:'SSC',analysis:'ديربي الرياض - الهلال 29 نقطة متصدر - النصر 22 نقطة - بونو ضد بينتو - رونالدو 41 سنة - Kingdom Arena 26 ألف - توقع 2-1 هلال'}],
- qa:[{home:'السد',away:'الدحيل',score:'3-1',goals:[12,38,55,71],status:'انتهت',time:'7:00 م',channel:'الكاس',analysis:'السد 3-1 الدحيل - أكرم عفيف هدفين - متصدر دوري نجوم قطر'}],
- ae:[{home:'العين',away:'الوصل',score:'-:-',goals:[],status:'8:00 م',time:'8:00 م',channel:'أبوظبي',analysis:'كلاسيكو الإمارات - العين ضد الوصل - هزاع بن زايد'}],
- om:[{home:'السيب',away:'ظفار',score:'1-0',goals:[88],status:'انتهت',time:'7:30 م',channel:'عمان',analysis:'السيب 1-0 ظفار - هدف قاتل د88 - السيب متصدر دوري عمان'}],
- iq:[{home:'الزوراء',away:'الجوية',score:'-:-',goals:[],status:'8:00 م',time:'8:00 م',channel:'العراقية',analysis:'كلاسيكو العراق - الزوراء ضد الجوية - الشعب الدولي - 35 ألف متفرج'}],
- nl:[{home:'أياكس',away:'آيندهوفن',score:'2-3',goals:[15,28,44,67,82],status:'انتهت',time:'9:45 م',channel:'beIN 3',analysis:'آيندهوفن يفوز 2-3 في أمستردام - 5 أهداف'}],
- be:[{home:'كلوب بروج',away:'أندرلخت',score:'-:-',goals:[],status:'9:45 م',time:'9:45 م',channel:'beIN 4',analysis:'كلاسيكو بلجيكا - كلوب بروج ضد أندرلخت'}],
- pt:[{home:'بنفيكا',away:'بورتو',score:'1-1',goals:[34,76],status:'انتهت',time:'11:00 م',channel:'beIN 2',analysis:'كلاسيكو البرتغال 1-1 - بنفيكا ضد بورتو - دا لوز'}]
+ de:[{home:'بايرن',away:'دورتموند',score:'-:-',goals:[],status:'9:30 م',time:'9:30 م',channel:'beIN 1',analysis:'⚽ كلاسيكو ألمانيا 🏟️ كين 14 هدف ضد غيراسي 12 هدف - توقع AI 2-1 بايرن - أليانز أرينا 75 ألف متفرج - أضواء الملعب'}, {home:'إلفرسبرغ',away:'ماينز',score:'4-1',goals:[12,32,54,67,89],status:'انتهت',time:'11:30 م',channel:'beIN 3',analysis:'🏟️ مفاجأة الموسم - إلفرسبرغ خامس الترتيب - 4-1 على ماينز - تكتيك 4-2-3-1 هجومي'}],
+ it:[{home:'إنتر',away:'ميلان',score:'-:-',goals:[],status:'10:45 م',time:'10:45 م',channel:'beIN 1',analysis:'🏆 ديربي ميلانو 🏟️ إنتر متصدر 24 نقطة - ميلان ثالث 20 نقطة - سان سيرو ممتلئ 80 ألف'}, {home:'نابولي',away:'يوفنتوس',score:'2-1',goals:[18,55,88],status:'انتهت',time:'9:00 م',channel:'beIN 2',analysis:'⚽ نابولي يفوز 2-1 - هدف قاتل د88 - لوكاكو يسجل'}],
+ fr:[{home:'باريس',away:'مارسيليا',score:'-:-',goals:[],status:'10:00 م',time:'10:00 م',channel:'beIN 4',analysis:'🥅 كلاسيكو فرنسا - باريس متصدر 25 نقطة - توريس جديد باريس 55م من برشلونة - ثنائية آخر مباراة'}, {home:'لوهافر',away:'باريس',score:'1-5',goals:[8,15,33,61,78,85],status:'انتهت',time:'10:00 م',channel:'beIN 4',analysis:'⚽ باريس 5-1 لوهافر - ثنائية توريس - ديمبيلي - باركولا - راموس - تقييم توريس 9.2 - ملعب لوهافر'}],
+ es:[{home:'برشلونة',away:'ريال مدريد',score:'-:-',goals:[],status:'11:00 م',time:'11:00 م',channel:'beIN 1',analysis:'🏆 الكلاسيكو 🏟️ برشلونة 26 نقطة - ريال 23 نقطة - بدون ليفا مصاب - روني باردجي 19 البديل - كامب نو 99 ألف'}, {home:'فياريال',away:'إسبانيول',score:'0-1',goals:[73],status:'انتهت',time:'9:00 م',channel:'beIN 2',analysis:'⚽ إسبانيول يفوز 0-1 في فياريال - هدف د73'}],
+ en:[{home:'سيتي',away:'أرسنال',score:'-:-',goals:[],status:'7:30 م',time:'7:30 م',channel:'beIN 1',analysis:'🏟️ قمة إنجلترا - سيتي 22 نقطة - أرسنال 21 نقطة - هالاند 13 هدف ضد ساكا 8 أهداف - الاتحاد'}, {home:'ليفربول',away:'يونايتد',score:'2-0',goals:[34,67],status:'انتهت',time:'6:00 م',channel:'beIN 1',analysis:'⚽ ليفربول 2-0 يونايتد - صلاح هدف + أسيست - أنفيلد 54 ألف'}],
+ br:[{home:'فلامينغو',away:'بالميراس',score:'2-2',goals:[22,45,61,89],status:'انتهت',time:'2:00 ص',channel:'beIN 5',analysis:'🏆 كلاسيكو البرازيل 2-2 - تعادل مثير - هدف د89 - ماراكانا'}],
+ sa:[{home:'الهلال',away:'النصر',score:'-:-',goals:[],status:'9:00 م',time:'9:00 م',channel:'SSC',analysis:'⚽ ديربي الرياض 🏟️ الهلال 29 نقطة متصدر - النصر 22 نقطة - بونو ضد بينتو - رونالدو 41 سنة - Kingdom Arena 26 ألف - توقع 2-1 هلال'}],
+ qa:[{home:'السد',away:'الدحيل',score:'3-1',goals:[12,38,55,71],status:'انتهت',time:'7:00 م',channel:'الكاس',analysis:'🥅 السد 3-1 الدحيل - أكرم عفيف هدفين - متصدر دوري نجوم قطر - جاسم بن حمد'}],
+ ae:[{home:'العين',away:'الوصل',score:'-:-',goals:[],status:'8:00 م',time:'8:00 م',channel:'أبوظبي',analysis:'🏟️ كلاسيكو الإمارات - العين ضد الوصل - هزاع بن زايد 24 ألف'}],
+ om:[{home:'السيب',away:'ظفار',score:'1-0',goals:[88],status:'انتهت',time:'7:30 م',channel:'عمان',analysis:'⚽ السيب 1-0 ظفار - هدف قاتل د88 - السيب متصدر دوري عمان - السيب'}],
+ iq:[{home:'الزوراء',away:'الجوية',score:'-:-',goals:[],status:'8:00 م',time:'8:00 م',channel:'العراقية',analysis:'🏆 كلاسيكو العراق - الزوراء ضد الجوية - الشعب الدولي - 35 ألف متفرج'}],
+ nl:[{home:'أياكس',away:'آيندهوفن',score:'2-3',goals:[15,28,44,67,82],status:'انتهت',time:'9:45 م',channel:'beIN 3',analysis:'⚽ آيندهوفن يفوز 2-3 في أمستردام - 5 أهداف - يوهان كرويف أرينا'}],
+ be:[{home:'كلوب بروج',away:'أندرلخت',score:'-:-',goals:[],status:'9:45 م',time:'9:45 م',channel:'beIN 4',analysis:'🥅 كلاسيكو بلجيكا - كلوب بروج ضد أندرلخت - جان برايدال'}],
+ pt:[{home:'بنفيكا',away:'بورتو',score:'1-1',goals:[34,76],status:'انتهت',time:'11:00 م',channel:'beIN 2',analysis:'🏟️ كلاسيكو البرتغال 1-1 - بنفيكا ضد بورتو - دا لوز 65 ألف'}]
 };
 
 function buildMenu(){
   const menu=document.getElementById('menu');
-  let html=`<button class="active" data-filter="all" onclick="filterAI('all',this)">✦ 🤖 كل الـ14 دوري - زخرفة احترافية ✦</button>`;
-  Object.keys(leagues).forEach(k=>{
-    const l=leagues[k];
-    html+=`<button data-filter="${k}" onclick="filterAI('${k}',this)">${l.flag} ${l.name}</button>`;
-  });
-  html+=`<button data-filter="press" onclick="filterAI('press',this)">📰 ذكاء - مقالات + تصويت</button>`;
+  let html=`<button class="active" data-filter="all" onclick="filterAI('all',this)">⚽ 🏟️ كل الـ14 دوري - زخرفة رياضية 🏆</button>`;
+  Object.keys(leagues).forEach(k=>{const l=leagues[k]; html+=`<button data-filter="${k}" onclick="filterAI('${k}',this)">${l.flag} ${l.name} ${l.emoji}</button>`;});
+  html+=`<button data-filter="press" onclick="filterAI('press',this)">📰 ذكاء - مقالات + تصويت ⚽</button>`;
   menu.innerHTML=html;
 }
 
@@ -127,25 +127,21 @@ function renderAI(){
     aiData[lg].forEach(m=>{
       const isFinished=m.status==='انتهت';
       const card=document.createElement('div');
-      card.className='card league-card';
+      card.className='card';
       card.innerHTML=`
-        <div class="hd"><span style="display:flex;align-items:center;gap:8px"><span style="background:${info.color};width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:0 0 10px ${info.color}"></span>${info.flag} ${info.name} - ${m.home} ${m.score} ${m.away}</span><span style="background:${isFinished?'#00ff88':'#1e3a5f'};color:${isFinished?'#000':'#93c5fd'};padding:6px 14px;border-radius:50px;font-size:10px">${isFinished?'✦ حصري ✦':'🔥 '+m.time}</span></div>
-        <div class="match"><div><div style="color:#ffeb3b;font-size:11px">📅 31 أكتوبر</div><div style="background:#1e1e40;padding:7px;border-radius:10px;margin-top:7px;font-size:11px">⏰ ${m.time}</div><div style="background:#3a2a8a;padding:6px;border-radius:10px;margin-top:7px;font-size:10px;text-align:center">📺 ${m.channel}</div></div><div><div class="team">${m.home}</div><div style="text-align:center;font-size:10px;margin:8px 0;color:#666">✦ VS ✦</div><div class="team">${m.away}</div></div><div><div class="score">${m.score}</div><div style="font-size:9px;text-align:center;margin-top:8px;padding:6px 12px;border-radius:50px;font-weight:800;background:${isFinished?'#00ff88':'#1e3a5f'};color:${isFinished?'#000':'#93c5fd'}">${m.status}</div></div>
-        <div class="detail"><b>🤖 تحليل ذكاء اصطناعي - ${info.flag} ${info.name}:</b> ${m.analysis}<br>${isFinished?`<b>⚽ الأهداف: د${m.goals.join(' - د')}</b><br><div class="video-box" data-goals="${m.goals.join(',')}" data-home="${m.home}" data-away="${m.away}" onclick="playAI(this)"><canvas></canvas><div class="label">🤖 ذكاء اصطناعي - حصري - لا ينحذف</div><div class="play"></div><div class="title">✦ ${m.home} ${m.score} ${m.away} - ${info.flag} ${info.name} - جميع الأهداف - زخرفة احترافية ✦</div></div>`:`<b>⏰ العد التنازلي: ${m.time} - ${m.channel} - توقع AI</b>`}</div></div>`;
+        <div class="hd"><span style="display:flex;align-items:center;gap:10px"><span style="background:${info.color};width:14px;height:14px;border-radius:50%;display:inline-block;box-shadow:0 0 12px ${info.color}"></span>${info.flag} ${info.name} ${info.emoji} - ${m.home} ${m.score} ${m.away}</span><span style="background:${isFinished?'#00ff88':'#1e3a5f'};color:${isFinished?'#000':'#93c5fd'};padding:7px 16px;border-radius:50px;font-size:11px">${isFinished?'⚽ حصري 🏟️':'🔥 '+m.time}</span></div>
+        <div class="match"><div><div style="color:#ffeb3b;font-size:11px">📅 31 أكتوبر ⚽</div><div style="background:#1e1e40;padding:8px;border-radius:12px;margin-top:8px;font-size:11px">⏰ ${m.time} 🏟️</div><div style="background:#3a2a8a;padding:6px;border-radius:12px;margin-top:8px;font-size:10px;text-align:center">📺 ${m.channel}</div></div><div><div class="team">${m.home} ${info.emoji}</div><div style="text-align:center;font-size:11px;margin:10px 0;color:#666">⚽ VS ⚽</div><div class="team">${m.away} ${info.emoji}</div></div><div><div class="score">${m.score}</div><div style="font-size:10px;text-align:center;margin-top:10px;padding:7px 14px;border-radius:50px;font-weight:800;background:${isFinished?'#00ff88':'#1e3a5f'};color:${isFinished?'#000':'#93c5fd'}">${m.status} 🏟️</div></div>
+        <div class="detail"><b>🤖 تحليل ذكاء اصطناعي - ${info.flag} ${info.name} ${info.emoji}:</b> ${m.analysis}<br>${isFinished?`<b>⚽ الأهداف: د${m.goals.join(' - د')}</b><br><div class="video-box" data-goals="${m.goals.join(',')}" data-home="${m.home}" data-away="${m.away}" onclick="playAI(this)"><canvas></canvas><div class="label">⚽ 🤖 ذكاء اصطناعي - حصري - لا ينحذف 🏟️</div><div class="play"></div><div class="title">⚽ ${m.home} ${m.score} ${m.away} - ${info.flag} ${info.name} - جميع الأهداف - زخرفة رياضية احترافية 🏆</div></div>`:`<b>⏰ العد التنازلي: ${m.time} - ${m.channel} - توقع AI 🏟️</b>`}</div></div>`;
       left.appendChild(card);
     });
   });
   
   right.innerHTML=`
-    <div class="side"><h3>✦ 🤖 تصويت ذكاء اصطناعي - 14 دوري ✦</h3><div class="article"><b>⚽ بايرن ضد دورتموند - الكلاسيكو 9:30 م</b><div class="poll"><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:800"><span>🔴 بايرن <span id="percB">68</span>%</span><span>🟡 دورتموند <span id="percD">32</span>%</span></div><div class="poll-bar"><div class="poll-fill" id="poll1" style="width:68%"></div></div><div style="font-size:11px;color:#888">✦ <span id="pollVotes">${votes.toLocaleString()}</span> صوت - ذكاء اصطناعي يحدث كل 30 ثانية ✦</div></div><button onclick="voteAI()" style="background:linear-gradient(90deg,#00ff88,#ffeb3b);color:#000;border:none;padding:16px 28px;border-radius:50px;font-weight:900;font-size:15px;cursor:pointer;width:100%;margin-top:16px;box-shadow:0 0 30px rgba(0,255,136,.5)">✦ صوت الآن 🤖 - زخرفة احترافية ✦</button></div></div>
-    <div class="side" style="margin-top:16px"><h3>✦ 🤖 سلوم تيفي يختار - ذكاء اصطناعي ✦</h3>
-      <div class="article"><b>⭐ نجم اليوم - AI يختار من 14 دوري:</b><br><b id="aiStar" style="color:#ffeb3b">فيران توريس - باريس 9 - 🇫🇷 فرنسي</b><br>تقييم <span id="aiRating">9.2</span>/10 - <span id="aiStarDetail">هدفين + أسيست - انتقال 55م من برشلونة</span><br><span style="color:#00ff88">🤖 يحدث كل 30 ثانية - زخرفة احترافية</span></div>
-      <div class="article"><b>⚽ هدافين 14 دوري - AI:</b><br><div id="aiScorers">🥇 كين 14 - 🇩🇪 بايرن<br>🥈 مبابي 12 - 🇪🇸 ريال<br>🥉 ديمبيلي 11 - 🇫🇷 باريس<br>4. رونالدو 10 - 🇸🇦 النصر<br>5. صلاح 9 - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 ليفربول<br>6. أكرم عفيف 8 - 🇶🇦 السد</div></div>
-      <div class="article"><b>💰 انتقالات 14 دوري - AI مباشر:</b><br><div id="aiTransfers">🔴 رسمي: توريس إلى باريس 55م ✅<br>🔵 رسمي: تاه إلى بايرن 4 ✅<br>🟢 رسمي: براون 11 إلى بايرن ✅<br>🟡 إشاعة: صلاح إلى الهلال 100م 🔥</div></div>
+    <div class="side"><h3>⚽ 🤖 تصويت ذكاء اصطناعي - 14 دوري 🏟️</h3><div class="article"><b>⚽ بايرن ضد دورتموند - الكلاسيكو 9:30 م 🏟️</b><div class="poll"><div style="display:flex;justify-content:space-between;font-size:14px;font-weight:900"><span>🔴 بايرن <span id="percB">68</span>% ⚽</span><span>🟡 دورتموند <span id="percD">32</span>% 🏟️</span></div><div class="poll-bar"><div class="poll-fill" id="poll1" style="width:68%"></div></div><div style="font-size:11px;color:#888">⚽ <span id="pollVotes">${votes.toLocaleString()}</span> صوت - ذكاء اصطناعي يحدث كل 30 ثانية 🏟️</div></div><button onclick="voteAI()" style="background:linear-gradient(90deg,#00ff88,#ffeb3b,#3b82f6);color:#000;border:none;padding:18px 30px;border-radius:50px;font-weight:900;font-size:16px;cursor:pointer;width:100%;margin-top:18px;box-shadow:0 0 35px rgba(0,255,136,.6)">⚽ صوت الآن 🤖 - زخرفة رياضية 🏟️</button></div></div>
+    <div class="side" style="margin-top:18px"><h3>⚽ 🤖 سلوم تيفي يختار - ذكاء اصطناعي 🏆</h3>
+      <div class="article"><b>⭐ نجم اليوم - AI يختار من 14 دوري:</b><br><b id="aiStar" style="color:#ffeb3b">فيران توريس - باريس 9 - 🇫🇷 فرنسي ⚽</b><br>تقييم <span id="aiRating">9.2</span>/10 - <span id="aiStarDetail">هدفين + أسيست - انتقال 55م من برشلونة</span><br><span style="color:#00ff88">🤖 يحدث كل 30 ثانية - زخرفة رياضية 🏟️</span></div>
+      <div class="article"><b>⚽ هدافين 14 دوري - AI 🏆:</b><br><div id="aiScorers">🥇 كين 14 - 🇩🇪 بايرن ⚽<br>🥈 مبابي 12 - 🇪🇸 ريال 🏟️<br>🥉 ديمبيلي 11 - 🇫🇷 باريس 🥅<br>4. رونالدو 10 - 🇸🇦 النصر ⚽<br>5. صلاح 9 - 🏴󠁧󠁢󠁥󠁮󠁧󠁿 ليفربول 🏆<br>6. أكرم عفيف 8 - 🇶🇦 السد 🥅</div></div>
+      <div class="article"><b>💰 انتقالات 14 دوري - AI مباشر ⚽:</b><br><div id="aiTransfers">🔴 رسمي: توريس إلى باريس 55م ✅ 🏟️<br>🔵 رسمي: تاه إلى بايرن 4 ✅ ⚽<br>🟢 رسمي: براون 11 إلى بايرن ✅ 🏆<br>🟡 إشاعة: صلاح إلى الهلال 100م 🔥 ⚽</div></div>
     </div>
-    <div class="side" style="margin-top:16px"><h3>✦ 📰 مقالات ذكاء اصطناعي - 14 دوري ✦</h3><div class="article" id="aiArticles"><b>🇩🇪 بيلد AI:</b> إلفرسبرغ مفاجأة - خامس الترتيب - 4-1 على ماينز - ✅<br><br><b>🇮🇹 لاجازيتا AI:</b> ديربي ميلانو الليلة 10:45 م - إنتر ضد ميلان - سان سيرو ممتلئ - ✅<br><br><b>🇫🇷 ليكيب AI:</b> باريس 5-1 لوهافر - توريس يثبت أن برشلونة أخطأ - ثنائية - ✅<br><br><b>🏴󠁧󠁢󠁥󠁮󠁧󠁿 ماركا AI:</b> برشلونة بدون ليفا - روني باردجي 19 البديل - ✅<br><br><b>🇸🇦 الرياضية AI:</b> ديربي الرياض الليلة 9:00 م - الهلال ضد النصر - تذاكر نفدت - توقع AI 2-1 هلال - ✅<br><br><b>🇴🇲 عمان الرياضي AI:</b> السيب متصدر دوري عمان - 1-0 على ظفار - هدف قاتل د88 - ✅</div></div>
-    <div class="side" style="margin-top:16px"><h3>✦ ⏰ ذكاء اصطناعي - إحصائيات 14 دوري ✦</h3><div class="article"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center"><div style="background:rgba(10,10,30,.9);padding:16px;border-radius:16px;border:1px solid rgba(0,255,136,.2)"><div style="font-size:28px;font-weight:900;color:#00ff88" id="statGoals">${goalsToday}</div><div style="font-size:11px">هدف اليوم - 14 دوري</div></div><div style="background:rgba(10,10,30,.9);padding:16px;border-radius:16px;border:1px solid rgba(255,235,59,.2)"><div style="font-size:28px;font-weight:900;color:#ffeb3b" id="statMatches">14</div><div style="font-size:11px">دوري - ذكاء اصطناعي</div></div></div><div style="margin-top:14px"><b>🔥 العد التنازلي - كلاسيكو ألمانيا:</b><div style="display:flex;gap:10px;margin:10px 0;text-align:center"><div style="background:#1a1a3a;padding:12px 16px;border-radius:14px;flex:1;border:1px solid rgba(0,255,136,.2)"><div style="font-size:22px;font-weight:900;color:#00ff88" id="cdH">00</div><div style="font-size:9px">ساعة</div></div><div style="background:#1a1a3a;padding:12px 16px;border-radius:14px;flex:1;border:1px solid rgba(0,255,136,.2)"><div style="font-size:22px;font-weight:900;color:#00ff88" id="cdM">00</div><div style="font-size:9px">دقيقة</div></div><div style="background:#1a1a3a;padding:12px 16px;border-radius:14px;flex:1;border:1px solid rgba(0,255,136,.2)"><div style="font-size:22px;font-weight:900;color:#00ff88" id="cdS">00</div><div style="font-size:9px">ثانية</div></div></div></div><div style="font-size:10px;color:#00ff88;margin-top:10px;text-align:center">✦ ── زخرفة احترافية - 14 دوري - ذكاء اصطناعي ── ✦</div></div></div>
-  `;
-}
-
-function playAI(box){if(box.classList.contains('playing'))return;box.classList.add('playing');const canvas=box.querySelector('canvas');const ctx=canvas.getContext('2d');const goalsAttr=box.getAttribute('data-goals')||'8';const g
+    <div class="side" style="margin-top:18px"><h3>📰 ⚽ مقالات ذكاء اصطناعي - 14 دوري 🏟️</h3><div class="article" id="aiArticles"><b>🇩🇪 بيلد AI ⚽:</b> إلفرسبرغ مفاجأة - خامس الترتيب - 4-1 على ماينز - ✅<br><br><b>🇮🇹 لاجازيتا AI 🏟️:</b> ديربي ميلانو الليلة 10:45 م - إنتر ضد ميلان - سان سيرو ممتلئ - ✅<br><br><b>🇫🇷 ليكيب AI 🥅:</b> باريس 5-1 لوهافر - توريس يثبت أن برشلونة أخطأ - ثنائية - ✅<br><br><b>🏴󠁧󠁢󠁥󠁮󠁧󠁿 BBC AI 🏆:</b> سيتي ضد أرسنال 7:30 م - هالاند ضد ساكا - ✅<br><br><b>🇸🇦 الرياضية AI ⚽:</b> ديربي الرياض الليلة 9:00 م - الهلال ضد النصر - توقع AI 2-1 هلال - ✅<br><br><b>🇴🇲 عمان الرياضي AI 🏟️:</b> السيب متصدر دوري عمان - 1-0 على ظفار - هدف قاتل د88 - ✅</div></div>
+    <div class="side" style="margin-top:18px"><h3>⏰ ⚽ ذكاء اصطناعي - إحصائيات 14 دوري 🏟️</h3><div class="article"><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:center"><div style="background:rgba(10,12,35,.95);padding:18px;border-radi
