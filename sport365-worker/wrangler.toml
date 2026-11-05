@@ -4,5 +4,10 @@ compatibility_date = "2026-11-06"
 
 [vars]
 ALLOWED_ORIGIN = "https://sloom86ss.github.io"
-# Add SPORTS_FEED_URL in Worker Settings > Variables and Secrets.
-# Add SPORTS_FEED_TOKEN as a Secret only if your authorized provider requires it.
+# Optional comma-separated OpenLigaDB competition shortcuts.
+OPENLIGADB_LEAGUES = "bl1,bl2,bl3,dfb"
+# Optional season start year; otherwise inferred from current date.
+# OPENLIGADB_SEASON = "2026"
+
+[triggers]
+crons = ["*/2 * * * *"]
