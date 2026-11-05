@@ -50,8 +50,8 @@ button,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-templa
 </div>
 <script>
 /*
- * بعد نشر Cloudflare Worker، ضع عنوانه هنا.
- * مثال: https://smart-ai-365-api.YOUR-SUBDOMAIN.workers.dev
+ * ضع عنوان خادم SMART AI 365 المستقل هنا بعد تشغيل Ollama وQwen3.
+ * مثال: https://api.your-domain.example
  * لا تضع أي مفتاح سري في هذا الملف.
  */
 const API_URL = "";
@@ -61,7 +61,7 @@ let messages=[];
 function addMessage(role,text){const row=document.createElement('div');row.className='message '+role;const av=document.createElement('div');av.className='avatar';av.textContent=role==='user'?'أنت':'✦';const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;row.append(av,bubble);chat.append(row);chat.style.display='flex';welcome.style.display='none';row.scrollIntoView({behavior:'smooth',block:'end'});return bubble;}
 async function submit(){
  const q=input.value.trim();if(!q||send.disabled)return;
- if(!API_URL){addMessage('assistant','المحرك الذكي لم يُربط بعد. تم تجهيز الخادم، وبقي نشره في Cloudflare ثم وضع عنوانه في إعداد API_URL. لن أعرض إجابة تجريبية على أنها إجابة حقيقية.');return;}
+ if(!API_URL){addMessage('assistant','محرك SMART AI 365 المستقل لم يُربط بعد. شغّل خادم Ollama وQwen3 ثم ضع عنوانه في إعداد API_URL. لن أعرض إجابة تجريبية على أنها إجابة حقيقية.');return;}
  addMessage('user',q);messages.push({role:'user',content:q});input.value='';send.disabled=true;statusEl.textContent='● جارٍ التفكير';
  const pending=addMessage('assistant','جارٍ إعداد الإجابة…');
  try{
@@ -69,7 +69,7 @@ async function submit(){
   const data=await response.json();
   if(!response.ok||!data.ok)throw new Error(data.error||'تعذر الاتصال بمحرك الذكاء الاصطناعي.');
   pending.textContent=data.answer;messages.push({role:'assistant',content:data.answer});statusEl.textContent='● المحرك متصل';
- }catch(error){pending.textContent='تعذر الحصول على إجابة: '+(error.message||'خطأ في الاتصال')+'\n\nتحقق من نشر الخادم وإعداد النطاق المسموح.';statusEl.textContent='● تعذر الاتصال';messages.pop();}
+ }catch(error){pending.textContent='تعذر الحصول على إجابة: '+(error.message||'خطأ في الاتصال')+'\n\nتحقق من تشغيل خادم Ollama وQwen3 وإعداد النطاق المسموح.';statusEl.textContent='● تعذر الاتصال';messages.pop();}
  finally{send.disabled=false;input.focus();}
 }
 send.addEventListener('click',submit);input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit();}});
