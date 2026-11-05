@@ -1,6 +1,6 @@
 import http from "node:http";
 import { fetchMatches } from "./feed.js";
-import { analyzeMatch, formatMatches } from "./analyzer.js";
+import { analyzeMatch, buildAnalysis, formatMatches } from "./analyzer.js";
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -83,7 +83,12 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "cache-control": "no-store" });
     return res.end(JSON.stringify({
       ok: lastFeed.ok, reason: lastFeed.ok ? null : lastFeed.reason,
+      source: lastFeed.source || "غير محدد",
+      sourceType: lastFeed.sourceType || "unknown",
+      sourceFreshness: lastFeed.sourceFreshness || "unknown",
+      ageSeconds: lastFeed.ageSeconds ?? null,
       updatedAt: lastFeed.updatedAt || null, checkedAt: lastFeed.checkedAt || null,
+      warnings: lastFeed.warnings || [], limitations: lastFeed.limitations || [],
       matches: lastFeed.matches || []
     }));
   }
@@ -93,12 +98,12 @@ const server = http.createServer((req, res) => {
     return res.end(JSON.stringify({
       ok: lastFeed.ok && Boolean(match),
       reason: !lastFeed.ok ? lastFeed.reason : (match ? null : "لا توجد مباراة متاحة للتحليل"),
-      match, summary: match ? analyzeMatch(match) : null
+      match, summary: match ? analyzeMatch(match) : null, analysis: buildAnalysis(match), sourceFreshness: lastFeed.sourceFreshness || "unknown", ageSeconds: lastFeed.ageSeconds ?? null, limitations: lastFeed.limitations || []
     }));
   }
   if (req.url === "/health") {
     res.writeHead(200);
-    return res.end(JSON.stringify({ service: "SPORT 365 AI BOT", status: "ok", feedConnected: lastFeed.ok, checkedAt: lastFeed.checkedAt || null }));
+    return res.end(JSON.stringify({ service: "SPORT 365 AI BOT", status: "ok", feedConnected: lastFeed.ok, source: lastFeed.source || "غير محدد", sourceFreshness: lastFeed.sourceFreshness || "unknown", ageSeconds: lastFeed.ageSeconds ?? null, checkedAt: lastFeed.checkedAt || null }));
   }
   res.writeHead(404);
   res.end(JSON.stringify({ error: "not_found" }));
