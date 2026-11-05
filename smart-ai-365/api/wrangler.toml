@@ -1,0 +1,12 @@
+name = "smart-ai-365-api"
+main = "src/index.js"
+compatibility_date = "2026-11-06"
+
+[ai]
+binding = "AI"
+
+[vars]
+MODEL = "@cf/qwen/qwen3-30b-a3b-fp8"
+# Set ALLOWED_ORIGIN to the exact deployed website origin before public launch.
+# Example: "https://your-site.pages.dev"
+ALLOWED_ORIGIN = "*"
