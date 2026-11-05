@@ -108,7 +108,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(404);
   res.end(JSON.stringify({ error: "not_found" }));
 });
-server.listen(port, () => console.log(`SPORT 365 AI BOT listening on ${port}`));
+server.listen(port, "0.0.0.0", () => console.log(`SPORT 365 AI BOT listening on ${port}`));
 
 await refreshFeed();
 setInterval(refreshFeed, pollSeconds * 1000);
