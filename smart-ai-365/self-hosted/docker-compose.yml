@@ -28,7 +28,7 @@ services:
     depends_on:
       - ollama
     entrypoint: ["/bin/sh", "-c"]
-    command: ["sleep 5; ollama pull qwen3:8b"]
+    command: ["until ollama list >/dev/null 2>&1; do sleep 2; done; ollama pull qwen3:8b"]
     environment:
       OLLAMA_HOST: http://ollama:11434
     restart: "no"
