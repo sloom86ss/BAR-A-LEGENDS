@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090710">
+<meta name="description" content="سبورت 365 — منصة الرياضة الذكية. المباريات والتحليل الرياضي والملخصات في واجهة عربية واحدة.">
+<title>سبورت 365 | منصة الرياضة الذكية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08070d;--panel:#12101c;--panel2:#191528;--line:#302444;--purple:#8b45d6;--purple2:#51218c;--neon:#b5ff26;--muted:#a49aaf;--white:#f8f5fc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#32134c 0,transparent 42%),var(--bg);color:var(--white);font-family:Tajawal,system-ui,sans-serif;min-height:100vh;padding-bottom:88px}
+button{font:inherit}.topline{height:3px;background:linear-gradient(90deg,#9c49ed,var(--neon),#9c49ed)}
+header{max-width:1050px;margin:auto;padding:18px 16px 12px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.crest{width:54px;height:60px;flex:none;display:grid;place-items:center;position:relative;filter:drop-shadow(0 0 12px #8c43cf88)}
+.crest:before{content:"";position:absolute;inset:9px 3px 0;background:linear-gradient(145deg,#282333,#09080d);border:2px solid #b5ff26;clip-path:polygon(50% 0,94% 13%,86% 75%,50% 100%,14% 75%,6% 13%);box-shadow:inset 0 0 16px #8b45d6}
+.crest .crown{position:absolute;top:0;color:#e6c66e;font-size:21px;text-shadow:0 0 9px #d6a83b}
+.crest .ball{z-index:1;font-size:24px;margin-top:12px}
+.brandname{font-size:clamp(21px,4vw,30px);font-weight:900;line-height:1.1;white-space:nowrap}.brandname span{color:var(--neon)}.tagline{color:#c8b6dc;font-size:11px;margin-top:5px;letter-spacing:.2px}
+.head-actions{display:flex;gap:8px}.head-btn{border:1px solid var(--line);background:#171222;color:var(--white);border-radius:12px;padding:9px 12px;font-size:12px}
+main{max-width:1050px;margin:0 auto;padding:0 14px}.hero{border:1px solid #4a2c67;background:linear-gradient(125deg,#241333,#100d19 60%,#17200d);border-radius:22px;padding:22px 20px;position:relative;overflow:hidden;box-shadow:0 15px 40px #0008}
+.hero:after{content:"365";position:absolute;left:12px;top:-27px;font-size:110px;font-weight:900;color:#ffffff08;direction:ltr}
+.eyebrow{color:var(--neon);font-size:12px;font-weight:800}.hero h1{font-size:clamp(25px,5vw,39px);margin:8px 0 5px;font-weight:900}.hero p{margin:0;color:#c7bdcf;max-width:580px;font-size:14px;line-height:1.8}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.pill{border:1px solid #54356d;background:#1a1425;border-radius:30px;padding:7px 12px;font-size:11px;color:#e8ddf2}.pill b{color:var(--neon);margin-left:5px}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:23px 3px 11px}.section-head h2{font-size:18px;margin:0}.section-head small{color:var(--muted);font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.tile,.panel{background:linear-gradient(145deg,#191426,#100e17);border:1px solid var(--line);border-radius:17px;padding:15px;min-width:0}.tile .symbol{font-size:23px}.tile h3{font-size:15px;margin:8px 0 4px}.tile p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+.panel{padding:18px}.empty{min-height:130px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:13px;line-height:1.9}.empty strong{display:block;color:#eee;margin-bottom:5px}
+.status{display:inline-flex;align-items:center;gap:7px;border:1px solid #3b5a1d;background:#17210e;color:var(--neon);padding:6px 10px;border-radius:30px;font-size:11px}
+.dot{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 10px var(--neon)}
+.tab-content{display:none}.tab-content.active{display:block}.tabbar{position:fixed;z-index:20;bottom:0;left:0;right:0;background:#0d0b13ed;backdrop-filter:blur(14px);border-top:1px solid #342448;padding:8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:4px}
+.tab{border:0;background:transparent;color:#9d93a8;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 10px;min-width:58px;border-radius:12px;font-size:10px;cursor:pointer}.tab .ico{font-size:19px;line-height:1.2}.tab.active{color:var(--neon);background:#21172c}
+.notice{margin-top:14px;color:#8f849a;font-size:10px;line-height:1.8;text-align:center}
+@media(max-width:620px){header{padding:13px 12px}.head-btn{padding:8px 9px;font-size:11px}.head-btn .wide{display:none}.grid{grid-template-columns:1fr}.hero{padding:19px 16px}.tile{display:flex;gap:12px;align-items:center}.tile h3{margin:0 0 4px}.tab{min-width:0;flex:1;padding:7px 3px}.tabbar{gap:2px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+ <div class="brand">
+  <div class="crest" aria-hidden="true"><span class="crown">♛</span><span class="ball">⚽</span></div>
+  <div><div class="brandname">سبورت <span>365</span></div><div class="tagline">منصة الرياضة الذكية</div></div>
+ </div>
+ <div class="head-actions"><button class="head-btn" type="button" aria-label="التنبيهات">🔔 <span class="wide">التنبيهات</span></button><button class="head-btn" type="button" aria-label="تثبيت التطبيق">＋ <span class="wide">التطبيق</span></button></div>
+</header>
+<main>
+ <section id="home" class="tab-content active">
+  <div class="hero">
+   <div class="eyebrow">SPORT 365 · SMART SPORTS PLATFORM</div>
+   <h1>الرياضة بذكاء… لحظة بلحظة</h1>
+   <p>منصة رياضية عربية تجمع متابعة المباريات والتحليل الذكي والملخصات في تجربة واحدة سهلة وسريعة.</p>
+   <div class="pills"><span class="pill"><b>●</b> متابعة مباشرة عند ربط المصدر</span><span class="pill">تحليل مستمر</span><span class="pill">واجهة عربية</span></div>
+  </div>
+  <div class="section-head"><h2>أقسام المنصة</h2><small>اختر القسم للمتابعة</small></div>
+  <div class="grid">
+   <article class="tile"><span class="symbol">⚽</span><div><h3>مركز المباريات</h3><p>المباشر والنتائج ومواعيد المواجهات.</p></div></article>
+   <article class="tile"><span class="symbol">🧠</span><div><h3>التحليل الذكي</h3><p>قراءة مجريات اللقاء وتحديث التحليل مع الأحداث المؤكدة.</p></div></article>
+   <article class="tile"><span class="symbol">▶️</span><div><h3>الفيديو والملخصات</h3><p>مساحة للمقاطع والملخصات من مصادر مسموح بها.</p></div></article>
+  </div>
+  <div class="section-head"><h2>حالة المنصة</h2><span class="status"><i class="dot"></i> الواجهة جاهزة</span></div>
+  <div class="panel"><div class="empty"><div><strong>بانتظار ربط مصادر رياضية موثوقة</strong>لن نعرض نتائج أو دقائق أو أحداثاً غير مؤكدة. ستظهر البيانات هنا بعد إعداد مصدر فعلي والتحقق من تحديثه.</div></div></div>
+ </section>
+ <section id="matches" class="tab-content">
+  <div class="section-head"><h2>مركز المباريات</h2><small>البيانات الموثوقة فقط</small></div>
+  <div class="panel"><div class="empty"><div><strong>لم يتم ربط مصدر النتائج بعد</strong>ستُعرض المباريات المباشرة أولاً، ثم القادمة والنتائج، بعد تفعيل مصدر بيانات موثوق.</div></div></div>
+ </section>
+ <section id="analysis" class="tab-content">
+  <div class="section-head"><h2>التحليل الذكي</h2><small>تحليل يتجدد مع أحداث المباراة</small></div>
+  <div class="panel"><div class="empty"><div><strong>محرك التحليل بانتظار بيانات المباراة</strong>سيتم فصل الإحصاءات والأحداث المؤكدة عن قراءة الذكاء الاصطناعي والتوقعات، ولن تُنشأ أحداث من دون مصدر.</div></div></div>
+ </section>
+ <section id="videos" class="tab-content">
+  <div class="section-head"><h2>الفيديو والملخصات</h2><small>مصادر قانونية فقط</small></div>
+  <div class="panel"><div class="empty"><div><strong>مساحة الفيديو جاهزة للربط</strong>لا يوجد بث أو مقطع مضمّن حالياً. ستُضاف فقط روابط ومقاطع تسمح مصادرها بالنشر أو التضمين.</div></div></div>
+ </section>
+ <section id="table" class="tab-content">
+  <div class="section-head"><h2>الترتيب</h2><small>جداول الدوريات</small></div>
+  <div class="panel"><div class="empty"><div><strong>جداول الترتيب ستظهر هنا</strong>بانتظار ربط بيانات رسمية للدوريات والبطولات.</div></div></div>
+ </section>
+ <p class="notice">سبورت 365 — منصة رياضية مستقلة. هذه نسخة الواجهة الأولية؛ لا تعرض بيانات مباشرة حتى يتم ربط مصدر موثوق واختباره.</p>
+</main>
+<nav class="tabbar" aria-label="التنقل الرئيسي">
+ <button class="tab active" data-tab="home"><span class="ico">⌂</span>الرئيسية</button>
+ <button class="tab" data-tab="matches"><span class="ico">⚽</span>المباريات</button>
+ <button class="tab" data-tab="analysis"><span class="ico">🧠</span>التحليل</button>
+ <button class="tab" data-tab="videos"><span class="ico">▶</span>الفيديو</button>
+ <button class="tab" data-tab="table"><span class="ico">🏆</span>الترتيب</button>
+</nav>
+<script>
+document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(item=>item.classList.toggle('active',item===button));
+ document.querySelectorAll('.tab-content').forEach(section=>section.classList.toggle('active',section.id===button.dataset.tab));
+ window.scrollTo({top:0,behavior:'smooth'});
+}));
+</script>
+</body>
+</html>
