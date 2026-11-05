@@ -74,6 +74,28 @@ async function refreshFeed() {
 
 const server = http.createServer((req, res) => {
   res.setHeader("content-type", "application/json; charset=utf-8");
+  res.setHeader("access-control-allow-origin", process.env.ALLOWED_ORIGIN || "*");
+  res.setHeader("access-control-allow-methods", "GET, OPTIONS");
+  res.setHeader("access-control-allow-headers", "content-type");
+  if (req.method === "OPTIONS") { res.writeHead(204); return res.end(); }
+  if (req.method !== "GET") { res.writeHead(405); return res.end(JSON.stringify({ error: "method_not_allowed" })); }
+  if (req.url === "/api/matches") {
+    res.writeHead(200, { "cache-control": "no-store" });
+    return res.end(JSON.stringify({
+      ok: lastFeed.ok, reason: lastFeed.ok ? null : lastFeed.reason,
+      updatedAt: lastFeed.updatedAt || null, checkedAt: lastFeed.checkedAt || null,
+      matches: lastFeed.matches || []
+    }));
+  }
+  if (req.url === "/api/analysis") {
+    const match = (lastFeed.matches || []).find(m => m.status && /live|مباشر|الشوط|حي/i.test(m.status)) || (lastFeed.matches || [])[0] || null;
+    res.writeHead(200, { "cache-control": "no-store" });
+    return res.end(JSON.stringify({
+      ok: lastFeed.ok && Boolean(match),
+      reason: !lastFeed.ok ? lastFeed.reason : (match ? null : "لا توجد مباراة متاحة للتحليل"),
+      match, summary: match ? analyzeMatch(match) : null
+    }));
+  }
   if (req.url === "/health") {
     res.writeHead(200);
     return res.end(JSON.stringify({ service: "SPORT 365 AI BOT", status: "ok", feedConnected: lastFeed.ok, checkedAt: lastFeed.checkedAt || null }));
