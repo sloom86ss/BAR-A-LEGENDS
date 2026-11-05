@@ -6,6 +6,6 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "start": "node src/index.js",
-    "check": "node --check src/index.js && node --check src/feed.js && node --check src/analyzer.js"
+    "check": "node --check src/index.js && node --check src/feed.js && node --check src/analyzer.js && node --check ../sport365-worker/src/index.js"
   }
 }
