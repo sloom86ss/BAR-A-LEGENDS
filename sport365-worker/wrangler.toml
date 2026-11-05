@@ -1,0 +1,8 @@
+name = "sport365-api"
+main = "src/index.js"
+compatibility_date = "2026-11-06"
+
+[vars]
+ALLOWED_ORIGIN = "https://sloom86ss.github.io"
+# Add SPORTS_FEED_URL in Worker Settings > Variables and Secrets.
+# Add SPORTS_FEED_TOKEN as a Secret only if your authorized provider requires it.
