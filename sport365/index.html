@@ -33,6 +33,17 @@ main{max-width:1050px;margin:0 auto;padding:0 14px}.hero{border:1px solid #4a2c6
 .tab{border:0;background:transparent;color:#9d93a8;display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 10px;min-width:58px;border-radius:12px;font-size:10px;cursor:pointer}.tab .ico{font-size:19px;line-height:1.2}.tab.active{color:var(--neon);background:#21172c}
 .notice{margin-top:14px;color:#8f849a;font-size:10px;line-height:1.8;text-align:center}
 @media(max-width:620px){header{padding:13px 12px}.head-btn{padding:8px 9px;font-size:11px}.head-btn .wide{display:none}.grid{grid-template-columns:1fr}.hero{padding:19px 16px}.tile{display:flex;gap:12px;align-items:center}.tile h3{margin:0 0 4px}.tab{min-width:0;flex:1;padding:7px 3px}.tabbar{gap:2px}}
+ 
+.analysis-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 3px 12px}.analysis-head h2{font-size:23px;margin:5px 0}.analysis-head p{font-size:12px;color:var(--muted);margin:0;line-height:1.7}
+.analysis-warning{border:1px solid #71551d;background:#211a0c;color:#f4d58b;padding:10px 12px;border-radius:12px;font-size:11px;margin:12px 0}
+.analysis-toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.analysis-toolbar label{font-size:11px;color:#c7b8d3;display:grid;gap:6px}.analysis-toolbar select{width:100%;background:#171222;border:1px solid var(--line);color:white;border-radius:10px;padding:11px;font:inherit}
+.analysis-score{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;padding:18px 12px;border:1px solid #51346c;border-radius:17px;background:radial-gradient(ellipse at center,#2c1740,#100d18 72%);gap:8px}.analysis-score small{display:block;color:#b8a8c5;font-size:11px}.analysis-score strong{display:block;font-size:18px;margin-top:6px}.score-center b{display:block;font-size:30px;color:var(--neon);direction:ltr}.score-center span{font-size:10px;color:#b5a7c0}
+.analysis-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:11px 0}.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px;min-width:0}.kpi span,.kpi small{display:block;color:var(--muted);font-size:10px}.kpi b{display:block;font-size:19px;margin:7px 0;color:var(--neon);direction:ltr;text-align:right}.meter{height:5px;background:#30263c;border-radius:9px;overflow:hidden}.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--purple),var(--neon));border-radius:9px}
+.analysis-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:10px}.chart-panel,.analysis-grid>.panel{min-height:190px}.panel-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}.panel-title h3{font-size:14px;margin:0}.panel-title span{font-size:10px;color:var(--muted)}
+.momentum{padding:8px 2px}.axis-labels{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.momentum-bars{height:105px;display:flex;align-items:end;gap:5px;border-bottom:1px solid #51405f;margin:10px 0}.momentum-bars i{display:block;flex:1;min-width:3px;border-radius:5px 5px 0 0;background:linear-gradient(0deg,var(--purple2),var(--neon));opacity:.85}
+.insight{font-size:12px;line-height:2;color:#d4c9dc}.insight-tag{display:inline-block;margin-top:12px;color:var(--neon);font-size:10px;border:1px solid #42551e;background:#18200f;border-radius:8px;padding:6px 8px}
+.analysis-lower{margin-top:11px}.tactic-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.tactic-list div{display:flex;justify-content:space-between;gap:8px;background:#0e0c15;border:1px solid #2a2235;padding:11px;border-radius:10px;font-size:11px}.tactic-list span{color:#c9bdd2}.tactic-list b{color:var(--neon);font-size:10px}
+@media(max-width:620px){.analysis-head{align-items:flex-start;flex-direction:column}.analysis-head .status{align-self:flex-start}.analysis-toolbar{grid-template-columns:1fr}.analysis-kpis{grid-template-columns:1fr 1fr}.analysis-grid{grid-template-columns:1fr}.analysis-score strong{font-size:15px}.analysis-score{padding:16px 7px}.tactic-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -66,8 +77,32 @@ main{max-width:1050px;margin:0 auto;padding:0 14px}.hero{border:1px solid #4a2c6
   <div class="panel"><div class="empty"><div><strong>لم يتم ربط مصدر النتائج بعد</strong>ستُعرض المباريات المباشرة أولاً، ثم القادمة والنتائج، بعد تفعيل مصدر بيانات موثوق.</div></div></div>
  </section>
  <section id="analysis" class="tab-content">
-  <div class="section-head"><h2>التحليل الذكي</h2><small>تحليل يتجدد مع أحداث المباراة</small></div>
-  <div class="panel"><div class="empty"><div><strong>محرك التحليل بانتظار بيانات المباراة</strong>سيتم فصل الإحصاءات والأحداث المؤكدة عن قراءة الذكاء الاصطناعي والتوقعات، ولن تُنشأ أحداث من دون مصدر.</div></div></div>
+  <div class="analysis-head">
+   <div><div class="eyebrow">SPORT 365 · AI LAB</div><h2>مركز التحليلات الذكي</h2><p>غرفة متابعة تكتيكية داخل الموقع — تتوسع تلقائياً عند ربط بيانات المباراة.</p></div>
+   <span class="status"><i class="dot"></i> واجهة التحليل جاهزة</span>
+  </div>
+  <div class="analysis-warning">⚠️ وضع العرض: المؤشرات أدناه توضيحية وليست بيانات مباراة حقيقية أو تحليلاً مباشراً.</div>
+  <div class="analysis-toolbar">
+   <label>المباراة <select id="analysisMatch"><option value="demo">نموذج توضيحي للمباراة</option></select></label>
+   <label>زاوية التحليل <select id="analysisView"><option value="overall">نظرة شاملة</option><option value="attack">التحليل الهجومي</option><option value="defense">التحليل الدفاعي</option><option value="press">الضغط والاستحواذ</option></select></label>
+  </div>
+  <div class="analysis-score">
+   <div><small>الفريق الأول</small><strong>الفريق A</strong></div><div class="score-center"><b>0 - 0</b><span>نموذج توضيحي</span></div><div><small>الفريق الثاني</small><strong>الفريق B</strong></div>
+  </div>
+  <div class="analysis-kpis">
+   <div class="kpi"><span>الاستحواذ</span><b id="possA">54%</b><div class="meter"><i style="width:54%"></i></div></div>
+   <div class="kpi"><span>التسديدات</span><b id="shots">8 - 6</b><small>محاولات توضيحية</small></div>
+   <div class="kpi"><span>التمريرات الناجحة</span><b id="passes">86% - 81%</b><small>نسب توضيحية</small></div>
+   <div class="kpi"><span>الهجمات الخطرة</span><b id="danger">5 - 4</b><small>مؤشر توضيحي</small></div>
+  </div>
+  <div class="analysis-grid">
+   <div class="panel chart-panel"><div class="panel-title"><h3>مؤشر السيطرة على مجريات اللعب</h3><span>رسم توضيحي</span></div>
+    <div class="momentum"><div class="axis-labels"><span>الفريق A</span><span>الفريق B</span></div><div class="momentum-bars"><i style="height:45%"></i><i style="height:30%"></i><i style="height:62%"></i><i style="height:38%"></i><i style="height:72%"></i><i style="height:44%"></i><i style="height:57%"></i><i style="height:28%"></i><i style="height:68%"></i><i style="height:40%"></i><i style="height:52%"></i><i style="height:33%"></i></div><div class="axis-labels"><span>بداية اللقاء</span><span>نهاية اللقاء</span></div></div>
+   </div>
+   <div class="panel"><div class="panel-title"><h3>قراءة المحلل الذكي</h3><span>تفسير آلي</span></div><div id="aiInsight" class="insight">في النسخة المتصلة، سيحلل النظام الاستحواذ والفرص والتحولات ويحدّث القراءة عند وصول أحداث مؤكدة. لا توجد حالياً بيانات مباراة فعلية.</div><div class="insight-tag">التحليل الفعلي يبدأ بعد ربط مصدر البيانات</div></div>
+  </div>
+  <div class="panel analysis-lower"><div class="panel-title"><h3>مؤشرات تكتيكية</h3><span>نموذج واجهة</span></div><div class="tactic-list"><div><span>بناء اللعب</span><b>بانتظار البيانات</b></div><div><span>الضغط العالي</span><b>بانتظار البيانات</b></div><div><span>التحولات السريعة</span><b>بانتظار البيانات</b></div><div><span>الفرص الخطرة</span><b>بانتظار البيانات</b></div></div></div>
+  <div class="panel analysis-lower"><div class="panel-title"><h3>سجل أحداث المباراة</h3><span>تحديث مع كل حدث مؤكد</span></div><div class="empty"><div><strong>لا توجد أحداث متصلة حالياً</strong>ستظهر الأهداف والبطاقات والتبديلات والدقائق هنا فور وصولها من مصدر موثوق.</div></div></div>
  </section>
  <section id="videos" class="tab-content">
   <div class="section-head"><h2>الفيديو والملخصات</h2><small>مصادر قانونية فقط</small></div>
@@ -92,6 +127,18 @@ document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click
  document.querySelectorAll('.tab-content').forEach(section=>section.classList.toggle('active',section.id===button.dataset.tab));
  window.scrollTo({top:0,behavior:'smooth'});
 }));
+
+// اختيار زاوية التحليل يوضح أن الشاشة تفاعلية، مع إبقاء البيانات التجريبية موسومة بوضوح.
+const analysisView=document.getElementById('analysisView');
+if(analysisView){analysisView.addEventListener('change',()=>{
+ const messages={
+ overall:'النظرة الشاملة: ستجمع قراءة الاستحواذ والفرص والتحولات فور توفر بيانات حقيقية.',
+ attack:'التحليل الهجومي: سيعرض بناء الهجمة والتسديدات والفرص الخطرة بعد وصول بيانات موثوقة.',
+ defense:'التحليل الدفاعي: سيركز على التمركز والافتكاك والتغطية الدفاعية عند توفر الإحصاءات.',
+ press:'الضغط والاستحواذ: سيقيس فترات الضغط واستعادة الكرة ونسب السيطرة من بيانات المباراة.'
+ };
+ document.getElementById('aiInsight').textContent=messages[analysisView.value]+' هذه قراءة توضيحية وليست وصفاً لمباراة جارية.';
+});}
 </script>
 </body>
 </html>
