@@ -87,7 +87,6 @@ function setNotice(id,text){const el=$(id);if(el)el.textContent=text;}
 function renderMatches(data){
  currentMatches=Array.isArray(data.matches)?data.matches:[];
  const live=currentMatches.filter(m=>liveStatus(m.status));
- $('matchesList').innerHTML=currentMatches.length?currentMatches.slice().sort((x,y)=>Number(liveStatus(y.status))-Number(liveStatus(x.status))).map(matchCard).join(''):'<div class="panel empty">لا توجد مباريات في آخر تحديث من المصدر.</div>';
  setNotice('matchesStatus',data.ok?'تم جلب '+currentMatches.length+' مباراة من '+(data.source||'المصدر')+' · تحديث البيانات '+(data.updatedAt||'غير محدد')+' · الحالات الحية قد تكون تقديرية':'تعذر جلب المصدر: '+(data.reason||'لم تصل بيانات'));
  const select=$('analysisMatch');
  const previous=selectedMatchId||select.value;
