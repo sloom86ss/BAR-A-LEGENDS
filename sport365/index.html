@@ -87,7 +87,7 @@ function setNotice(id,text){const el=$(id);if(el)el.textContent=text;}
 function renderMatches(data){
  currentMatches=Array.isArray(data.matches)?data.matches:[];
  const live=currentMatches.filter(m=>liveStatus(m.status));
- setNotice('matchesStatus',data.ok?'تم جلب '+currentMatches.length+' مباراة من '+(data.source||'المصدر')+' · تحديث البيانات '+(data.updatedAt||'غير محدد')+' · الحالات الحية قد تكون تقديرية':'تعذر جلب المصدر: '+(data.reason||'لم تصل بيانات'));
+ setNotice('matchesStatus',data.ok?'تم جلب '+currentMatches.length+' مباراة من '+(data.source||'المصدر')+' · آخر تحديث '+(data.updatedAt||'غير محدد')+' · حداثة البيانات: '+({fresh:'حديثة',aging:'قديمة نسبياً',stale:'قديمة — لا تعتمد عليها كبيانات مباشرة',unknown:'غير معروفة'}[data.sourceFreshness||'unknown'])+(data.ageSeconds!=null?' · عمر البيانات '+data.ageSeconds+' ثانية':''):'تعذر جلب المصدر: '+(data.reason||'لم تصل بيانات'));
  const select=$('analysisMatch');
  const previous=selectedMatchId||select.value;
  select.innerHTML=currentMatches.length?currentMatches.map(m=>'<option value="'+esc(m.id)+'">'+esc(m.home)+' × '+esc(m.away)+'</option>').join(''):'<option value="">لا توجد مباراة متاحة بعد</option>';
@@ -106,7 +106,7 @@ function renderAnalysis(){
  const facts=filtered.slice(-8).map(e=>'• '+(e.minute!=null?e.minute+'′: ':'')+(e.type||'حدث')+(e.player?' — '+e.player:'')+(e.detail?' ('+e.detail+')':'')).join('\n');
  $('aiInsight').textContent='الوقائع المؤكدة من المصدر:\n'+(facts||'لم يرسل المصدر أحداثاً مسجلة لهذه الزاوية.')+'\n\nقراءة تحليلية أولية: '+(ev.length?'تُظهر البيانات المسجلة '+ev.length+' حدثاً. لا يمكن استنتاج الاستحواذ أو الضغط أو جودة الفرص من سجل الأحداث وحده.':'لا تتوفر أحداث كافية لتقديم استنتاج تكتيكي موثوق.');
  $('analysisEvents').textContent=facts||'لا توجد أحداث مؤكدة في سجل هذه المباراة.';
- $('analysisStatus').innerHTML='<i class="dot"></i> '+(m.statusConfidence==='time_inferred'?'حالة جارية تقديرية':(liveStatus(m.status)?'مباشر حسب المصدر':'بيانات المباراة متاحة'));
+ $('analysisStatus').innerHTML='<i class="dot"></i> '+(m.statusConfidence==='time_based'?'حالة جارية تقديرية':(liveStatus(m.status)?'مباشر حسب المصدر':'بيانات المباراة متاحة'));
 }
 async function refreshSport365(){
  if(!API_BASE){setNotice('matchesStatus','لم يُضبط عنوان خدمة محرك التحليل بعد.');setNotice('analysisNotice','الواجهة جاهزة، لكنها تنتظر عنوان خدمة SPORT 365 API ومصدر مباريات موثوق.');$('analysisStatus').textContent='بانتظار ربط الخدمة';return;}
@@ -114,7 +114,7 @@ async function refreshSport365(){
   const response=await fetch(API_BASE+'/api/matches',{cache:'no-store'});
   if(!response.ok)throw new Error('HTTP '+response.status);
   const data=await response.json();renderMatches(data);
-  setNotice('analysisNotice',data.ok?'تم استلام بيانات '+(data.source||'المصدر')+'. المصدر مجتمعي وقد يتأخر؛ لا تتوفر دقيقة لعب مؤكدة في هذا الموصل.':'المحرك يعمل، لكن مصدر المباريات غير متصل: '+(data.reason||'غير معروف'));
+  setNotice('analysisNotice',data.ok?'تم استلام بيانات '+(data.source||'المصدر')+'. '+(data.sourceFreshness==='stale'?'تنبيه: البيانات قديمة ولا تعرض على أنها مباشرة. ':'')+'المصدر مجتمعي وقد يتأخر؛ لا تتوفر دقيقة لعب مؤكدة في هذا الموصل.':'المحرك يعمل، لكن مصدر المباريات غير متصل: '+(data.reason||'غير معروف'));
  }catch(error){setNotice('matchesStatus','تعذر الاتصال بمحرك التحليل: '+error.message);setNotice('analysisNotice','تعذر جلب بيانات المباريات. لن نعرض بيانات افتراضية على أنها حقيقية.');$('analysisStatus').textContent='الاتصال متعذر';}
 }
 document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
