@@ -40,5 +40,6 @@ jobs:
             echo "No feed changes to publish."
           else
             git commit -m "Update SPORT 365 football feed"
+            git pull --rebase origin main
             git push
           fi
