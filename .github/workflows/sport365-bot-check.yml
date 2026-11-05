@@ -19,5 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Check JavaScript syntax
+      - name: Check bot JavaScript syntax
         run: npm --prefix sport365-bot run check
+      - name: Check Worker JavaScript syntax
+        run: node --check sport365-worker/src/index.js
