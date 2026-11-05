@@ -51,6 +51,7 @@ export function validateFeed(data) {
     source: typeof data.source === "string" ? data.source : "غير محدد",
     sourceType: typeof data.sourceType === "string" ? data.sourceType : "unknown",
     updatedAt: Number.isFinite(updated) ? new Date(updated).toISOString() : null,
+    retrievedAt: typeof data.retrievedAt === "string" ? data.retrievedAt : null,
     sourceFreshness,
     ageSeconds: ageMs == null ? null : Math.floor(ageMs / 1000),
     warnings: Array.isArray(data.warnings) ? data.warnings.slice(0, 50) : [],
