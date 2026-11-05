@@ -1,0 +1,44 @@
+name: SPORT 365 Free Football Feed
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "sport365-bot/src/publish-static-feed.js"
+      - ".github/workflows/sport365-free-feed.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sport365-free-feed
+  cancel-in-progress: true
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch and validate football feed
+        run: node sport365-bot/src/publish-static-feed.js
+      - name: Publish changed feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sport365/data/matches.json
+          if git diff --cached --quiet; then
+            echo "No feed changes to publish."
+          else
+            git commit -m "Update SPORT 365 football feed"
+            git push
+          fi
