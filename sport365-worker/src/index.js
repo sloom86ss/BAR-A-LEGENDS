@@ -140,13 +140,17 @@ async function loadOpenLigaDB(env) {
     String(a.kickoff || "").localeCompare(String(b.kickoff || ""))
   );
   const successful = outcomes.filter(x => !x.note).length;
+  const sourceTimes = matches.map(match => Date.parse(match.sourceUpdatedAt || "")).filter(Number.isFinite);
+  const latestSourceUpdate = sourceTimes.length ? new Date(Math.max(...sourceTimes)).toISOString() : null;
   return {
     ok: successful > 0,
     service: "SPORT 365 Football Intelligence",
     source: "OpenLigaDB",
     sourceType: "community",
     coverage: leagues,
-    updatedAt: new Date().toISOString(),
+    // updatedAt is the provider's own timestamp, not our polling time.
+    updatedAt: latestSourceUpdate,
+    retrievedAt: new Date().toISOString(),
     matches,
     reason: successful ? null : "تعذر الوصول إلى مصدر OpenLigaDB لجميع البطولات المحددة",
     warnings: outcomes.filter(x => x.note).map(x => ({ league: x.league, message: x.note })),
