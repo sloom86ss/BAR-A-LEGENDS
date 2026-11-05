@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909"><meta name="description" content="SMART AI 365 — مساحة ذكية للمحادثة والإبداع والإنتاجية.">
+<title>SMART AI 365 | مساعدك الذكي</title>
+<style>
+:root{--bg:#090909;--panel:#11110f;--panel2:#171613;--line:#30291b;--gold:#d8ad54;--gold2:#f4d58c;--text:#f6f2e9;--muted:#a9a294;--green:#8bc6a1}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -20%,#382b12 0,transparent 36%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
+button,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}.sidebar{background:#0c0c0b;border-left:1px solid var(--line);padding:22px 16px;display:flex;flex-direction:column;gap:22px}.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,#f1d38b,#9c7028);color:#17120a;display:grid;place-items:center;font-size:20px;font-weight:900;box-shadow:0 5px 25px #d8ad5433}.brand strong{font-size:17px;letter-spacing:.5px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.new{border:1px solid #80612d;background:linear-gradient(120deg,#d8ad54,#b98531);color:#161006;padding:12px;border-radius:13px;font-weight:800}.side-label{color:#8e8778;font-size:11px;margin:0 5px}.history{display:grid;gap:7px}.history button{background:transparent;border:0;color:#c9c1b2;text-align:right;padding:10px;border-radius:9px;font-size:13px}.history button:hover{background:#1a1813}.side-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:15px;color:var(--muted);font-size:11px;line-height:1.8}.main{min-width:0;display:flex;flex-direction:column;min-height:100vh}.top{height:72px;border-bottom:1px solid #242018;display:flex;align-items:center;justify-content:space-between;padding:0 28px}.top-title{font-weight:700}.top-actions{display:flex;gap:10px;align-items:center}.status{font-size:11px;color:#e8c77f;border:1px solid #6e542a;background:#211a0d;padding:7px 11px;border-radius:30px}.icon-btn{background:#171613;border:1px solid var(--line);color:#ddd0b3;border-radius:10px;padding:8px 11px}.content{width:min(900px,100%);margin:0 auto;padding:38px 24px 18px;display:flex;flex-direction:column;flex:1}.welcome{text-align:center;margin:auto auto 28px;max-width:700px}.orb{margin:0 auto 20px;width:74px;height:74px;border-radius:25px;background:linear-gradient(145deg,#f0d18a,#8b6122);display:grid;place-items:center;color:#171006;font-size:32px;box-shadow:0 0 55px #c9983c33}.welcome h1{font-size:clamp(27px,4vw,42px);margin:0 0 12px;letter-spacing:-1px}.welcome h1 span{color:var(--gold2)}.welcome p{color:var(--muted);line-height:1.9;margin:0 auto;max-width:570px}.prompts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:26px auto 0;max-width:620px}.prompt{background:#11110f;border:1px solid #30291b;color:#e8dfce;text-align:right;padding:14px;border-radius:14px;line-height:1.6;font-size:13px}.prompt:hover{border-color:#a77d37;background:#19160f}.prompt b{display:block;color:var(--gold2);font-size:13px;margin-bottom:4px}.chat{display:none;flex-direction:column;gap:18px;padding:10px 0 22px}.message{display:flex;gap:12px;align-items:flex-start;max-width:90%}.message.user{margin-right:auto;flex-direction:row-reverse}.avatar{flex:0 0 34px;width:34px;height:34px;border-radius:11px;background:#241d10;color:var(--gold2);display:grid;place-items:center;font-size:13px;font-weight:800}.message.user .avatar{background:#29251b;color:#fff}.bubble{background:#14130f;border:1px solid #30291b;padding:13px 16px;border-radius:15px;line-height:1.85;font-size:14px;white-space:pre-wrap}.message.user .bubble{background:#282116;border-color:#5c4622}.composer-wrap{position:sticky;bottom:0;background:linear-gradient(transparent,#090909 20%);padding:22px 0 8px}.composer{background:#151410;border:1px solid #66502a;border-radius:19px;padding:12px;box-shadow:0 12px 40px #0008}.composer textarea{width:100%;resize:none;min-height:54px;max-height:180px;background:transparent;border:0;outline:0;color:var(--text);padding:7px 9px;line-height:1.7}.composer textarea::placeholder{color:#817a6c}.composer-foot{display:flex;justify-content:space-between;align-items:center;padding:5px 4px 0}.tools{display:flex;gap:7px}.tool{border:1px solid #383123;background:#1c1a14;color:#bdb29b;border-radius:9px;padding:7px 10px;font-size:12px}.send{background:linear-gradient(135deg,#f0d28a,#b7832e);border:0;color:#171006;border-radius:11px;padding:9px 18px;font-weight:900}.send:disabled{opacity:.45;cursor:not-allowed}.disclaimer{text-align:center;color:#777064;font-size:10px;line-height:1.8;margin-top:12px}.mobile-brand{display:none}
+@media(max-width:760px){.app{grid-template-columns:1fr}.sidebar{display:none}.top{height:62px;padding:0 14px}.mobile-brand{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800}.mobile-brand .logo{width:34px;height:34px;border-radius:11px;font-size:16px}.content{padding:24px 14px 12px}.welcome{margin-top:12vh}.prompts{grid-template-columns:1fr}.message{max-width:100%}.composer-wrap{padding-bottom:8px}.top-title{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">✦</div><div><strong>SMART AI 365</strong><small>ذكاء يفتح لك آفاقاً جديدة</small></div></div>
+  <button class="new" id="newChat">＋ محادثة جديدة</button>
+  <div><p class="side-label">مساحة العمل</p><div class="history" id="history"><button>ابدأ محادثتك الأولى</button></div></div>
+  <div class="side-bottom">SMART AI 365<br>نسخة تجريبية أولية · الواجهة جاهزة للتطوير<br>لن نطلب منك مفتاحاً سرياً داخل المتصفح.</div>
+</aside>
+<main class="main">
+<header class="top">
+  <div class="mobile-brand"><div class="logo">✦</div>SMART AI 365</div>
+  <div class="top-title">المساعد الذكي</div>
+  <div class="top-actions"><span class="status">● نسخة تجريبية</span><button class="icon-btn" id="clearChat" title="مسح المحادثة">⌫</button></div>
+</header>
+<section class="content">
+  <div class="welcome" id="welcome">
+    <div class="orb">✦</div>
+    <h1>مرحباً بك في <span>SMART AI 365</span></h1>
+    <p>مساحتك الذكية للتفكير والتعلّم والإبداع. اكتب سؤالك أو اختر بداية تساعدك على الانطلاق.</p>
+    <div class="prompts">
+      <button class="prompt" data-prompt="اشرح لي موضوعاً صعباً بطريقة بسيطة"><b>✧ تعلّم واكتشف</b>اشرح لي موضوعاً صعباً ببساطة</button>
+      <button class="prompt" data-prompt="ساعدني في كتابة رسالة احترافية"><b>✎ الكتابة والإبداع</b>اكتب رسالة أو طوّر فكرتي</button>
+      <button class="prompt" data-prompt="ساعدني في كتابة كود لمشروع صغير"><b>⌘ البرمجة</b>ابنِ معي مشروعاً خطوة بخطوة</button>
+      <button class="prompt" data-prompt="ضع لي خطة عملية لتحقيق هدفي"><b>◈ التخطيط</b>حوّل هدفي إلى خطة واضحة</button>
+    </div>
+  </div>
+  <div class="chat" id="chat" aria-live="polite"></div>
+  <div class="composer-wrap">
+    <div class="composer">
+      <textarea id="input" rows="2" placeholder="اسأل SMART AI 365 أي شيء..." aria-label="اكتب رسالتك"></textarea>
+      <div class="composer-foot"><div class="tools"><button class="tool" id="attach" type="button">＋ ملف</button><input type="file" id="file" hidden><span id="fileName" style="font-size:11px;color:#c9a65e;align-self:center"></span></div><button class="send" id="send">إرسال ↑</button></div>
+    </div>
+    <div class="disclaimer">قد تخطئ أنظمة الذكاء الاصطناعي. تحقق من المعلومات المهمة قبل الاعتماد عليها.<br>هذه معاينة للواجهة؛ محرك الذكاء الاصطناعي الحقيقي لم يُربط بعد.</div>
+  </div>
+</section>
+</main>
+</div>
+<script>
+const input=document.getElementById('input'),chat=document.getElementById('chat'),welcome=document.getElementById('welcome'),send=document.getElementById('send');
+let messages=[];
+function addMessage(role,text){const row=document.createElement('div');row.className='message '+role;const av=document.createElement('div');av.className='avatar';av.textContent=role==='user'?'أنت':'✦';const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;row.append(av,bubble);chat.append(row);chat.style.display='flex';welcome.style.display='none';row.scrollIntoView({behavior:'smooth',block:'end'});}
+function replyDemo(q){return 'وصل سؤالك بنجاح إلى واجهة SMART AI 365.\n\nهذه النسخة هي النموذج الأولي للتصميم والتفاعل، ولم يتم توصيلها بعد بمحرك ذكاء اصطناعي؛ لذلك لن أقدّم لك إجابة وهمية على أنها صادرة عن نموذج حقيقي.\n\nالخطوة التالية هي ربط محرك مفتوح المصدر مجاني أو ذي حصة مجانية من خلال خادم آمن، حتى تعمل المحادثة فعلياً من دون كشف مفاتيح الوصول في المتصفح.';}
+function submit(){const q=input.value.trim();if(!q)return;addMessage('user',q);messages.push({role:'user',content:q});input.value='';send.disabled=true;setTimeout(()=>{const a=replyDemo(q);addMessage('assistant',a);messages.push({role:'assistant',content:a});send.disabled=false;input.focus();},350);}
+send.addEventListener('click',submit);input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit();}});
+document.querySelectorAll('[data-prompt]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.prompt;input.focus();}));
+document.getElementById('newChat').addEventListener('click',reset);document.getElementById('clearChat').addEventListener('click',reset);
+function reset(){chat.innerHTML='';chat.style.display='none';welcome.style.display='block';messages=[];input.value='';}
+document.getElementById('attach').addEventListener('click',()=>document.getElementById('file').click());
+document.getElementById('file').addEventListener('change',e=>{const f=e.target.files[0];document.getElementById('fileName').textContent=f?f.name:'';});
+</script>
+</body></html>
