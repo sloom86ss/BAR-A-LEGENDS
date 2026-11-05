@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#090710">
+<meta name="theme-color" content="#090710">\n<meta name="sport365-api" content="">
 <meta name="description" content="سبورت 365 — منصة الرياضة الذكية. المباريات والتحليل الرياضي والملخصات في واجهة عربية واحدة.">
 <title>سبورت 365 | منصة الرياضة الذكية</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,36 +73,24 @@ main{max-width:1050px;margin:0 auto;padding:0 14px}.hero{border:1px solid #4a2c6
   <div class="panel"><div class="empty"><div><strong>بانتظار ربط مصادر رياضية موثوقة</strong>لن نعرض نتائج أو دقائق أو أحداثاً غير مؤكدة. ستظهر البيانات هنا بعد إعداد مصدر فعلي والتحقق من تحديثه.</div></div></div>
  </section>
  <section id="matches" class="tab-content">
-  <div class="section-head"><h2>مركز المباريات</h2><small>البيانات الموثوقة فقط</small></div>
-  <div class="panel"><div class="empty"><div><strong>لم يتم ربط مصدر النتائج بعد</strong>ستُعرض المباريات المباشرة أولاً، ثم القادمة والنتائج، بعد تفعيل مصدر بيانات موثوق.</div></div></div>
+  <div class="section-head"><h2>مركز المباريات</h2><small>تحديث تلقائي من المصدر المتصل</small></div>
+  <div id="matchesStatus" class="analysis-warning">جارٍ التحقق من اتصال محرك SPORT 365…</div>
+  <div id="matchesList" class="grid"><div class="panel empty">بانتظار بيانات موثوقة.</div></div>
  </section>
  <section id="analysis" class="tab-content">
   <div class="analysis-head">
-   <div><div class="eyebrow">SPORT 365 · AI LAB</div><h2>مركز التحليلات الذكي</h2><p>غرفة متابعة تكتيكية داخل الموقع — تتوسع تلقائياً عند ربط بيانات المباراة.</p></div>
-   <span class="status"><i class="dot"></i> واجهة التحليل جاهزة</span>
+   <div><div class="eyebrow">SPORT 365 · AI LAB</div><h2>مركز التحليلات الذكي</h2><p>قراءة مستمرة لأحداث المباراة المؤكدة، مع فصل الوقائع عن تفسير المحلل.</p></div>
+   <span id="analysisStatus" class="status"><i class="dot"></i> جارٍ الاتصال</span>
   </div>
-  <div class="analysis-warning">⚠️ وضع العرض: المؤشرات أدناه توضيحية وليست بيانات مباراة حقيقية أو تحليلاً مباشراً.</div>
+  <div id="analysisNotice" class="analysis-warning">لن تظهر إحصاءات أو استنتاجات تكتيكية ما لم تصل من مصدر موثوق.</div>
   <div class="analysis-toolbar">
-   <label>المباراة <select id="analysisMatch"><option value="demo">نموذج توضيحي للمباراة</option></select></label>
-   <label>زاوية التحليل <select id="analysisView"><option value="overall">نظرة شاملة</option><option value="attack">التحليل الهجومي</option><option value="defense">التحليل الدفاعي</option><option value="press">الضغط والاستحواذ</option></select></label>
+   <label>المباراة <select id="analysisMatch"><option value="">لا توجد مباراة متاحة بعد</option></select></label>
+   <label>زاوية القراءة <select id="analysisView"><option value="overall">الأحداث والقراءة الشاملة</option><option value="attack">الهجوم والأهداف</option><option value="defense">الدفاع والبطاقات</option><option value="press">إيقاع المباراة</option></select></label>
   </div>
-  <div class="analysis-score">
-   <div><small>الفريق الأول</small><strong>الفريق A</strong></div><div class="score-center"><b>0 - 0</b><span>نموذج توضيحي</span></div><div><small>الفريق الثاني</small><strong>الفريق B</strong></div>
-  </div>
-  <div class="analysis-kpis">
-   <div class="kpi"><span>الاستحواذ</span><b id="possA">54%</b><div class="meter"><i style="width:54%"></i></div></div>
-   <div class="kpi"><span>التسديدات</span><b id="shots">8 - 6</b><small>محاولات توضيحية</small></div>
-   <div class="kpi"><span>التمريرات الناجحة</span><b id="passes">86% - 81%</b><small>نسب توضيحية</small></div>
-   <div class="kpi"><span>الهجمات الخطرة</span><b id="danger">5 - 4</b><small>مؤشر توضيحي</small></div>
-  </div>
-  <div class="analysis-grid">
-   <div class="panel chart-panel"><div class="panel-title"><h3>مؤشر السيطرة على مجريات اللعب</h3><span>رسم توضيحي</span></div>
-    <div class="momentum"><div class="axis-labels"><span>الفريق A</span><span>الفريق B</span></div><div class="momentum-bars"><i style="height:45%"></i><i style="height:30%"></i><i style="height:62%"></i><i style="height:38%"></i><i style="height:72%"></i><i style="height:44%"></i><i style="height:57%"></i><i style="height:28%"></i><i style="height:68%"></i><i style="height:40%"></i><i style="height:52%"></i><i style="height:33%"></i></div><div class="axis-labels"><span>بداية اللقاء</span><span>نهاية اللقاء</span></div></div>
-   </div>
-   <div class="panel"><div class="panel-title"><h3>قراءة المحلل الذكي</h3><span>تفسير آلي</span></div><div id="aiInsight" class="insight">في النسخة المتصلة، سيحلل النظام الاستحواذ والفرص والتحولات ويحدّث القراءة عند وصول أحداث مؤكدة. لا توجد حالياً بيانات مباراة فعلية.</div><div class="insight-tag">التحليل الفعلي يبدأ بعد ربط مصدر البيانات</div></div>
-  </div>
-  <div class="panel analysis-lower"><div class="panel-title"><h3>مؤشرات تكتيكية</h3><span>نموذج واجهة</span></div><div class="tactic-list"><div><span>بناء اللعب</span><b>بانتظار البيانات</b></div><div><span>الضغط العالي</span><b>بانتظار البيانات</b></div><div><span>التحولات السريعة</span><b>بانتظار البيانات</b></div><div><span>الفرص الخطرة</span><b>بانتظار البيانات</b></div></div></div>
-  <div class="panel analysis-lower"><div class="panel-title"><h3>سجل أحداث المباراة</h3><span>تحديث مع كل حدث مؤكد</span></div><div class="empty"><div><strong>لا توجد أحداث متصلة حالياً</strong>ستظهر الأهداف والبطاقات والتبديلات والدقائق هنا فور وصولها من مصدر موثوق.</div></div></div>
+  <div id="analysisScore" class="analysis-score"><div><small>الفريق المضيف</small><strong>—</strong></div><div class="score-center"><b>— : —</b><span>بانتظار المصدر</span></div><div><small>الفريق الضيف</small><strong>—</strong></div></div>
+  <div class="panel analysis-lower"><div class="panel-title"><h3>قراءة المحلل الذكي</h3><span>وقائع ثم تفسير</span></div><div id="aiInsight" class="insight">سيظهر التحليل بعد وصول أحداث مباراة حقيقية.</div></div>
+  <div class="panel analysis-lower"><div class="panel-title"><h3>سجل أحداث المباراة</h3><span>يتجدد تلقائياً</span></div><div id="analysisEvents" class="insight">لا توجد أحداث واردة حالياً.</div></div>
+  <p class="notice">لا يعرض المركز نسب استحواذ أو خرائط حرارة أو تقييمات تكتيكية من دون إحصاءات موثقة. التفسير الذكي لا يُقدَّم على أنه حقيقة.</p>
  </section>
  <section id="videos" class="tab-content">
   <div class="section-head"><h2>الفيديو والملخصات</h2><small>مصادر قانونية فقط</small></div>
@@ -122,23 +110,57 @@ main{max-width:1050px;margin:0 auto;padding:0 14px}.hero{border:1px solid #4a2c6
  <button class="tab" data-tab="table"><span class="ico">🏆</span>الترتيب</button>
 </nav>
 <script>
+const API_BASE=(document.querySelector('meta[name="sport365-api"]')?.content||'').replace(/\/$/,'');
+const $=id=>document.getElementById(id);
+let currentMatches=[];
+let selectedMatchId='';
+function esc(value){return String(value??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function liveStatus(s){return /live|مباشر|الشوط|حي/i.test(s||'');}
+function matchCard(m){return '<article class="tile"><span class="symbol">⚽</span><div><h3>'+esc(m.home)+' '+esc(m.homeScore)+' - '+esc(m.awayScore)+' '+esc(m.away)+'</h3><p>'+esc(m.league)+' · '+esc(m.status)+(m.minute!=null?' · '+esc(m.minute)+'′':'')+'</p></div></article>';}
+function setNotice(id,text){const el=$(id);if(el)el.textContent=text;}
+function renderMatches(data){
+ currentMatches=Array.isArray(data.matches)?data.matches:[];
+ const live=currentMatches.filter(m=>liveStatus(m.status));
+ $('matchesList').innerHTML=currentMatches.length?currentMatches.slice().sort((x,y)=>Number(liveStatus(y.status))-Number(liveStatus(x.status))).map(matchCard).join(''):'<div class="panel empty">لا توجد مباريات في آخر تحديث من المصدر.</div>';
+ setNotice('matchesStatus',data.ok?'المصدر متصل · '+currentMatches.length+' مباراة · آخر فحص '+(data.checkedAt||'غير محدد'):'المصدر غير متصل: '+(data.reason||'لم تصل بيانات'));
+ const select=$('analysisMatch');
+ const previous=selectedMatchId||select.value;
+ select.innerHTML=currentMatches.length?currentMatches.map(m=>'<option value="'+esc(m.id)+'">'+esc(m.home)+' × '+esc(m.away)+'</option>').join(''):'<option value="">لا توجد مباراة متاحة بعد</option>';
+ if(currentMatches.some(m=>String(m.id)===String(previous)))select.value=previous;
+ else {const liveMatch=currentMatches.find(m=>liveStatus(m.status));select.value=String((liveMatch||currentMatches[0]||{}).id||'');}
+ selectedMatchId=select.value;
+ renderAnalysis();
+}
+function renderAnalysis(){
+ const m=currentMatches.find(x=>String(x.id)===String($('analysisMatch').value))||currentMatches.find(x=>liveStatus(x.status))||currentMatches[0];
+ if(!m){$('analysisScore').innerHTML='<div><small>الفريق المضيف</small><strong>—</strong></div><div class="score-center"><b>— : —</b><span>بانتظار المصدر</span></div><div><small>الفريق الضيف</small><strong>—</strong></div>';setNotice('aiInsight','لا توجد مباراة فعلية متاحة للتحليل حالياً.');setNotice('analysisEvents','لا توجد أحداث واردة حالياً.');return;}
+ $('analysisScore').innerHTML='<div><small>الفريق المضيف</small><strong>'+esc(m.home)+'</strong></div><div class="score-center"><b>'+esc(m.homeScore)+' : '+esc(m.awayScore)+'</b><span>'+esc(m.status)+(m.minute!=null?' · '+esc(m.minute)+'′':'')+'</span></div><div><small>الفريق الضيف</small><strong>'+esc(m.away)+'</strong></div>';
+ const ev=Array.isArray(m.events)?m.events:[];
+ const view=$('analysisView').value;
+ const filtered=ev.filter(e=>view==='attack'?/هدف|تسديد|ركن|جزاء/i.test(e.type||''):view==='defense'?/بطاق|طرد|تبديل|دفاع/i.test(e.type||''):true);
+ const facts=filtered.slice(-8).map(e=>'• '+(e.minute!=null?e.minute+'′: ':'')+(e.type||'حدث')+(e.player?' — '+e.player:'')+(e.detail?' ('+e.detail+')':'')).join('\n');
+ $('aiInsight').textContent='الوقائع المؤكدة من المصدر:\n'+(facts||'لم يرسل المصدر أحداثاً مسجلة لهذه الزاوية.')+'\n\nقراءة المحلل: '+(ev.length?'تُظهر البيانات المسجلة '+ev.length+' حدثاً. لا يمكن استنتاج الاستحواذ أو الضغط أو جودة الفرص من سجل الأحداث وحده.':'لا تتوفر أحداث كافية لتقديم استنتاج تكتيكي موثوق.');
+ $('analysisEvents').textContent=facts||'لا توجد أحداث مؤكدة في سجل هذه المباراة.';
+ $('analysisStatus').innerHTML='<i class="dot"></i> '+(liveStatus(m.status)?'مباراة مباشرة':'بيانات المباراة متاحة');
+}
+async function refreshSport365(){
+ if(!API_BASE){setNotice('matchesStatus','لم يُضبط عنوان خدمة محرك التحليل بعد.');setNotice('analysisNotice','الواجهة جاهزة، لكنها تنتظر عنوان خدمة SPORT 365 API ومصدر مباريات موثوق.');$('analysisStatus').textContent='بانتظار ربط الخدمة';return;}
+ try{
+  const response=await fetch(API_BASE+'/api/matches',{cache:'no-store'});
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const data=await response.json();renderMatches(data);
+  setNotice('analysisNotice',data.ok?'تم استلام بيانات من المصدر. التفسير أدناه يعتمد على الأحداث المتاحة فقط.':'المحرك يعمل، لكن مصدر المباريات غير متصل: '+(data.reason||'غير معروف'));
+ }catch(error){setNotice('matchesStatus','تعذر الاتصال بمحرك التحليل: '+error.message);setNotice('analysisNotice','تعذر جلب بيانات المباريات. لن نعرض بيانات افتراضية على أنها حقيقية.');$('analysisStatus').textContent='الاتصال متعذر';}
+}
 document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
  document.querySelectorAll('.tab').forEach(item=>item.classList.toggle('active',item===button));
  document.querySelectorAll('.tab-content').forEach(section=>section.classList.toggle('active',section.id===button.dataset.tab));
  window.scrollTo({top:0,behavior:'smooth'});
 }));
-
-// اختيار زاوية التحليل يوضح أن الشاشة تفاعلية، مع إبقاء البيانات التجريبية موسومة بوضوح.
-const analysisView=document.getElementById('analysisView');
-if(analysisView){analysisView.addEventListener('change',()=>{
- const messages={
- overall:'النظرة الشاملة: ستجمع قراءة الاستحواذ والفرص والتحولات فور توفر بيانات حقيقية.',
- attack:'التحليل الهجومي: سيعرض بناء الهجمة والتسديدات والفرص الخطرة بعد وصول بيانات موثوقة.',
- defense:'التحليل الدفاعي: سيركز على التمركز والافتكاك والتغطية الدفاعية عند توفر الإحصاءات.',
- press:'الضغط والاستحواذ: سيقيس فترات الضغط واستعادة الكرة ونسب السيطرة من بيانات المباراة.'
- };
- document.getElementById('aiInsight').textContent=messages[analysisView.value]+' هذه قراءة توضيحية وليست وصفاً لمباراة جارية.';
-});}
+$('analysisMatch').addEventListener('change',e=>{selectedMatchId=e.target.value;renderAnalysis();});
+$('analysisView').addEventListener('change',renderAnalysis);
+refreshSport365();
+setInterval(refreshSport365,30000);
 </script>
 </body>
 </html>
