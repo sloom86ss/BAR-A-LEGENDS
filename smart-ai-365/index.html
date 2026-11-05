@@ -23,7 +23,7 @@ button,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-templa
 <header class="top">
   <div class="mobile-brand"><div class="logo">✦</div>SMART AI 365</div>
   <div class="top-title">المساعد الذكي</div>
-  <div class="top-actions"><span class="status">● نسخة تجريبية</span><button class="icon-btn" id="clearChat" title="مسح المحادثة">⌫</button></div>
+  <div class="top-actions"><span class="status" id="engineStatus">● المحرك بانتظار الربط</span><button class="icon-btn" id="clearChat" title="مسح المحادثة">⌫</button></div>
 </header>
 <section class="content">
   <div class="welcome" id="welcome">
@@ -43,17 +43,35 @@ button,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-templa
       <textarea id="input" rows="2" placeholder="اسأل SMART AI 365 أي شيء..." aria-label="اكتب رسالتك"></textarea>
       <div class="composer-foot"><div class="tools"><button class="tool" id="attach" type="button">＋ ملف</button><input type="file" id="file" hidden><span id="fileName" style="font-size:11px;color:#c9a65e;align-self:center"></span></div><button class="send" id="send">إرسال ↑</button></div>
     </div>
-    <div class="disclaimer">قد تخطئ أنظمة الذكاء الاصطناعي. تحقق من المعلومات المهمة قبل الاعتماد عليها.<br>هذه معاينة للواجهة؛ محرك الذكاء الاصطناعي الحقيقي لم يُربط بعد.</div>
+    <div class="disclaimer">قد تخطئ أنظمة الذكاء الاصطناعي. تحقق من المعلومات المهمة قبل الاعتماد عليها.<br>لن تظهر إجابات وهمية؛ ستعمل المحادثة عند ضبط عنوان خادم الذكاء الاصطناعي.</div>
   </div>
 </section>
 </main>
 </div>
 <script>
+/*
+ * بعد نشر Cloudflare Worker، ضع عنوانه هنا.
+ * مثال: https://smart-ai-365-api.YOUR-SUBDOMAIN.workers.dev
+ * لا تضع أي مفتاح سري في هذا الملف.
+ */
+const API_URL = "";
 const input=document.getElementById('input'),chat=document.getElementById('chat'),welcome=document.getElementById('welcome'),send=document.getElementById('send');
+const statusEl=document.getElementById('engineStatus');
 let messages=[];
-function addMessage(role,text){const row=document.createElement('div');row.className='message '+role;const av=document.createElement('div');av.className='avatar';av.textContent=role==='user'?'أنت':'✦';const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;row.append(av,bubble);chat.append(row);chat.style.display='flex';welcome.style.display='none';row.scrollIntoView({behavior:'smooth',block:'end'});}
-function replyDemo(q){return 'وصل سؤالك بنجاح إلى واجهة SMART AI 365.\n\nهذه النسخة هي النموذج الأولي للتصميم والتفاعل، ولم يتم توصيلها بعد بمحرك ذكاء اصطناعي؛ لذلك لن أقدّم لك إجابة وهمية على أنها صادرة عن نموذج حقيقي.\n\nالخطوة التالية هي ربط محرك مفتوح المصدر مجاني أو ذي حصة مجانية من خلال خادم آمن، حتى تعمل المحادثة فعلياً من دون كشف مفاتيح الوصول في المتصفح.';}
-function submit(){const q=input.value.trim();if(!q)return;addMessage('user',q);messages.push({role:'user',content:q});input.value='';send.disabled=true;setTimeout(()=>{const a=replyDemo(q);addMessage('assistant',a);messages.push({role:'assistant',content:a});send.disabled=false;input.focus();},350);}
+function addMessage(role,text){const row=document.createElement('div');row.className='message '+role;const av=document.createElement('div');av.className='avatar';av.textContent=role==='user'?'أنت':'✦';const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;row.append(av,bubble);chat.append(row);chat.style.display='flex';welcome.style.display='none';row.scrollIntoView({behavior:'smooth',block:'end'});return bubble;}
+async function submit(){
+ const q=input.value.trim();if(!q||send.disabled)return;
+ if(!API_URL){addMessage('assistant','المحرك الذكي لم يُربط بعد. تم تجهيز الخادم، وبقي نشره في Cloudflare ثم وضع عنوانه في إعداد API_URL. لن أعرض إجابة تجريبية على أنها إجابة حقيقية.');return;}
+ addMessage('user',q);messages.push({role:'user',content:q});input.value='';send.disabled=true;statusEl.textContent='● جارٍ التفكير';
+ const pending=addMessage('assistant','جارٍ إعداد الإجابة…');
+ try{
+  const response=await fetch(API_URL.replace(/\/$/,'')+'/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages})});
+  const data=await response.json();
+  if(!response.ok||!data.ok)throw new Error(data.error||'تعذر الاتصال بمحرك الذكاء الاصطناعي.');
+  pending.textContent=data.answer;messages.push({role:'assistant',content:data.answer});statusEl.textContent='● المحرك متصل';
+ }catch(error){pending.textContent='تعذر الحصول على إجابة: '+(error.message||'خطأ في الاتصال')+'\n\nتحقق من نشر الخادم وإعداد النطاق المسموح.';statusEl.textContent='● تعذر الاتصال';messages.pop();}
+ finally{send.disabled=false;input.focus();}
+}
 send.addEventListener('click',submit);input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit();}});
 document.querySelectorAll('[data-prompt]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.prompt;input.focus();}));
 document.getElementById('newChat').addEventListener('click',reset);document.getElementById('clearChat').addEventListener('click',reset);
