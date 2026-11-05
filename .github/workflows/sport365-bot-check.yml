@@ -1,0 +1,22 @@
+name: SPORT 365 AI Bot Check
+
+on:
+  push:
+    paths:
+      - "sport365-bot/**"
+      - ".github/workflows/sport365-bot-check.yml"
+  pull_request:
+    paths:
+      - "sport365-bot/**"
+      - ".github/workflows/sport365-bot-check.yml"
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check JavaScript syntax
+        run: npm --prefix sport365-bot run check
