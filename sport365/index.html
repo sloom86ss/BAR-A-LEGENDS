@@ -77,6 +77,7 @@ main{max-width:1050px;margin:0 auto;padding:0 14px}.hero{border:1px solid #4a2c6
 
 <script>
 const API_BASE=(document.querySelector('meta[name="sport365-api"]')?.content||'').replace(/\/$/,'');
+const FEED_URL=API_BASE?API_BASE+'/api/matches':'data/matches.json';
 const $=id=>document.getElementById(id);
 let currentMatches=[];
 let selectedMatchId='';
@@ -109,9 +110,9 @@ function renderAnalysis(){
  $('analysisStatus').innerHTML='<i class="dot"></i> '+(m.statusConfidence==='time_based'?'حالة جارية تقديرية':(liveStatus(m.status)?'مباشر حسب المصدر':'بيانات المباراة متاحة'));
 }
 async function refreshSport365(){
- if(!API_BASE){setNotice('matchesStatus','لم يُضبط عنوان خدمة محرك التحليل بعد.');setNotice('analysisNotice','الواجهة جاهزة، لكنها تنتظر عنوان خدمة SPORT 365 API ومصدر مباريات موثوق.');$('analysisStatus').textContent='بانتظار ربط الخدمة';return;}
+ if(!FEED_URL){setNotice('matchesStatus','مصدر البيانات غير مضبوط.');return;}
  try{
-  const response=await fetch(API_BASE+'/api/matches',{cache:'no-store'});
+  const response=await fetch(FEED_URL,{cache:'no-store'});
   if(!response.ok)throw new Error('HTTP '+response.status);
   const data=await response.json();renderMatches(data);
   setNotice('analysisNotice',data.ok?'تم استلام بيانات '+(data.source||'المصدر')+'. '+(data.sourceFreshness==='stale'?'تنبيه: البيانات قديمة ولا تعرض على أنها مباشرة. ':'')+'المصدر مجتمعي وقد يتأخر؛ لا تتوفر دقيقة لعب مؤكدة في هذا الموصل.':'المحرك يعمل، لكن مصدر المباريات غير متصل: '+(data.reason||'غير معروف'));
