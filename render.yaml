@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sport365-ai-engine
+    runtime: node
+    plan: free
+    rootDir: sport365-bot
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ALLOWED_ORIGIN
+        value: https://sloom86ss.github.io
+      - key: POLL_SECONDS
+        value: "60"
