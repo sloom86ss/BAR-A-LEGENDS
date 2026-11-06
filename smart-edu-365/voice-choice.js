@@ -1,4 +1,4 @@
-// Adds an explicit choice between Nabra's single female MSA voice and device voices.
+// Adds a selectable female Arabic MSA neural voice alongside device voices.
 (() => {
   const panel = document.querySelector('.smart-voice-panel');
   const select = panel && panel.querySelector('select');
@@ -10,10 +10,10 @@
   option.textContent = 'نبرة — صوت فتاة عربية فصحى';
   select.insertBefore(option, select.firstChild);
   select.disabled = false;
-  select.value = saved === 'nabra-neural' ? saved : 'nabra-neural';
+  const savedExists = saved === 'nabra-neural' || Array.from(select.options).some(o => o.value === saved);
+  select.value = savedExists ? saved : 'nabra-neural';
   localStorage.setItem(key, select.value);
   const note = panel.querySelector('small');
-  const nativeSpeak = window.SmartEduVoice && window.SmartEduVoice.speak;
   function say(text, rate = 0.88) {
     if (select.value === 'nabra-neural') {
       if (typeof window.SmartEduNabraSpeak !== 'function') {
@@ -44,6 +44,10 @@
       : 'تم اختيار صوت الجهاز.';
   });
   if (window.SmartEduVoice) window.SmartEduVoice.speak = say;
-  const test = panel.querySelector('button');
-  if (test) test.addEventListener('click', () => say('مَرْحَبًا يا بَطَل! أَنا مُعَلِّمَتُكَ الذَّكِيَّةُ. هَيَّا نَتَعَلَّمُ مَعًا.', 0.88));
+  const oldTest = panel.querySelector('button');
+  if (oldTest) {
+    const test = oldTest.cloneNode(true);
+    oldTest.replaceWith(test);
+    test.addEventListener('click', () => say('مَرْحَبًا يا بَطَل! أَنا مُعَلِّمَتُكَ الذَّكِيَّةُ. هَيَّا نَتَعَلَّمُ مَعًا.', 0.88));
+  }
 })();
