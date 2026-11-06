@@ -90,7 +90,41 @@ X:["M65 25 L175 135","M175 25 L65 135"],
 Y:["M60 25 L120 80 L180 25","M120 80 L120 140"],
 Z:["M65 25 L175 25 L65 135 L175 135"]
 };
-function drawStrokeDemo(){const g=$("strokePaths");g.innerHTML="";const shapes=strokeShapes[letters[idx][0]]||[];shapes.forEach((d,i)=>{const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",d);p.setAttribute("stroke",i%2?"#b17b28":"#25232a");p.setAttribute("stroke-width","9");p.setAttribute("fill","none");p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");g.appendChild(p);const len=p.getTotalLength();p.style.strokeDasharray=len;p.style.strokeDashoffset=len;p.dataset.len=len;});$("strokeNote").textContent=shapes.length+" ضربة/ضربات مرسومة بالترتيب للحرف الكبير "+letters[idx][0]+". شاهدها ثم قلّدها على لوحة التتبّع."}
+const lowerStrokeShapes={
+a:["M275 75 C275 35 345 35 345 80 C345 125 275 125 275 80 Z","M345 55 L345 130"],
+b:["M245 25 L245 130","M245 85 C245 40 320 40 320 90 C320 135 245 135 245 90"],
+c:["M335 70 C305 35 250 50 250 90 C250 130 305 145 335 115"],
+d:["M345 25 L345 130","M345 85 C345 40 275 40 275 85 C275 130 345 130 345 85"],
+e:["M250 90 L335 90 C335 40 265 35 255 80 C245 125 300 145 335 115"],
+f:["M285 130 L285 45 Q285 15 325 25","M260 65 L315 65"],
+g:["M345 65 C345 25 275 25 275 70 C275 115 345 115 345 70","M345 70 L345 125 Q345 155 300 150"],
+h:["M245 25 L245 130","M245 85 C245 45 325 45 325 90 L325 130"],
+i:["M290 60 L290 130","M290 30 L290 31"],
+j:["M320 60 L320 130 Q320 155 285 150","M320 30 L320 31"],
+k:["M250 25 L250 130","M325 60 L250 95 L330 130"],
+l:["M290 25 L290 130"],
+m:["M235 130 L235 60","M235 85 C235 40 285 45 285 85 L285 130","M285 85 C285 40 340 45 340 85 L340 130"],
+n:["M255 130 L255 60","M255 85 C255 40 335 45 335 85 L335 130"],
+o:["M300 55 C355 55 355 130 300 130 C245 130 245 55 300 55 Z"],
+p:["M255 60 L255 155","M255 90 C255 45 335 45 335 90 C335 130 255 130 255 90"],
+q:["M345 60 L345 155","M345 90 C345 45 265 45 265 90 C265 130 345 130 345 90"],
+r:["M260 130 L260 60","M260 85 Q275 45 325 65"],
+s:["M330 65 C285 35 250 70 285 88 C335 105 325 145 265 120"],
+t:["M290 35 L290 110 Q290 140 325 125","M260 65 L320 65"],
+u:["M255 60 L255 100 Q255 140 300 125 Q340 115 340 60","M340 60 L340 130"],
+v:["M250 60 L295 130 L340 60"],
+w:["M235 60 L265 130 L295 85 L325 130 L355 60"],
+x:["M255 60 L335 130","M335 60 L255 130"],
+y:["M250 60 L295 125 L340 60","M295 125 L275 155"],
+z:["M255 60 L340 60 L255 130 L340 130"]
+};
+function drawStrokeDemo(){
+const g=$("strokePaths");g.innerHTML="";
+const upper=letters[idx][0],lower=letters[idx][1];
+const all=[...(strokeShapes[upper]||[]).map(d=>({d,color:"#25232a"})),...(lowerStrokeShapes[lower]||[]).map(d=>({d,color:"#b17b28"}))];
+all.forEach(item=>{const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",item.d);p.setAttribute("stroke",item.color);p.setAttribute("stroke-width","8");p.setAttribute("fill","none");p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");g.appendChild(p);const len=p.getTotalLength();p.style.strokeDasharray=len;p.style.strokeDashoffset=len;p.dataset.len=len;});
+const note=$("strokeNote");note.textContent="الأسود: الحرف الكبير "+upper+"، والذهبي: الحرف الصغير "+lower+". تُعرض الضربات بالتتابع؛ شاهدها ثم قلّدها.";
+}
 function playStrokeDemo(){const paths=[...$("strokePaths").children];paths.forEach((p,i)=>{const len=Number(p.dataset.len);p.style.transition="none";p.style.strokeDashoffset=len;requestAnimationFrame(()=>{p.style.transition="stroke-dashoffset 850ms ease "+(i*.9)+"s";p.style.strokeDashoffset="0"})})}
 $("playStrokes").onclick=playStrokeDemo;$("resetStrokes").onclick=()=>{drawStrokeDemo();playStrokeDemo()};
 
