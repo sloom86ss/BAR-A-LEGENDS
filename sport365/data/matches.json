@@ -9,9 +9,9 @@
     "dfb"
   ],
   "updatedAt": "2026-10-28T23:33:58.950Z",
-  "retrievedAt": "2026-11-06T01:18:47.015Z",
+  "retrievedAt": "2026-11-06T02:24:16.249Z",
   "sourceFreshness": "stale",
-  "ageSeconds": 697488,
+  "ageSeconds": 701417,
   "matches": [
     {
       "id": "87618",
@@ -77,7 +77,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T19:55:03.25",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87620",
@@ -119,7 +119,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T19:53:10.027",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87624",
@@ -153,7 +153,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T20:00:34.25",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87625",
@@ -203,7 +203,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T19:56:09.1",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87621",
@@ -261,7 +261,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:35:09.803",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87623",
@@ -319,7 +319,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:45:27.777",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87626",
@@ -353,7 +353,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:39:33.707",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87632",
@@ -387,7 +387,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:39:40.023",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87619",
@@ -421,7 +421,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:52:05.163",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87622",
@@ -455,7 +455,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:55:42.393",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87630",
@@ -481,7 +481,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:56:26.427",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87631",
@@ -539,7 +539,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:57:07.563",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87627",
@@ -629,7 +629,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T23:33:58.95",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87628",
@@ -703,7 +703,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T22:39:34.577",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87629",
@@ -737,7 +737,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T22:38:01.033",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "87633",
@@ -811,7 +811,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T22:38:06.823",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83684",
@@ -828,7 +828,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:04.17",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83687",
@@ -845,7 +845,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:12.903",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84870",
@@ -862,7 +862,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:49:48.87",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83234",
@@ -879,7 +879,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:28:06.667",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83685",
@@ -896,7 +896,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:36.737",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83682",
@@ -913,7 +913,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:29.167",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83688",
@@ -930,7 +930,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:43.617",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84866",
@@ -947,7 +947,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-09T08:40:32.783",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84867",
@@ -964,7 +964,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-09T08:40:46.48",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84868",
@@ -981,7 +981,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-09T08:41:00.023",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84869",
@@ -998,7 +998,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-09T08:41:16.357",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84871",
@@ -1015,7 +1015,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-09T08:41:37.013",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83228",
@@ -1032,7 +1032,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T08:13:19.017",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83229",
@@ -1049,7 +1049,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T08:13:32.553",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83233",
@@ -1066,7 +1066,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T08:14:18.987",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83236",
@@ -1083,7 +1083,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T08:14:49.117",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84865",
@@ -1100,7 +1100,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:06.07",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83230",
@@ -1117,7 +1117,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:28:25.883",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83681",
@@ -1134,7 +1134,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:58.847",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83678",
@@ -1151,7 +1151,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:41:18.867",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83683",
@@ -1168,7 +1168,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:41:47.92",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83686",
@@ -1185,7 +1185,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:42:15.113",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84873",
@@ -1202,7 +1202,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:21.797",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83235",
@@ -1219,7 +1219,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:28:40.24",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84872",
@@ -1236,7 +1236,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:34.72",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83232",
@@ -1253,7 +1253,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:28:56.027",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "83231",
@@ -1270,7 +1270,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:29:08.703",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     },
     {
       "id": "84874",
@@ -1287,7 +1287,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:51.423",
-      "recordUpdatedAt": "2026-11-06T01:18:47.015Z"
+      "recordUpdatedAt": "2026-11-06T02:24:16.249Z"
     }
   ],
   "reason": null,
