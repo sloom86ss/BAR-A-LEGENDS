@@ -1,7 +1,7 @@
-const CACHE_NAME='smart-edu-360-v6';
+const CACHE_NAME='smart-edu-360-v7';
 const CORE_FILES=[
  './','./index.html','./manifest.webmanifest','./icon.svg',
- './manners-course.html','./manners-listening.html','./assessment.html','./certificates.html',
+ './manners-course.html','./smart-teacher.html','./manners-listening.html','./assessment.html','./certificates.html',
  './alphabet.html','./handwriting.html','./word-writing.html','./english-course.html','./english-assessment.html','./phonics.html','./certificates.html'
 ];
 self.addEventListener('install',event=>{
