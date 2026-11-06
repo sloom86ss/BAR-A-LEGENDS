@@ -16,7 +16,7 @@ header,main{max-width:900px;margin:auto;padding:18px}header{display:flex;justify
 <body>
 <header><div class="brand">✦ ثَقِّف طفلك – SMART EDU 360</div><a class="back" href="index.html">الرئيسية</a></header>
 <main>
-<section class="hero"><div class="gold">مسار الإنجليزية من الصفر إلى التمكّن</div><h1>دروس اللغة الإنجليزية</h1><p class="muted">ابدأ من المستوى الأول، واتبع الدروس بالترتيب. كل مستوى يبني على ما تعلمته في المستوى السابق.</p><div class="progress"><span id="progressBar"></span></div><div class="muted" id="progressText">رحلتك تبدأ الآن ⭐</div></section>
+<section class="hero"><div class="gold">مسار الإنجليزية من الصفر إلى التمكّن</div><h1>دروس اللغة الإنجليزية</h1><p class="muted">ابدأ من المستوى الأول، واتبع الدروس بالترتيب. كل مستوى يبني على ما تعلمته في المستوى السابق.</p><div class="muted">ابدأ بالمستوى الأول، ثم انتقل إلى المستويات التالية بالترتيب حتى الاختبار النهائي ⭐</div></section>
 <section class="level"><div class="level-head"><div class="num">1</div><div><h2>الحروف الإنجليزية A–Z</h2><div class="muted">التعرّف إلى الحروف الكبيرة والصغيرة وأسمائها وكتابتها</div></div></div><div class="items"><a class="lesson" href="alphabet.html"><span>ابدأ الحروف من A إلى Z<small>شاهد الحرف واسمع اسمه وتدرّب على تمييزه</small></span><span class="arrow">←</span></a><a class="lesson" href="handwriting.html"><span>تعلّم كتابة الحروف<small>تدرّب على شكل الحرف الكبير والصغير</small></span><span class="arrow">←</span></a></div></section>
 <section class="level"><div class="level-head"><div class="num">2</div><div><h2>أصوات الحروف والنطق</h2><div class="muted">الفرق بين اسم الحرف وصوته داخل الكلمة</div></div></div><div class="items"><a class="lesson" href="phonics.html"><span>تعلّم الأصوات ودمجها<small>اربط الصوت بالكلمة وتدرّب على سماعه</small></span><span class="arrow">←</span></a><a class="lesson" href="listening-practice.html"><span>تدريب الاستماع والفهم<small>استمع واختر الإجابة المناسبة</small></span><span class="arrow">←</span></a></div></section>
 <section class="level"><div class="level-head"><div class="num">3</div><div><h2>قراءة الكلمات والمفردات</h2><div class="muted">ابدأ بالكلمات القصيرة ثم وسّع حصيلتك</div></div></div><div class="items"><a class="lesson" href="reading-practice.html"><span>القراءة المتدرجة<small>اقرأ الكلمات ثم العبارات والنصوص القصيرة</small></span><span class="arrow">←</span></a><a class="lesson" href="word-writing.html"><span>كتابة الكلمات<small>تدرّب على تهجئة الكلمات وكتابتها</small></span><span class="arrow">←</span></a><a class="lesson" href="dictation.html"><span>الإملاء: استمع واكتب<small>أحضر دفتراً وقلماً واكتب ما تسمعه</small></span><span class="arrow">←</span></a></div></section>
@@ -26,10 +26,5 @@ header,main{max-width:900px;margin:auto;padding:18px}header{display:flex;justify
 <section class="level"><div class="level-head"><div class="num">7</div><div><h2>الكتابة والتعبير</h2><div class="muted">انتقل من الفقرة القصيرة إلى الرسالة والقصة</div></div></div><div class="items"><a class="lesson" href="paragraph-writing.html"><span>كتابة الفقرات والرسائل والقصص<small>نظّم أفكارك واكتب نصاً مترابطاً</small></span><span class="arrow">←</span></a></div></section>
 <section class="final"><div class="gold">🏆 المحطة الأخيرة</div><h2>الاختبار النهائي للغة الإنجليزية</h2><p class="muted">بعد إنهاء المستويات السبعة، انتقل إلى الاختبار النهائي. هذه محطة مستقلة عن اختبار دورة الاحترام العربية.</p><a href="english-assessment.html">ابدأ الاختبار النهائي ←</a></section>
 </main>
-<script>
-const done=JSON.parse(localStorage.getItem('smartEduEnglishCompleted')||'[]');
-const total=7, pct=Math.min(100,Math.round(done.length/total*100));
-document.getElementById('progressBar').style.width=pct+'%';
-document.getElementById('progressText').textContent=done.length+' من '+total+' مستويات مكتملة';
-</script>
+
 </body></html>
