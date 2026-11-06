@@ -64,8 +64,9 @@ document.querySelectorAll('.age').forEach(button=>button.addEventListener('click
 
 let deferredInstallPrompt=null;
 const installButton=document.getElementById('installAppBtn');
+installButton.hidden=false;
 window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;installButton.hidden=false;});
-installButton.addEventListener('click',async()=>{if(!deferredInstallPrompt){alert('على iPhone: افتح قائمة المشاركة ثم اختر «إضافة إلى الشاشة الرئيسية».');return;}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;installButton.hidden=true;});
+installButton.addEventListener('click',async()=>{if(!deferredInstallPrompt){alert('للتثبيت: على iPhone افتح زر المشاركة ثم «إضافة إلى الشاشة الرئيسية». وعلى Android افتح قائمة المتصفح واختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».');return;}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;installButton.hidden=true;});
 window.addEventListener('appinstalled',()=>{installButton.hidden=true;});
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 </script>
