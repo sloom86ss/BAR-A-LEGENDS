@@ -3,45 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101014">
-<meta name="description" content="ثَقِّف طفلك – SMART EDU 360: اختر الكورس التعليمي المناسب لطفلك: اللغة الإنجليزية أو الاحترام والأخلاق.">
+<meta name="theme-color" content="#101020">
+<meta name="description" content="ثَقِّف طفلك – SMART EDU 360: كورسات تعليمية تفاعلية للغة الإنجليزية والاحترام والأخلاق.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <title>ثَقِّف طفلك – SMART EDU 360</title>
 <style>
-:root{color-scheme:dark;--bg:#101015;--panel:#1b1a22;--text:#f7f3eb;--muted:#c5c0b8;--pink:#e99ac0;--blue:#83c8f5}
+:root{color-scheme:dark;--bg:#101020;--panel:#1c1b35;--text:#fbf8ff;--muted:#c9c4dd;--purple:#a98bff;--blue:#7bd8ff;--gold:#ffd77d}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#24212d 0%,#101015 65%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;display:grid;place-items:center;padding:28px 18px}
-main{width:min(1120px,100%)}
-h1{text-align:center;font-size:clamp(25px,4vw,38px);margin:0 0 34px;font-weight:800}
-.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
-.course{position:relative;display:flex;flex-direction:column;align-items:center;min-height:560px;padding:56px 34px 38px;background:linear-gradient(145deg,#1d1c25,#17161e);border:2px solid #383640;border-radius:42px;color:inherit;text-decoration:none;text-align:center;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
-.course:before{content:"";position:absolute;top:0;left:0;right:0;height:8px;border-radius:40px 40px 0 0;background:var(--accent)}
-.course:hover,.course:focus-visible{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 18px 48px #0007;outline:none}
-.icon{font-size:76px;line-height:1.2;margin:12px 0 40px}
-.course h2{font-size:clamp(25px,3vw,38px);line-height:1.6;margin:0 0 20px}
-.course p{font-size:clamp(18px,2vw,25px);line-height:2;color:var(--muted);margin:0;max-width:440px}
-.hint{margin-top:auto;padding-top:28px;color:var(--accent);font-weight:800;font-size:17px}
-.english{--accent:var(--blue)}.manners{--accent:var(--pink)}
-@media(max-width:720px){body{padding:24px 14px}.choices{grid-template-columns:1fr;gap:20px}.course{min-height:390px;padding:38px 25px 28px;border-radius:30px}.icon{font-size:62px;margin:4px 0 18px}.course h2{margin-bottom:12px}.course p{font-size:18px}.hint{padding-top:20px}}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -12%,#49347b 0%,transparent 48%),linear-gradient(160deg,#111020,#111326 58%,#17102a);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;padding:30px 18px}
+main{width:min(1080px,100%);margin:auto}
+.brand{text-align:center;margin:0 auto 36px}
+.crown{font-size:42px;filter:drop-shadow(0 5px 14px #d9baff88);display:block;margin-bottom:7px}
+h1{font-size:clamp(26px,4vw,40px);margin:0;font-weight:900;letter-spacing:.2px}
+.sub{color:var(--muted);font-size:17px;line-height:1.9;max-width:680px;margin:12px auto 0}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.course{position:relative;display:flex;flex-direction:column;align-items:center;min-height:510px;padding:24px 26px 30px;background:linear-gradient(145deg,#252345dd,#17182bdd);border:1px solid #7770a4;border-radius:30px;color:inherit;text-decoration:none;text-align:center;overflow:hidden;box-shadow:0 18px 50px #05051088;transition:transform .2s,border-color .2s,box-shadow .2s}
+.course:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--accent),#fff,var(--accent))}
+.course:after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:var(--glow);filter:blur(65px);opacity:.3;top:20px;z-index:0}
+.course>*{position:relative;z-index:1}
+.course:hover,.course:focus-visible{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 22px 55px #050510aa;outline:none}
+.art{width:min(100%,310px);height:205px;display:grid;place-items:center;margin:8px auto 16px;border-radius:24px;background:linear-gradient(145deg,#ffffff1b,#ffffff05);border:1px solid #ffffff22;box-shadow:inset 0 1px 0 #ffffff22,0 12px 25px #05051055}
+.art .emoji{font-size:105px;filter:drop-shadow(0 12px 10px #05051088)}
+.course h2{font-size:clamp(23px,3vw,32px);line-height:1.55;margin:2px 0 10px}
+.course p{font-size:16px;line-height:2;color:var(--muted);margin:0;max-width:430px}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.meta span{font-size:13px;color:#f4edff;background:#ffffff12;border:1px solid #ffffff20;border-radius:99px;padding:5px 11px}
+.hint{margin-top:auto;padding-top:22px;color:var(--accent);font-weight:900;font-size:16px}
+.english{--accent:var(--blue);--glow:#54bfff}.manners{--accent:var(--gold);--glow:#f5b95a}
+@media(max-width:720px){body{padding:23px 13px}.brand{margin-bottom:25px}.choices{grid-template-columns:1fr;gap:17px}.course{min-height:0;padding:20px 18px 23px;border-radius:25px}.art{height:175px;width:min(100%,280px)}.art .emoji{font-size:88px}.course p{font-size:15px}.hint{padding-top:17px}}
 </style>
 </head>
 <body>
 <main>
+<header class="brand">
+<span class="crown" aria-label="تاج">👑</span>
 <h1>ثَقِّف طفلك – SMART EDU 360</h1>
-<p style="text-align:center;color:#c5c0b8;font-size:18px;line-height:1.9;margin:-16px auto 30px;max-width:700px">كورسات تعليمية تفاعلية تساعد طفلك على اكتساب المعرفة والمهارات خطوة بخطوة.</p>
+<p class="sub">رحلة تعليمية ممتعة تبني المعرفة والمهارات والأخلاق خطوة بخطوة. اختر الكورس وابدأ رحلة التعلّم.</p>
+</header>
 <div class="choices" aria-label="اختر الكورس التعليمي">
 <a class="course english" href="english-course.html">
-<div class="icon" aria-hidden="true">🔤</div>
-<h2>اللغة الإنجليزية</h2>
-<p>من الحروف وأصواتها إلى القراءة والكتابة والمفردات والقواعد والمحادثة والخطاب والتواصل.</p>
+<div class="art" role="img" aria-label="رمز تعليمي لكورس اللغة الإنجليزية"><span class="emoji">📚🔤</span></div>
+<h2>كورس اللغة الإنجليزية</h2>
+<p>من الحروف وأصواتها إلى القراءة والكتابة والمفردات والقواعد والمحادثة والتواصل بثقة.</p>
+<div class="meta"><span>7 مراحل تعليمية</span><span>استماع وتدريبات</span><span>اختبار وشهادة</span></div>
 <span class="hint">استكشف الكورس وابدأ التعلّم ←</span>
 </a>
 <a class="course manners" href="manners-course.html">
-<div class="icon" aria-hidden="true">🤝</div>
-<h2>الاحترام والأخلاق وحُسن التعامل</h2>
-<p>نتعلّم الأدب والكلمة الطيبة واحترام الآخرين والوالدين والحوار والاعتذار والتسامح وحل الخلافات.</p>
-<span class="hint">اضغط لفتح الدورة ←</span>
+<div class="art" role="img" aria-label="رمز تعليمي لكورس الاحترام والأخلاق"><span class="emoji">🤝💛</span></div>
+<h2>كورس الاحترام والأخلاق</h2>
+<p>تعلّم الأدب والكلمة الطيبة واحترام الوالدين والآخرين والحوار والاعتذار والتسامح وحل الخلافات.</p>
+<div class="meta"><span>4 مراحل تعليمية</span><span>استماع ومهمة يومية</span><span>اختبار وشهادة</span></div>
+<span class="hint">استكشف الكورس وابدأ التعلّم ←</span>
 </a>
 </div>
 </main>
