@@ -55,4 +55,58 @@ try{const p=JSON.parse(localStorage.getItem("smartEdu365PhonicsProgress")||"null
 render();
 function showStarCelebration(){const box=document.getElementById("starCelebration");if(!box)return;let student="";try{student=(localStorage.getItem("smartEdu365StudentName")||"").trim()}catch(e){}document.getElementById("starTitle").textContent=student?"أحسنت يا "+student+"!":"أحسنت يا بطل!";document.getElementById("starMessage").textContent="لقد اجتزت المرحلة بنجاح. واصل التألق! 🌟";box.classList.add("show");document.body.style.overflow="hidden";}(()=>{const box=document.getElementById("starCelebration"),close=document.getElementById("starClose");if(close)close.addEventListener("click",()=>{box.classList.remove("show");document.body.style.overflow=""});if(box)box.addEventListener("click",e=>{if(e.target===box){box.classList.remove("show");document.body.style.overflow=""}})})();
 </script><div class="star-celebration" id="starCelebration" role="dialog" aria-modal="true" aria-labelledby="starTitle"><span class="falling-star">✦</span><span class="falling-star">★</span><span class="falling-star">✧</span><span class="falling-star">⭐</span><span class="falling-star">✦</span><div class="star-card"><div class="star-burst">★ ✦ ★</div><h2 id="starTitle">أحسنت يا بطل!</h2><p id="starMessage">لقد اجتزت المرحلة بنجاح ⭐</p><button type="button" id="starClose">متابعة التعلم</button></div></div>
+<script>
+/* SMART EDU 360: تحسين نطق الإنجليزية وتشغيل المقاطع الطويلة دون انقطاع */
+(()=> {
+ const synth=window.speechSynthesis;
+ if(!synth||synth.__smartEdu360Patched)return;
+ const nativeSpeak=synth.speak.bind(synth);
+ function selectEnglishVoice(u){
+  const lang=(u.lang||"en-US").toLowerCase();
+  if(!lang.startsWith("en"))return;
+  if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;
+  const voices=synth.getVoices()||[];
+  const voice=voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-us")||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-gb")||voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en-"))||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en");
+  if(voice){u.voice=voice;u.lang=voice.lang;}
+ }
+ function splitSpeech(value){
+  const sentences=(value.match(/[^.!?]+[.!?]?/g)||[value]).map(s=>s.trim()).filter(Boolean);
+  const out=[];
+  for(const sentence of sentences){
+   if(sentence.length<=115){out.push(sentence);continue;}
+   const clauses=sentence.split(/(?<=[,;:])\s+/);
+   for(const clause of clauses){
+    if(clause.length<=115){out.push(clause);continue;}
+    let part="";
+    for(const word of clause.split(/\s+/)){
+     if(part&&(part+" "+word).length>105){out.push(part);part=word;}
+     else part=part?part+" "+word:word;
+    }
+    if(part)out.push(part);
+   }
+  }
+  return out.length?out:[value];
+ }
+ synth.speak=function(original){
+  if(!original||typeof original.text!=="string")return nativeSpeak(original);
+  if(!(original.lang||"en-US").toLowerCase().startsWith("en"))return nativeSpeak(original);
+  selectEnglishVoice(original);
+  const chunks=splitSpeech(original.text.trim());
+  if(chunks.length<=1)return nativeSpeak(original);
+  let index=0;
+  const next=()=>{
+   if(index>=chunks.length)return;
+   const part=new SpeechSynthesisUtterance(chunks[index]);
+   part.lang=original.lang||"en-US";part.rate=original.rate;part.pitch=original.pitch;part.volume=original.volume;
+   if(original.voice)part.voice=original.voice;
+   if(index===0&&original.onstart)part.onstart=e=>original.onstart(e);
+   part.onend=e=>{if(index===chunks.length-1){if(original.onend)original.onend(e);}else{index++;next();}};
+   part.onerror=e=>{if(original.onerror)original.onerror(e);};
+   nativeSpeak(part);
+  };
+  next();
+ };
+ synth.__smartEdu360Patched=true;
+})();
+</script>
 </body></html>
