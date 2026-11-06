@@ -9,7 +9,7 @@
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#352715 0,transparent 34%),linear-gradient(160deg,#0b0b10,#111018 65%,#0b0b10);color:var(--text);font-family:system-ui,Tahoma,sans-serif;line-height:1.8}
 header,main{max-width:900px;margin:auto;padding:18px}header{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{color:var(--gold2);font-weight:900}.back{color:var(--gold2);text-decoration:none;border:1px solid #76613b;border-radius:12px;padding:8px 12px;font-size:13px}
 .hero,.level,.final{background:linear-gradient(150deg,#211f25,#15141b);border:1px solid var(--line);border-radius:19px;padding:18px;margin:14px 0}.hero{background:linear-gradient(120deg,#292016,#19171b 60%,#15151d);border-color:#5c4929}.gold{color:var(--gold2)}h1{font-size:clamp(25px,5vw,36px);margin:5px 0}.muted{color:var(--muted);font-size:14px}.progress{height:9px;background:#34313a;border-radius:20px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#b98532,var(--gold2));transition:width .2s}
-.level-head{display:flex;align-items:center;gap:12px}.num{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#f6d98d,#a77928);color:#201606;font-weight:900}.level h2{font-size:19px;margin:0}.items{display:grid;gap:8px;margin-top:12px}.lesson{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--text);background:#0e0e13;border:1px solid #39343b;border-radius:12px;padding:11px 13px}.lesson:hover{border-color:var(--gold)}.lesson small{display:block;color:var(--muted);font-size:12px}.arrow{color:var(--gold2);font-size:20px}.final{border-color:#8b6a32;background:linear-gradient(120deg,#292016,#17151a)}.final a,.btn{display:inline-block;text-decoration:none;border:0;border-radius:12px;padding:12px 17px;background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907;font:inherit;font-weight:800;margin-top:8px}
+.level{display:none}.level.active{display:block}.level-head{display:flex;align-items:center;gap:12px}.num{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#f6d98d,#a77928);color:#201606;font-weight:900}.level h2{font-size:19px;margin:0}.items{display:grid;gap:8px;margin-top:12px}.lesson{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--text);background:#0e0e13;border:1px solid #39343b;border-radius:12px;padding:11px 13px}.lesson:hover{border-color:var(--gold)}.lesson small{display:block;color:var(--muted);font-size:12px}.arrow{color:var(--gold2);font-size:20px}.final{border-color:#8b6a32;background:linear-gradient(120deg,#292016,#17151a)}.final a,.btn{display:inline-block;text-decoration:none;border:0;border-radius:12px;padding:12px 17px;background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907;font:inherit;font-weight:800;margin-top:8px}
 @media(max-width:600px){header,main{padding:14px}.level,.hero,.final{padding:15px}.lesson{align-items:flex-start}}
 </style>
 </head>
@@ -26,5 +26,33 @@ header,main{max-width:900px;margin:auto;padding:18px}header{display:flex;justify
 <section class="level"><div class="level-head"><div class="num">7</div><div><h2>الكتابة والتعبير</h2><div class="muted">انتقل من الفقرة القصيرة إلى الرسالة والقصة</div></div></div><div class="items"><a class="lesson" href="paragraph-writing.html"><span>كتابة الفقرات والرسائل والقصص<small>نظّم أفكارك واكتب نصاً مترابطاً</small></span><span class="arrow">←</span></a></div></section>
 <section class="final"><div class="gold">🏆 المحطة الأخيرة</div><h2>الاختبار النهائي للغة الإنجليزية</h2><p class="muted">بعد إنهاء المستويات السبعة، انتقل إلى الاختبار النهائي. هذه محطة مستقلة عن اختبار دورة الاحترام العربية.</p><a href="english-assessment.html">ابدأ الاختبار النهائي ←</a></section>
 </main>
-
+<script>
+(()=> {
+ const key='smartEdu365EnglishStage';
+ let current=Math.max(1,Math.min(7,Number(localStorage.getItem(key)||1)));
+ const levels=[...document.querySelectorAll('main > .level')];
+ const final=document.querySelector('.final');
+ function render(){
+  levels.forEach((el,i)=>{
+   el.classList.toggle('active',i+1===current);
+   el.setAttribute('aria-hidden',i+1===current?'false':'true');
+  });
+  const old=document.getElementById('stage-next'); if(old)old.remove();
+  if(current<=7){
+   const b=document.createElement('button');b.id='stage-next';b.className='btn';
+   b.textContent=current===7?'أنهيت المرحلة الأخيرة – افتح الاختبار النهائي':'أنهيت المرحلة '+current+' – انتقل إلى المرحلة التالية';
+   b.addEventListener('click',()=>{
+    if(current<7){current++;localStorage.setItem(key,String(current));render();}
+    else{localStorage.setItem(key,'8');render();}
+   });
+   levels[Math.min(current,7)-1].appendChild(b);
+  }
+  final.style.display=current===8?'block':'none';
+  const status=document.getElementById('stage-status');
+  if(status)status.textContent=current===8?'اكتملت المراحل السبع. الاختبار النهائي أصبح متاحاً.':'المرحلة '+current+' من 7';
+ }
+ const status=document.createElement('p');status.id='stage-status';status.className='muted';document.querySelector('.hero').appendChild(status);
+ render();
+})();
+</script>
 </body></html>
