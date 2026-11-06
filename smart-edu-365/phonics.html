@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014"><title>دمج الأصوات وقراءة الكلمات | SMART EDU 365</title>
+<style>
+:root{--bg:#101014;--panel:#1b1a20;--gold:#f0cf83;--line:#514633;--muted:#c8c0b2;--green:#8ce0b0}
+*{box-sizing:border-box}body{margin:0;padding:16px;background:radial-gradient(ellipse at top,#2b2114,#101014 55%);color:#faf5e9;font-family:Tahoma,Arial,sans-serif;line-height:1.8}.wrap{max-width:900px;margin:auto}.gold{color:var(--gold)}.muted{color:var(--muted);font-size:14px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.progress{height:8px;background:#34313a;border-radius:9px;overflow:hidden;margin:10px 0}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,#bb8735,#ffe4a0)}button{border:0;border-radius:11px;padding:10px 14px;font:inherit;font-weight:bold;cursor:pointer}.primary{background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907}.secondary{background:#302b24;color:#fff;border:1px solid #625239}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tabs button{background:#302b24;color:#fff}.tabs button.active{background:var(--gold);color:#241907}.vowel{font-size:52px;color:var(--gold);font-weight:900;text-align:center;direction:ltr}.sound{font-size:28px;text-align:center;direction:ltr;color:#fff}.blend{display:flex;justify-content:center;align-items:center;gap:clamp(8px,4vw,25px);direction:ltr;margin:18px 0;flex-wrap:wrap}.phoneme{font-size:clamp(32px,9vw,54px);font-weight:900;background:#29242a;border:1px solid #675334;border-radius:14px;padding:6px 15px;min-width:58px;text-align:center}.phoneme.v{color:#ffe09a}.arrow{font-size:24px;color:var(--gold)}.word{font-size:clamp(38px,10vw,58px);font-weight:900;direction:ltr;text-align:center;color:var(--gold);letter-spacing:5px}.translation{text-align:center;color:var(--muted);font-size:18px}.actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:14px 0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.step{background:#121218;border:1px solid #423a34;border-radius:12px;padding:12px;text-align:center}.step b{display:block;color:var(--gold);font-size:20px;direction:ltr}.question{padding:14px 0;border-bottom:1px solid #39343b}.answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:9px}.answers label{background:#111117;border:1px solid #49414a;border-radius:10px;padding:10px;display:flex;gap:8px;align-items:center}.answers input{accent-color:#e8c16f}.notice{background:#241e13;border:1px solid #715a31;border-radius:12px;padding:12px;color:#f2dfb5;font-size:13px}.hidden{display:none!important}a{color:var(--gold)}@media(max-width:580px){body{padding:10px}.panel{padding:14px}.steps{grid-template-columns:1fr}.answers{grid-template-columns:1fr 1fr}}
+</style></head>
+<body><main class="wrap">
+<div class="top"><div><h1 class="gold">SMART EDU 365</h1><h2>من الأصوات إلى قراءة الكلمات</h2></div><a href="index.html">الرئيسية</a></div>
+<p class="muted">بعد معرفة الحروف، نتعلم كيف نسمع صوت كل حرف ونمزج الأصوات حتى نقرأ كلمة قصيرة. لا تستعجل؛ اقرأ الصوت ثم اجمع الأصوات.</p>
+<div class="panel"><div class="top"><strong id="unitTitle">الدرس 1: صوت a القصير</strong><span id="count" class="muted">1 من 5</span></div><div class="progress"><span id="bar"></span></div><div id="units" class="tabs"></div></div>
+<section class="panel" aria-live="polite">
+<div class="vowel" id="vowel">a</div><div class="sound" id="sound">/æ/</div><p id="vowelText" class="translation">صوت قصير، كما في كلمة cat.</p>
+<h3 class="gold">شاهد الأصوات وهي تندمج</h3>
+<div class="blend" id="blend"></div><div class="word" id="word">cat</div><div class="translation" id="meaning">قطة 🐱</div>
+<div class="actions"><button class="primary" id="listenSounds">استمع إلى الأصوات منفصلة</button><button class="secondary" id="listenWord">استمع إلى الكلمة كاملة</button></div>
+<div class="steps"><div class="step"><b id="s1">/k/</b>الصوت الأول</div><div class="step"><b id="s2">/æ/</b>صوت الوسط</div><div class="step"><b id="s3">/t/</b>الصوت الأخير</div></div>
+<p class="muted" id="tip">قل: /k/ — /æ/ — /t/، ثم قرّب الأصوات من بعضها: c-a-t، cat.</p>
+<div class="actions"><button class="secondary" id="prev">الدرس السابق</button><button class="primary" id="next">الكلمة التالية</button></div>
+</section>
+<section class="panel"><h3 class="gold">اختبر فهمك</h3><p class="muted">بعد مراجعة الكلمات، أجب عن الأسئلة الخمسة. النجاح من 4 إجابات صحيحة.</p><button class="primary" id="start">ابدأ اختبار الوحدة</button><div id="quiz" class="hidden"></div><div id="result" class="notice hidden" aria-live="polite"></div></section>
+<p class="notice">ملاحظة مهمة: هذه بداية قراءة الكلمات القصيرة ذات نمط حرف ساكن + حركة قصيرة + حرف ساكن (CVC). نطق الجهاز آلي وقد يختلف باختلاف اللهجة والصوت المثبت. بعض الكلمات والحروف لها أصوات متعددة، وسنتعلمها تدريجياً.</p>
+<p class="muted">يحفظ تقدمك على الجهاز والمتصفح الحالي فقط، ولا تتم مزامنته مع أجهزة أخرى.</p>
+</main>
+<script>
+const units=[
+{v:"a",ipa:"/æ/",title:"صوت a القصير",desc:"افتح فمك قليلاً وقل الصوت القصير /æ/ كما في cat وmap.",words:[
+{w:"cat",m:"قطة 🐱",p:["k","æ","t"]},{w:"map",m:"خريطة 🗺️",p:["m","æ","p"]},{w:"bag",m:"حقيبة 🎒",p:["b","æ","g"]}]},
+{v:"e",ipa:"/ɛ/",title:"صوت e القصير",desc:"صوت /ɛ/ كما في pen وbed.",words:[
+{w:"pen",m:"قلم 🖊️",p:["p","ɛ","n"]},{w:"bed",m:"سرير 🛏️",p:["b","ɛ","d"]},{w:"red",m:"أحمر 🟥",p:["r","ɛ","d"]}]},
+{v:"i",ipa:"/ɪ/",title:"صوت i القصير",desc:"صوت /ɪ/ كما في sit وpin.",words:[
+{w:"sit",m:"يجلس 🪑",p:["s","ɪ","t"]},{w:"pin",m:"دبوس 📌",p:["p","ɪ","n"]},{w:"fin",m:"زعنفة 🐟",p:["f","ɪ","n"]}]},
+{v:"o",ipa:"/ɒ/ أو /ɑ/",title:"صوت o القصير",desc:"صوت قصير كما في dog وhot؛ يختلف قليلاً بين اللهجات.",words:[
+{w:"dog",m:"كلب 🐶",p:["d","ɒ","g"]},{w:"hot",m:"حار 🔥",p:["h","ɒ","t"]},{w:"box",m:"صندوق 📦",p:["b","ɒ","ks"]}]},
+{v:"u",ipa:"/ʌ/",title:"صوت u القصير",desc:"صوت /ʌ/ كما في sun وcup.",words:[
+{w:"sun",m:"شمس ☀️",p:["s","ʌ","n"]},{w:"cup",m:"كوب ☕",p:["k","ʌ","p"]},{w:"bus",m:"حافلة 🚌",p:["b","ʌ","s"]}]}
+];
+let ui=0,wi=0;
+const $=id=>document.getElementById(id);
+function say(t){if(!("speechSynthesis"in window)){alert("النطق الصوتي غير متاح في هذا المتصفح.");return;}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.72;speechSynthesis.speak(u);}
+function unlocked(){try{return Math.max(0,Math.min(4,Number(localStorage.getItem("smartEdu365PhonicsUnlocked")||0)))}catch(e){return 0}}
+function renderTabs(){$("units").innerHTML=units.map((u,i)=>'<button data-unit="'+i+'" class="'+(i===ui?"active":"")+'" '+(i>unlocked()?"disabled":"")+'>'+u.v.toUpperCase()+'</button>').join("");document.querySelectorAll("[data-unit]").forEach(b=>b.onclick=()=>{ui=Number(b.dataset.unit);wi=0;render();});}
+function render(){const u=units[ui],w=u.words[wi];$("unitTitle").textContent="الدرس "+(ui+1)+": "+u.title;$("count").textContent=(wi+1)+" من "+u.words.length;$("bar").style.width=((wi+1)/u.words.length*100)+"%";$("vowel").textContent=u.v;$("sound").textContent=u.ipa;$("vowelText").textContent=u.desc;$("blend").innerHTML=w.p.map((p,i)=>'<span class="phoneme '+(i===1?"v":"")+'">'+p+'</span>'+(i<2?'<span class="arrow">+</span>':"")).join("");$("word").textContent=w.w;$("meaning").textContent=w.m;$("s1").textContent="/"+w.p[0]+"/";$("s2").textContent="/"+w.p[1]+"/";$("s3").textContent="/"+w.p[2]+"/";$("tip").textContent="قل الأصوات منفصلة، ثم اجمعها بسلاسة لتقرأ: "+w.w+"."; $("prev").disabled=ui===0&&wi===0;$("next").textContent=wi===u.words.length-1?(ui===4?"اكتملت الوحدات":"اختبر الوحدة لفتح التالية"):"الكلمة التالية";renderTabs();$("quiz").classList.add("hidden");$("result").classList.add("hidden");try{localStorage.setItem("smartEdu365PhonicsProgress",JSON.stringify({ui,wi}));}catch(e){}}
+$("prev").onclick=()=>{if(wi>0)wi--;else if(ui>0){ui--;wi=units[ui].words.length-1;}render();};
+$("next").onclick=()=>{if(wi<units[ui].words.length-1){wi++;render();}else startQuiz();};
+$("listenSounds").onclick=()=>{const p=units[ui].words[wi].p;say(p.join(" ... "));};$("listenWord").onclick=()=>say(units[ui].words[wi].w);
+function startQuiz(){const u=units[ui];$("quiz").classList.remove("hidden");$("quiz").innerHTML=u.words.map((w,i)=>{const opts=[w.w,...u.words.filter(x=>x.w!==w.w).map(x=>x.w)];return '<div class="question"><strong>'+(i+1)+'. أي كلمة تتكون من الأصوات المعروضة: '+w.p.join(" – ")+'؟</strong><div class="answers">'+opts.sort(()=>Math.random()-.5).map(x=>'<label><input type="radio" name="q'+i+'" value="'+x+'">'+x+'</label>').join("")+'</div></div>';}).join("")+'<button class="primary" id="grade">صحح إجاباتي</button>';$("grade").onclick=grade;$("quiz").scrollIntoView({behavior:"smooth"});}
+function grade(){const u=units[ui];let score=0,n=0;u.words.forEach((w,i)=>{const x=$("quiz").querySelector('input[name="q'+i+'"]:checked');if(x){n++;if(x.value===w.w)score++;}});if(n!==u.words.length){$("result").textContent="أجب عن الأسئلة الثلاثة أولاً."; $("result").classList.remove("hidden");return;}const pass=score>=Math.ceil(u.words.length*.8);if(pass&&ui<4){try{localStorage.setItem("smartEdu365PhonicsUnlocked",String(Math.max(unlocked(),ui+1)));}catch(e){}}$("result").innerHTML=(pass?"ممتاز! أتقنت هذه الوحدة 🎉":"لا بأس، راجع الكلمات وحاول مرة أخرى.")+"<br>النتيجة: "+score+" من "+u.words.length+". "+(pass?(ui<4?'<button class="primary" id="openNext">افتح صوت الحركة التالي</button>':"أكملت أصوات الحركات القصيرة الخمسة!"):"تحتاج إلى إجابتين صحيحتين على الأقل.");$("result").classList.remove("hidden");if(pass&&ui<4)$("openNext").onclick=()=>{ui++;wi=0;render();};}
+try{const p=JSON.parse(localStorage.getItem("smartEdu365PhonicsProgress")||"null");if(p&&Number.isInteger(p.ui)&&p.ui>=0&&p.ui<=unlocked()){ui=p.ui;wi=Math.max(0,Math.min(Number(p.wi)||0,units[ui].words.length-1));}}catch(e){}
+render();
+</script></body></html>
