@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014"><title>الإملاء والاستماع والكتابة | SMART EDU 365</title>
+<style>
+:root{--bg:#0b0b10;--panel:#191821;--gold:#e6bd65;--gold2:#ffdf91;--text:#f7f3e9;--muted:#bbb5aa;--line:#393640}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#382a17,transparent 38%),var(--bg);color:var(--text);font-family:system-ui,Tahoma,sans-serif;min-height:100vh}main{max-width:850px;margin:auto;padding:20px 15px 50px}header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}a{color:var(--gold2);text-decoration:none}.brand{font-weight:800;color:var(--gold2)}.panel{background:linear-gradient(145deg,#1d1b25,#13131a);border:1px solid var(--line);border-radius:20px;padding:20px;margin:14px 0}.eyebrow{color:var(--gold2);font-size:13px;font-weight:800}h1{font-size:clamp(25px,5vw,36px);margin:8px 0}h2{font-size:20px;margin:0 0 12px}.muted{color:var(--muted);line-height:1.8;font-size:14px}.gold{color:var(--gold2)}.progress{height:8px;background:#34313a;border-radius:99px;overflow:hidden;margin:14px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,#b88636,var(--gold2));width:0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}.btn{border:1px solid var(--line);border-radius:12px;padding:11px 15px;background:#292631;color:var(--text);font:inherit;cursor:pointer}.btn.primary{background:linear-gradient(135deg,var(--gold2),#bd8732);color:#211707;border:0;font-weight:800}.btn:disabled{opacity:.45}.levels{display:flex;gap:8px;flex-wrap:wrap}.level{border:1px solid var(--line);background:#111119;color:var(--text);border-radius:99px;padding:9px 13px;font:inherit;cursor:pointer}.level.active{border-color:var(--gold);background:#392b17;color:var(--gold2)}.prompt{padding:18px;border:1px solid #62502f;border-radius:15px;background:#211b12;text-align:center;line-height:1.9}.answer{direction:ltr;text-align:center;font-size:25px;font-weight:800;letter-spacing:1px;color:#211707;background:#fffdf7;border-radius:12px;padding:18px;margin-top:12px}.hidden{display:none}.feedback{min-height:24px;color:#8ce0b0;margin-top:10px}.footer{text-align:center;color:#8e8990;font-size:12px;margin-top:25px}@media(max-width:560px){.panel{padding:16px}header{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body><main>
+<header><a href="index.html">← الصفحة الرئيسية</a><div class="brand">SMART EDU 365 ✦</div></header>
+<section class="panel"><div class="eyebrow">🎧 استمع · ✏️ اكتب · ⭐ راجع</div><h1>الإملاء والاستماع والكتابة</h1><p class="muted">تدرّب على سماع الإنجليزية ثم كتابتها بيدك في الدفتر. لا تحتاج إلى ميكروفون أو تسجيل صوتك.</p><div class="progress"><span id="bar"></span></div><p class="muted" id="progress">التدريب 1 من 12</p></section>
+<section class="panel"><h2>اختر المستوى</h2><div class="levels" id="levels"></div><p class="muted" id="levelDesc"></p></section>
+<section class="panel"><div class="eyebrow" id="kind">كلمة قصيرة</div><h2 id="title">استمع ثم اكتب</h2><div class="prompt">١. اضغط «استمع» دون النظر إلى الإجابة.<br>٢. أحضر دفترك وقلمك واكتب ما تسمعه.<br>٣. أعد الاستماع إذا احتجت.<br>٤. اكشف الإجابة وقارن كتابتك.</div><div class="actions"><button class="btn primary" id="play">🔊 استمع</button><button class="btn" id="slow">🐢 استمع ببطء</button><button class="btn" id="reveal">إظهار الإجابة بعد الكتابة</button></div><div id="answer" class="answer hidden" lang="en"></div><p id="meaning" class="muted hidden"></p><div class="feedback" id="feedback" aria-live="polite"></div><div class="actions"><button class="btn" id="prev">السابق</button><button class="btn primary" id="next">التالي ←</button></div></section>
+<section class="panel"><h2>تذكّر</h2><p class="muted">لا تستعجل. استمع أكثر من مرة، واكتب بخط واضح، ثم قارن الحروف وترتيبها بالإجابة. اطلب مساعدة ولي أمرك أو معلمك إذا صعبت عليك كلمة.</p></section>
+<div class="footer">النطق صوت آلي من جهازك وقد يختلف باختلاف المتصفح والأصوات المثبتة.</div>
+</main>
+<script>
+const units=[
+{level:0,kind:"كلمة قصيرة",en:"cat",ar:"قطة"},{level:0,kind:"كلمة قصيرة",en:"sun",ar:"شمس"},{level:0,kind:"كلمة قصيرة",en:"pen",ar:"قلم"},{level:0,kind:"كلمة قصيرة",en:"dog",ar:"كلب"},
+{level:1,kind:"كلمة وجملة",en:"blue book",ar:"كتاب أزرق"},{level:1,kind:"جملة قصيرة",en:"I am happy.",ar:"أنا سعيد."},{level:1,kind:"جملة قصيرة",en:"This is my bag.",ar:"هذه حقيبتي."},{level:1,kind:"جملة قصيرة",en:"I like apples.",ar:"أنا أحب التفاح."},
+{level:2,kind:"جملة متقدمة",en:"My family lives in a small house.",ar:"تعيش عائلتي في منزل صغير."},{level:2,kind:"جملة متقدمة",en:"I practise English every day.",ar:"أتدرب على الإنجليزية كل يوم."},{level:2,kind:"جملة متقدمة",en:"Please listen carefully and write the sentence.",ar:"من فضلك استمع جيداً واكتب الجملة."},{level:2,kind:"جملة متقدمة",en:"Reading helps us learn new words.",ar:"تساعدنا القراءة على تعلم كلمات جديدة."}
+];
+const levels=["المستوى الأول: كلمات","المستوى الثاني: جمل سهلة","المستوى الثالث: جمل متقدمة"],descs=["ابدأ بكلمات قصيرة وواضحة.","انتقل إلى كلمات مترابطة وجمل بسيطة.","تدرّب على جمل أطول وأكثر تفصيلاً."];
+let level=0,index=0,unlocked=[true,false,false],done=[];
+const $=id=>document.getElementById(id);
+function items(){return units.map((u,i)=>({...u,i})).filter(u=>u.level===level)}
+function current(){return items()[index]}
+function speak(rate){const u=current();if(!("speechSynthesis"in window)){ $("feedback").textContent="النطق الصوتي غير متاح في هذا المتصفح.";return}speechSynthesis.cancel();const s=new SpeechSynthesisUtterance(u.en);s.lang="en-US";s.rate=rate;speechSynthesis.speak(s)}
+function render(){const u=current();$("kind").textContent=u.kind;$("title").textContent="استمع ثم اكتب في دفترك";$("answer").textContent=u.en;$("meaning").textContent="المعنى: "+u.ar;$("answer").classList.add("hidden");$("meaning").classList.add("hidden");$("feedback").textContent="";$("progress").textContent="التدريب "+(index+1)+" من "+items().length+" · أنجزت "+done.length+" من 12";$("bar").style.width=(done.length/12*100)+"%";$("levelDesc").textContent=descs[level];$("prev").disabled=index===0;$("next").textContent=index===items().length-1?(level===2?"أنهيت المستوى":"المستوى التالي ←"):"التالي ←";renderLevels()}
+function renderLevels(){$("levels").innerHTML="";levels.forEach((n,i)=>{const b=document.createElement("button");b.className="level"+(i===level?" active":"");b.textContent=n;b.disabled=!unlocked[i];b.onclick=()=>{level=i;index=0;render()};$("levels").append(b)})}
+$("play").onclick=()=>speak(.85);$("slow").onclick=()=>speak(.58);
+$("reveal").onclick=()=>{$("answer").classList.remove("hidden");$("meaning").classList.remove("hidden");$("feedback").textContent="قارن ما كتبته في دفترك بالإجابة. أحسنت على المحاولة!";const id=current().i;if(!done.includes(id))done.push(id);if(level<2&&items().every(u=>done.includes(u.i)))unlocked[level+1]=true;renderLevels();$("progress").textContent="التدريب "+(index+1)+" من "+items().length+" · أنجزت "+done.length+" من 12";$("bar").style.width=(done.length/12*100)+"%";};
+$("prev").onclick=()=>{if(index>0){index--;render()}};
+$("next").onclick=()=>{if(index<items().length-1){index++;render()}else if(level<2&&unlocked[level+1]){level++;index=0;render()}else if(level===2){$("feedback").textContent="أحسنت! أنهيت تدريبات الإملاء الاثني عشر."}};
+render();
+</script></body></html>
