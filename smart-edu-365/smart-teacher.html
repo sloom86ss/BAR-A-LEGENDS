@@ -64,4 +64,4 @@ document.getElementById('speak').onclick=()=>say(lastReply);document.getElementB
 document.getElementById('quiz').onclick=()=>{const item=data[course][Math.floor(Math.random()*data[course].length)];add('سؤال التدريب: '+item.q,'teacher');lastReply='سؤال التدريب: '+item.q;window.currentQuiz=item;};
 document.getElementById('send').onclick=()=>{const q=input.value.trim();if(!q)return;add(q,'child');const item=window.currentQuiz;if(item&&item.a.some(a=>q.toLowerCase().includes(a.toLowerCase()))){add('أحسنت! إجابة صحيحة. ⭐ '+item.ex,'teacher');window.currentQuiz=null;}else{add(replyFor(q),'teacher');}input.value='';};
 renderTopics();
-</script></body></html>
+</script><script src="voice-input.js"></script>\n</body></html>
