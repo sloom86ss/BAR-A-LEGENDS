@@ -3,17 +3,38 @@
   const panel = document.querySelector('.smart-voice-panel');
   const select = panel && panel.querySelector('select');
   if (!select) return;
-  const key = 'smartEdu360VoiceURI';
-  const saved = localStorage.getItem(key);
-  const option = document.createElement('option');
-  option.value = 'nabra-neural';
-  option.textContent = 'نبرة — صوت فتاة عربية فصحى';
-  select.insertBefore(option, select.firstChild);
-  select.disabled = false;
-  const savedExists = saved === 'nabra-neural' || Array.from(select.options).some(o => o.value === saved);
-  select.value = savedExists ? saved : 'nabra-neural';
-  localStorage.setItem(key, select.value);
+  const voiceKey = 'smartEdu360VoiceURI';
+  const modeKey = 'smartEdu360VoiceMode';
   const note = panel.querySelector('small');
+  let mode = localStorage.getItem(modeKey) || 'nabra-neural';
+
+  function ensureNeuralOption() {
+    if (!Array.from(select.options).some(o => o.value === 'nabra-neural')) {
+      const option = document.createElement('option');
+      option.value = 'nabra-neural';
+      option.textContent = 'نبرة — صوت فتاة عربية فصحى';
+      select.insertBefore(option, select.firstChild);
+    }
+    select.disabled = false;
+  }
+  function restoreChoice() {
+    ensureNeuralOption();
+    if (mode === 'nabra-neural') select.value = 'nabra-neural';
+    else {
+      const savedVoice = localStorage.getItem(voiceKey);
+      if (savedVoice && Array.from(select.options).some(o => o.value === savedVoice)) select.value = savedVoice;
+      else select.value = 'nabra-neural';
+    }
+    updateNote();
+  }
+  function updateNote() {
+    if (!note) return;
+    if (select.value === 'nabra-neural') {
+      note.textContent = window.SmartEduNabraSpeak
+        ? 'صوت الفتاة العربية الفصحى جاهز.'
+        : 'اخترت صوت الفتاة العربية الفصحى؛ اضغط «تحميل الصوت العربي الطبيعي» لتجهيزه أول مرة.';
+    } else note.textContent = 'تم اختيار صوت عربي من جهازك.';
+  }
   function say(text, rate = 0.88) {
     if (select.value === 'nabra-neural') {
       if (typeof window.SmartEduNabraSpeak !== 'function') {
@@ -38,10 +59,10 @@
     return true;
   }
   select.addEventListener('change', () => {
-    localStorage.setItem(key, select.value);
-    if (note) note.textContent = select.value === 'nabra-neural'
-      ? 'اخترت صوت الفتاة العربية الفصحى. حمّل النموذج أولاً إذا لم يكن جاهزاً.'
-      : 'تم اختيار صوت الجهاز.';
+    mode = select.value === 'nabra-neural' ? 'nabra-neural' : 'device';
+    localStorage.setItem(modeKey, mode);
+    if (mode === 'device') localStorage.setItem(voiceKey, select.value);
+    updateNote();
   });
   if (window.SmartEduVoice) window.SmartEduVoice.speak = say;
   const oldTest = panel.querySelector('button');
@@ -49,5 +70,12 @@
     const test = oldTest.cloneNode(true);
     oldTest.replaceWith(test);
     test.addEventListener('click', () => say('مَرْحَبًا يا بَطَل! أَنا مُعَلِّمَتُكَ الذَّكِيَّةُ. هَيَّا نَتَعَلَّمُ مَعًا.', 0.88));
+  }
+  restoreChoice();
+  if (window.speechSynthesis) {
+    window.speechSynthesis.addEventListener('voiceschanged', () => {
+      restoreChoice();
+      if (window.SmartEduVoice) window.SmartEduVoice.speak = say;
+    });
   }
 })();
