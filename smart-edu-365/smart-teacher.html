@@ -58,9 +58,9 @@ function replyFor(q){const s=q.toLowerCase();const list=data[course];let item=li
 function renderTopics(){topics.innerHTML='';data[course].forEach((x,i)=>{const b=document.createElement('button');b.className='btn';b.textContent=x.title;b.onclick=()=>{add(x.title,'child');add(x.text+'\n\n'+x.q,'teacher');};topics.appendChild(b);});}
 document.querySelectorAll('[data-course]').forEach(b=>b.onclick=()=>{course=b.dataset.course;document.querySelectorAll('[data-course]').forEach(x=>x.classList.toggle('active',x===b));add(course==='english'?'اخترنا كورس اللغة الإنجليزية.':'اخترنا كورس الاحترام والأخلاق.','teacher');renderTopics();});
 function send(){const q=input.value.trim();if(!q)return;lastQuestion=q;add(q,'child');add(replyFor(q),'teacher');input.value='';}
-document.getElementById('send').onclick=send;input.addEventListener('keydown',e=>{if(e.key==='Enter')send();});
+document.getElementById('send').onclick=send;input.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('send').click();});
 document.getElementById('speak').onclick=()=>say(lastReply);document.getElementById('repeat').onclick=()=>{add(lastReply,'teacher');say(lastReply);};
 document.getElementById('quiz').onclick=()=>{const item=data[course][Math.floor(Math.random()*data[course].length)];add('سؤال التدريب: '+item.q,'teacher');lastReply='سؤال التدريب: '+item.q;window.currentQuiz=item;};
-const oldSend=send;document.getElementById('send').onclick=()=>{const q=input.value.trim();if(!q)return;add(q,'child');const item=window.currentQuiz;if(item&&item.a.some(a=>q.toLowerCase().includes(a.toLowerCase()))){add('أحسنت! إجابة صحيحة. ⭐ '+item.ex,'teacher');window.currentQuiz=null;}else{add(replyFor(q),'teacher');}input.value='';};
+document.getElementById('send').onclick=()=>{const q=input.value.trim();if(!q)return;add(q,'child');const item=window.currentQuiz;if(item&&item.a.some(a=>q.toLowerCase().includes(a.toLowerCase()))){add('أحسنت! إجابة صحيحة. ⭐ '+item.ex,'teacher');window.currentQuiz=null;}else{add(replyFor(q),'teacher');}input.value='';};
 renderTopics();
 </script></body></html>
