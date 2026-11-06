@@ -1,8 +1,8 @@
-const CACHE_NAME='smart-edu-360-v1';
+const CACHE_NAME='smart-edu-360-v2';
 const CORE_FILES=[
  './','./index.html','./manifest.webmanifest','./icon.svg',
  './manners-course.html','./manners-listening.html','./assessment.html','./certificates.html',
- './alphabet.html','./handwriting.html','./word-writing.html'
+ './alphabet.html','./handwriting.html','./word-writing.html','./english-course.html','./english-assessment.html','./phonics.html','./certificates.html'
 ];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(CORE_FILES)).then(()=>self.skipWaiting()));
