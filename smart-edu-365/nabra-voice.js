@@ -2,7 +2,7 @@
 const status = document.createElement('p');
 status.className = 'note';
 status.id = 'nabraStatus';
-status.textContent = 'الصوت العربي الطبيعي اختياري؛ اضغط تحميله عند توفر اتصال بالإنترنت (نحو 16 ميجابايت أول مرة).';
+status.textContent = 'الصوت العربي الطبيعي اختياري؛ اضغط تحميله عند توفر اتصال بالإنترنت (نحو 16 ميجابايت للنموذج، إضافة إلى ملفات التشغيل (قد يتجاوز الإجمالي 23 ميجابايت)).';
 const toolRows = document.querySelectorAll('.tools');
 const toolsRow = toolRows.length > 1 ? toolRows[1] : toolRows[0];
 const button = document.createElement('button');
@@ -42,7 +42,7 @@ button.addEventListener('click', async () => {
       catch (e) { console.error(e); return false; }
     };
     button.textContent = '✓ الصوت الطبيعي جاهز';
-    status.textContent = 'تم تحميل الصوت وحفظ ملفاته مؤقتاً في ذاكرة المتصفح. يمكنك الآن تجربة القراءة.';
+    status.textContent = 'تم تحميل الصوت. يحتفظ المتصفح بملفات النموذج للتشغيل لاحقاً ما دامت ذاكرة التخزين المؤقت متاحة. جرّب القراءة الآن.';
   } catch (error) {
     console.error(error);
     status.textContent = 'تعذر تحميل النموذج. تحقق من الإنترنت ثم أعد المحاولة؛ سيبقى الصوت الأساسي متاحاً.';
