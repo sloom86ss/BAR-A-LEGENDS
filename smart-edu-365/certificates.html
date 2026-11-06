@@ -60,7 +60,7 @@ if(!eligible){
  const expected=assessment.track==='english'?'basics':'manners';
  document.getElementById('level').value=expected;
  document.getElementById('level').disabled=true;
- gate.textContent='تم اجتياز الاختبار بنجاح: '+assessment.score+' من '+assessment.total+' ('+(assessment.score*20)+'٪). يمكنك الآن إنشاء الشهادة التحفيزية.';
+ gate.textContent='تم اجتياز الاختبار بنجاح: '+assessment.score+' من '+assessment.total+' ('+(Math.round(assessment.score/assessment.total*100))+'٪). يمكنك الآن إنشاء الشهادة التحفيزية.';
 }
 function applyLanguage(){
  const t=translations[language.value],english=language.value==='en';
@@ -71,7 +71,7 @@ function applyLanguage(){
  [...level.options].forEach(option=>option.textContent=t.levels[option.value]);
  level.value=selected;
  document.getElementById('outLevel').textContent=t.levels[selected];
- document.getElementById('assessmentLine').textContent=eligible?'نتيجة الاختبار: '+assessment.score+'/'+assessment.total+' ('+(assessment.score*20)+'٪)':'';
+ document.getElementById('assessmentLine').textContent=eligible?'نتيجة الاختبار: '+assessment.score+'/'+assessment.total+' ('+(Math.round(assessment.score/assessment.total*100))+'٪)':'';
  document.getElementById('outName').textContent=document.getElementById('student').value.trim()||t.defaultName;
 }
 language.addEventListener('change',applyLanguage);
@@ -80,7 +80,7 @@ document.getElementById('create').addEventListener('click',()=>{
  const t=translations[language.value];
  document.getElementById('outName').textContent=document.getElementById('student').value.trim()||t.defaultName;
  document.getElementById('outLevel').textContent=t.levels[document.getElementById('level').value];
- document.getElementById('assessmentLine').textContent='نتيجة الاختبار: '+assessment.score+'/'+assessment.total+' ('+(assessment.score*20)+'٪)';
+ document.getElementById('assessmentLine').textContent='نتيجة الاختبار: '+assessment.score+'/'+assessment.total+' ('+(Math.round(assessment.score/assessment.total*100))+'٪)';
  document.getElementById('cert').style.display='block';
  document.getElementById('print').disabled=false;
  document.getElementById('cert').scrollIntoView({behavior:'smooth'});
