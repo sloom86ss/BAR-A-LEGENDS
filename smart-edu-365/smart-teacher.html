@@ -34,6 +34,7 @@ main{max-width:850px;margin:auto}header{display:flex;align-items:center;justify-
 </section>
 <footer class="muted" style="text-align:center;padding:20px;border-top:1px solid #ffffff22">تم تطويره بواسطة <b style="color:#c5a8ff">SLOOMAI</b></footer>
 </main>
+<script src="voice.js"></script>
 <script>
 const data={
 english:[
@@ -53,7 +54,7 @@ manners:[
 let course='english',lastReply='مرحباً يا بطل! اختر موضوعاً أو اكتب سؤالك، وسأساعدك على فهمه. 🌟',lastQuestion='';
 const chat=document.getElementById('chat'),topics=document.getElementById('topics'),input=document.getElementById('question');
 function add(text,who){const b=document.createElement('div');b.className='bubble '+who;b.innerHTML='<small>'+(who==='teacher'?'المعلّم':'أنت')+'</small>';b.append(document.createTextNode(text));chat.appendChild(b);chat.scrollTop=chat.scrollHeight;if(who==='teacher')lastReply=text;}
-function say(text){if(!('speechSynthesis'in window)){add('ميزة القراءة الصوتية غير متاحة في هذا المتصفح. يمكنك قراءة الشرح المكتوب.','teacher');return;}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='ar-OM';u.rate=.86;const voices=speechSynthesis.getVoices();const v=voices.find(x=>x.lang.toLowerCase().startsWith('ar-om'))||voices.find(x=>x.lang.toLowerCase().startsWith('ar'));if(v)u.voice=v;speechSynthesis.speak(u);}
+function say(text){if(window.SmartEduVoice){window.SmartEduVoice.speak(text,.86);return;}if(!('speechSynthesis'in window)){add('ميزة القراءة الصوتية غير متاحة في هذا المتصفح. يمكنك قراءة الشرح المكتوب.','teacher');return;}const u=new SpeechSynthesisUtterance(text);u.lang='ar';u.rate=.86;speechSynthesis.speak(u);}
 function replyFor(q){const s=q.toLowerCase();const list=data[course];let item=list.find(x=>x.keys.some(k=>s.includes(k)));if(!item)item=list.find(x=>s.includes(x.title.split(' ')[0]));if(item)return item.text+'\n\nسؤال للتأكد: '+item.q; if(/مرحبا|السلام|اهلا|أهلا/.test(s))return 'أهلاً بك يا بطل! اختر موضوعاً من الأزرار، وسأشرحه لك خطوة بخطوة.';if(/شكرا|شكراً/.test(s))return 'العفو يا بطل! أنا سعيد بمحاولتك. هل تريد سؤالاً تدريبياً؟';return 'سؤال جميل! اختر أحد الموضوعات الظاهرة حتى أقدم لك شرحاً دقيقاً من دروس هذا الكورس. يمكنك أيضاً كتابة كلمة مثل: الحروف، الاستماع، الاحترام، الاعتذار أو ترتيب الغرفة.';}
 function renderTopics(){topics.innerHTML='';data[course].forEach((x,i)=>{const b=document.createElement('button');b.className='btn';b.textContent=x.title;b.onclick=()=>{add(x.title,'child');add(x.text+'\n\n'+x.q,'teacher');};topics.appendChild(b);});}
 document.querySelectorAll('[data-course]').forEach(b=>b.onclick=()=>{course=b.dataset.course;document.querySelectorAll('[data-course]').forEach(x=>x.classList.toggle('active',x===b));add(course==='english'?'اخترنا كورس اللغة الإنجليزية.':'اخترنا كورس الاحترام والأخلاق.','teacher');renderTopics();});
