@@ -50,11 +50,11 @@ const translations={
 };
 const language=document.getElementById('language');
 const assessment=(()=>{try{return JSON.parse(sessionStorage.getItem('smartEdu365Assessment')||'null')}catch(e){return null}})();
-const eligible=!!(assessment&&assessment.passed&&assessment.score>=4&&assessment.total===5);
+const eligible=!!(assessment&&assessment.passed&&(assessment.track==='english'?(assessment.score>=8&&assessment.total===10):(assessment.score>=4&&assessment.total===5)));
 const gate=document.getElementById('gate');
 if(!eligible){
  document.getElementById('certificatePanel').classList.add('locked');
- gate.innerHTML='لفتح الشهادة، أكمل اختبار أحد المسارين واحصل على 4 إجابات صحيحة من 5 على الأقل. <a href="assessment.html" style="color:#fff">ابدأ الاختبار</a>';
+ gate.innerHTML='لفتح الشهادة، أكمل اختبار المسار الذي اخترته واجتز الدرجة المطلوبة. <a href="assessment.html" style="color:#fff">اختبار الاحترام</a> أو <a href="english-assessment.html" style="color:#fff">اختبار الإنجليزية</a>.';
  document.getElementById('create').disabled=true;
 }else{
  const expected=assessment.track==='english'?'basics':'manners';
