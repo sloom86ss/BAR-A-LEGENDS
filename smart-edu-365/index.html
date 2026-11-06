@@ -2,7 +2,12 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101014"><meta name="description" content="SMART EDU 365 — تعلّم، ارتقِ، واكتشف. منصة تعليمية آمنة للأطفال واليافعين.">
+<meta name="theme-color" content="#101014">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SMART EDU 360">
+<link rel="icon" href="icon.svg" type="image/svg+xml"><meta name="description" content="SMART EDU 365 — تعلّم، ارتقِ، واكتشف. منصة تعليمية آمنة للأطفال واليافعين.">
 <title>SMART EDU 365 | تعلّم، ارتقِ، واكتشف</title>
 <style>
 :root{--bg:#0b0b10;--panel:#15151d;--panel2:#1d1c25;--gold:#e6bd65;--gold2:#ffdf91;--text:#f7f3e9;--muted:#b7b2a8;--line:#34313a;--blue:#83c7ff;--green:#8ce0b0;--pink:#f2a4c5}
@@ -21,7 +26,7 @@ main{max-width:1100px;margin:auto;padding:22px 20px 60px}.hero{padding:34px 28px
 </head>
 <body>
 <div class="student-welcome" id="studentWelcome" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><div class="welcome-card"><div style="font-size:38px;color:#ffdf91">⭐</div><h2 id="welcomeTitle">أهلاً بك في SMART EDU 365</h2><p>قبل أن نبدأ رحلة التعلّم، اكتب اسم الطالب ليظهر في عبارات التشجيع والنجاح.</p><input id="welcomeStudentName" maxlength="30" autocomplete="given-name" placeholder="اكتب اسم الطالب هنا" aria-label="اسم الطالب"><button class="btn primary" id="saveWelcomeName" type="button">ابدأ التعلّم</button><div class="welcome-error" id="welcomeError" aria-live="polite"></div></div></div>
-<header><div class="brand"><div class="logo" aria-hidden="true">✦</div><div><b>SMART EDU 365</b><small>English • الاحترام وحُسن التعامل</small></div></div><div class="safe">بيئة تعليمية تراعي سلامة الطفل</div></header>
+<header><div class="brand"><div class="logo" aria-hidden="true">✦</div><div><b>SMART EDU 365</b><small>English • الاحترام وحُسن التعامل</small></div></div><div class="actions" style="margin:0"><button class="btn secondary" id="installAppBtn" type="button" hidden>ثبّت التطبيق على هاتفك</button><div class="safe">بيئة تعليمية تراعي سلامة الطفل</div></div></header>
 <main>
 <section class="hero"><div class="eyebrow" id="studentGreeting">رحلتك نحو المعرفة والشخصية الجميلة</div><h1>ثقّف طفلك مع SMART EDU 365</h1><p>منصة تعليمية تركّز على مسارين: تعلّم اللغة الإنجليزية من الصفر إلى التمكّن، وتعلّم الاحترام وحُسن التعامل باللغة العربية، بدروس وأنشطة تناسب عمر كل متعلّم.</p><div class="actions"><button class="btn primary" onclick="document.getElementById('ages').scrollIntoView({behavior:'smooth'})">ابدأ رحلة التعلّم</button><button class="btn secondary" onclick="document.getElementById('tracks').scrollIntoView({behavior:'smooth'})">اكتشف الأقسام</button><a class="btn secondary" href="manners-course.html" style="text-decoration:none;display:inline-block">تعلّم الأخلاق والسلوك واحترام الوالدين 🤝</a><a class="btn secondary" href="assessment.html" style="text-decoration:none;display:inline-block">اختبر مستواك واحصل على شهادة</a><a class="btn secondary" href="alphabet.html" style="text-decoration:none;display:inline-block">ابدأ الحروف الإنجليزية A–Z</a><a class="btn secondary" href="handwriting.html" style="text-decoration:none;display:inline-block">شاهد طريقة كتابة الحروف الإنجليزية ✍️</a><a class="btn secondary" href="word-writing.html" style="text-decoration:none;display:inline-block">تدرّب على كتابة الكلمات الإنجليزية ✍️</a><a class="btn secondary" href="sentence-writing.html" style="text-decoration:none;display:inline-block">تدرّب على كتابة الجمل الإنجليزية ✍️</a><a class="btn secondary" href="paragraph-writing.html" style="text-decoration:none;display:inline-block">تدرّب على كتابة الفقرات والرسائل والقصص ✍️</a><a class="btn secondary" href="speaking-practice.html" style="text-decoration:none;display:inline-block">تدرّب على المحادثة والخطاب 🎙️</a><a class="btn secondary" href="phonics.html" style="text-decoration:none;display:inline-block">تعلم الأصوات وقراءة الكلمات</a><a class="btn secondary" href="sentences.html" style="text-decoration:none;display:inline-block">اقرأ جُملاً سهلة</a><a class="btn secondary" href="conversations.html" style="text-decoration:none;display:inline-block">تدرّب على المحادثة</a><a class="btn secondary" href="daily-conversations.html" style="text-decoration:none;display:inline-block">محادثات الحياة اليومية</a><a class="btn secondary" href="build-sentences.html" style="text-decoration:none;display:inline-block">تعلّم تكوين الجمل</a><a class="btn secondary" href="grammar-basics.html" style="text-decoration:none;display:inline-block">القواعد الإنجليزية من الصفر</a><a class="btn secondary" href="dictation.html" style="text-decoration:none;display:inline-block">تدريب الإملاء: استمع واكتب في دفترك ✏️</a><a class="btn secondary" href="listening-practice.html" style="text-decoration:none;display:inline-block">تدريب الاستماع والفهم</a><a class="btn secondary" href="reading-practice.html" style="text-decoration:none;display:inline-block">تدريب القراءة من الكلمات إلى القصص</a></div></section>
 <section id="ages"><div class="section-head"><div><h2>اختر فئتك العمرية</h2><p>نكيّف الشرح والأنشطة بحسب المرحلة.</p></div></div><div class="ages">
@@ -56,5 +61,12 @@ document.querySelectorAll('.age').forEach(button=>button.addEventListener('click
  button.classList.add('active');
  document.getElementById('age-label').textContent='المحتوى المعروض مناسب للفئة: '+button.dataset.age+' سنوات';
 }));
+
+let deferredInstallPrompt=null;
+const installButton=document.getElementById('installAppBtn');
+window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;installButton.hidden=false;});
+installButton.addEventListener('click',async()=>{if(!deferredInstallPrompt){alert('على iPhone: افتح قائمة المشاركة ثم اختر «إضافة إلى الشاشة الرئيسية».');return;}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;installButton.hidden=true;});
+window.addEventListener('appinstalled',()=>{installButton.hidden=true;});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 </script>
 </body></html>
