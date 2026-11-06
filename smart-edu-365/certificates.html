@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>شهادات SMART EDU 365 التحفيزية</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:22px;background:#101014;color:#f8f2e5;font-family:Tahoma,Arial,sans-serif;line-height:1.8}.wrap{max-width:850px;margin:auto}.panel{background:#1b1a20;border:1px solid #6d542b;border-radius:20px;padding:22px}.gold{color:#f0cf83}label{display:block;margin:14px 0 6px}input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #75613e;background:#101014;color:#fff;font:inherit}button{margin:16px 8px 0 0;padding:12px 18px;border:0;border-radius:10px;background:#e8c16f;color:#211707;font:inherit;font-weight:bold;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.certificate{display:none;margin-top:24px;padding:34px;background:#fff9e9;color:#493315;text-align:center;border:9px double #c49a4b;border-radius:16px}.certificate h1,.certificate h2{color:#805a1d}.certificate h1{font-size:32px}.certificate .name{font-size:28px;font-weight:bold;margin:12px}.small{font-size:12px;color:#725d3c}.hint{color:#cfc5b2;font-size:13px}@media print{body{background:white;padding:0}.panel,.hint,.controls{display:none!important}.wrap{max-width:none}.certificate{display:block!important;margin:0;border-radius:0;min-height:95vh;padding:60px 30px}}
+</style>
+</head>
+<body><main class="wrap">
+<h1 class="gold">SMART EDU 365</h1><h2>شهادات الإنجاز والتحفيز</h2>
+<section class="panel">
+<p>احتفل بكل مرحلة تنجزها في تعلّم الإنجليزية أو الاحترام وحُسن التعامل. اكتب الاسم الذي تريد ظهوره واختر الإنجاز.</p>
+<div class="controls">
+<label for="student">الاسم المعروض على الشهادة (اختياري)</label>
+<input id="student" maxlength="30" placeholder="مثال: بطل التعلّم">
+<label for="level">اختر الإنجاز</label>
+<select id="level">
+<option>أتممت تعلّم الحروف الإنجليزية</option>
+<option>أتقنت أصوات الحروف والنطق</option>
+<option>أنهيت مرحلة قراءة الكلمات</option>
+<option>أتممت تكوين الجمل والمحادثة</option>
+<option>أنهيت أساسيات اللغة الإنجليزية</option>
+<option>أتممت مرحلة الاحترام وحُسن التعامل</option>
+<option>اجتزت التقييم النهائي للمسار</option>
+</select>
+<button id="create">عرض الشهادة التحفيزية</button>
+<button id="print" disabled>طباعة الشهادة</button>
+</div>
+<p class="hint">ملاحظة: هذه شهادة تحفيزية قابلة للطباعة. لا تُعد إثباتاً آلياً للإتقان؛ تعتمد الشهادة الرسمية بعد إكمال الدروس واجتياز الاختبار والتحقق من النتيجة.</p>
+</section>
+<section class="certificate" id="cert" aria-live="polite">
+<div class="small">SMART EDU 365 · رحلة تعلّم وإنجاز</div>
+<h1>شهادة إنجاز وتحفيز</h1>
+<p>تُقدَّم بكل فخر إلى</p>
+<div class="name" id="outName">بطل SMART EDU 365</div>
+<p>تقديراً للمثابرة والجهد في إنجاز</p>
+<h2 id="outLevel"></h2>
+<p>كل خطوة تتعلمها تقرّبك من هدفك. استمر، فأنت قادر على التقدم!</p>
+<h2>⭐ أحسنت ⭐</h2>
+<div class="small">SMART EDU 365 — التعلّم رحلة تستحق الفخر</div>
+</section></main>
+<script>
+const create=document.getElementById('create'),print=document.getElementById('print'),cert=document.getElementById('cert');
+create.addEventListener('click',()=>{document.getElementById('outName').textContent=document.getElementById('student').value.trim()||'بطل SMART EDU 365';document.getElementById('outLevel').textContent=document.getElementById('level').value;cert.style.display='block';print.disabled=false;cert.scrollIntoView({behavior:'smooth'});});
+print.addEventListener('click',()=>window.print());
+</script></body></html>
