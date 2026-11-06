@@ -1,4 +1,4 @@
-const CACHE_NAME='smart-edu-360-v4';
+const CACHE_NAME='smart-edu-360-v5';
 const CORE_FILES=[
  './','./index.html','./manifest.webmanifest','./icon.svg',
  './manners-course.html','./manners-listening.html','./assessment.html','./certificates.html',
