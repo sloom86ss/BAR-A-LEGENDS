@@ -12,11 +12,14 @@ main{max-width:850px;margin:auto;padding:18px 14px 50px}.panel{background:linear
 button,select{background:#26231d;color:#fff;border:1px solid #8e7137;border-radius:11px;padding:11px 13px;font:inherit;cursor:pointer}button.primary{background:linear-gradient(120deg,#c49a43,#f0d58b);color:#17120a;font-weight:700}button:disabled{opacity:.45;cursor:not-allowed}
 h2{font-size:1.2rem;color:var(--gold);margin:0 0 10px}.muted{color:var(--muted)}.stage{font-size:.9rem;color:#e7ca82}.phrase{font-size:1.2rem;direction:ltr;text-align:left;background:#0c0c0c;border-radius:12px;padding:12px;margin:10px 0}.translation{background:#211d14;padding:10px;border-radius:10px}.hidden{display:none}.choices{display:grid;gap:8px;margin-top:12px}.choices button{text-align:right}.feedback{min-height:30px;color:var(--gold);font-weight:700}.progress{height:9px;background:#34302a;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#a77b2d,#f3d98f);width:0}
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px}
+
+.study-timer{background:#171710;border:1px solid #80632f;border-radius:14px;padding:13px 15px;margin:12px 0}.study-timer-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.study-timer strong{color:#f0cf83}.study-time{font-size:22px;font-weight:800;direction:ltr;unicode-bidi:isolate;color:#fff}.study-track{height:7px;background:#39342b;border-radius:20px;overflow:hidden;margin-top:9px}.study-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#b88636,#ffe4a0)}.study-timer small{color:#c8c0b2}
 </style></head>
 <body>
 <header><div>SMART EDU 365</div><h1>الاستماع المتقدم</h1><p>استمع، افهم، ثم اختبر نفسك — خطوة بعد خطوة</p></header>
 <main>
 <section class="panel" style="border:1px solid #b88b3d;background:#211b12;padding:14px 16px;border-radius:14px;margin:14px 0"><strong style="color:#ffdf91">✏️ أحضر دفترك وقلمك</strong><p style="margin:7px 0 0;line-height:1.9">استمع جيداً إلى الحرف أو الكلمة أو الجملة، وشاهدها على الشاشة، ثم اكتبها بيدك في دفترك. أعد الاستماع وراجع كتابتك.</p></section>
+<section class="study-timer" aria-label="عداد وقت التعلم"><div class="study-timer-head"><div><strong>⏱️ وقت تعلمك</strong><div class="study-time" id="studyElapsed" role="timer">00:00</div></div><div><strong>المدة المقترحة</strong><div><span>12 دقائق</span></div></div></div><div class="study-track"><span id="studyTimeBar"></span></div><div class="study-timer-head" style="margin-top:7px"><small id="studyTimeHint">خذ وقتك؛ لا يوجد اختبار سرعة.</small><button type="button" id="studyPause" class="secondary" style="padding:6px 10px">إيقاف مؤقت</button></div></section>
 <section class="panel"><h2>تقدمك في الدورة</h2><div class="progress"><span id="bar"></span></div><p id="progressText" class="muted">أكملت 0 من 5 مراحل</p></section>
 <section class="panel">
 <div class="stage" id="stageLabel">المرحلة الأولى</div><h2 id="lessonTitle">استمع إلى العبارة</h2>
@@ -52,4 +55,7 @@ function answer(i){if(answered)return;answered=true;const l=lessons[current];con
 function nextLesson(){if(current===lessons.length-1){alert("أكملت جميع دروس الاستماع المتقدم. يمكنك إعادة الدورة للتدرب.");current=0}else current++;render();window.scrollTo({top:0,behavior:"smooth"})}
 function updateProgress(){const n=done.length;$("bar").style.width=(n/lessons.length*100)+"%";$("progressText").textContent="أكملت "+n+" من "+lessons.length+" مراحل"}
 render();
+
+// عداد وقت التعلم: مؤشر لطيف للمدة المقترحة وليس حداً زمنياً.
+(()=>{const out=document.getElementById("studyElapsed"),bar=document.getElementById("studyTimeBar"),hint=document.getElementById("studyTimeHint"),pause=document.getElementById("studyPause");if(!out||!bar||!pause)return;let seconds=0,running=true;const target=12*60;function draw(){const m=String(Math.floor(seconds/60)).padStart(2,"0"),ss=String(seconds%60).padStart(2,"0");out.textContent=m+":"+ss;bar.style.width=Math.min(100,seconds/target*100)+"%";hint.textContent=seconds<target?"خذ وقتك؛ لا يوجد اختبار سرعة.": "أحسنت الاستمرار! يمكنك المتابعة براحتك.";pause.textContent=running?"إيقاف مؤقت":"متابعة";}setInterval(()=>{if(running){seconds++;draw()}},1000);pause.addEventListener("click",()=>{running=!running;draw()});draw()})();
 </script></body></html>
