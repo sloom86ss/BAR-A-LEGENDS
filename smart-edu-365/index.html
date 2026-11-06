@@ -1,73 +1,48 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#101014">
+<meta name="description" content="ثَقِّف طفلك – SMART EDU 360: اختر دورة اللغة الإنجليزية أو دورة الاحترام والأخلاق.">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="SMART EDU 360">
-<link rel="icon" href="icon.svg" type="image/svg+xml"><meta name="description" content="SMART EDU 365 — تعلّم، ارتقِ، واكتشف. منصة تعليمية آمنة للأطفال واليافعين.">
-<title>SMART EDU 365 | تعلّم، ارتقِ، واكتشف</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>ثَقِّف طفلك – SMART EDU 360</title>
 <style>
-:root{--bg:#0b0b10;--panel:#15151d;--panel2:#1d1c25;--gold:#e6bd65;--gold2:#ffdf91;--text:#f7f3e9;--muted:#b7b2a8;--line:#34313a;--blue:#83c7ff;--green:#8ce0b0;--pink:#f2a4c5}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#352715 0,transparent 34%),linear-gradient(160deg,#0b0b10,#111018 65%,#0b0b10);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
-header{max-width:1100px;margin:auto;padding:24px 20px 10px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#f6d98d,#a77928);display:grid;place-items:center;color:#201606;font-size:25px;box-shadow:0 8px 25px #d3a44a30}.brand b{display:block;font-size:20px;letter-spacing:.3px}.brand small{color:var(--muted)}.safe{border:1px solid #76613b;border-radius:999px;padding:8px 12px;color:var(--gold2);font-size:12px}
-main{max-width:1100px;margin:auto;padding:22px 20px 60px}.hero{padding:34px 28px;border:1px solid #5c4929;border-radius:26px;background:linear-gradient(120deg,#292016,#19171b 55%,#15151d);box-shadow:0 18px 55px #0006;position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;left:35px;top:8px;font-size:110px;color:#e7bd6530}.eyebrow{color:var(--gold2);font-weight:700;font-size:13px}.hero h1{font-size:clamp(27px,5vw,46px);margin:10px 0}.hero p{max-width:650px;color:#d4cfc4;line-height:1.9;margin:0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:13px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}.primary{background:linear-gradient(135deg,var(--gold2),#c18c35);color:#201606}.secondary{background:#ffffff0b;border:1px solid var(--line);color:var(--text)}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:32px 0 14px}.section-head h2{font-size:22px;margin:0}.section-head p{color:var(--muted);margin:5px 0 0;font-size:13px}
-.ages,.tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.age,.track{border:1px solid var(--line);background:linear-gradient(150deg,var(--panel2),var(--panel));border-radius:20px;padding:18px;text-align:right;color:var(--text)}.age{cursor:pointer;transition:.18s}.age:hover,.age.active{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 10px 25px #0004}.age .emoji{font-size:27px}.age h3,.track h3{margin:9px 0 6px}.age p,.track p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}.age .range{color:var(--gold2);font-weight:800;font-size:13px}
-.track{min-height:170px}.track .emoji{font-size:30px}.track:nth-child(1){border-top:3px solid var(--blue)}.track:nth-child(2){border-top:3px solid var(--pink)}.track:nth-child(3){border-top:3px solid var(--green)}
-.lessons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.lesson{padding:16px;border:1px solid var(--line);border-radius:16px;background:#15151c}.lesson b{display:block;margin-bottom:6px}.lesson span{font-size:13px;color:var(--muted);line-height:1.7}
-.note{margin-top:24px;padding:16px;border:1px solid #62502f;border-radius:16px;background:#211b12;color:#e9d8b3;font-size:13px;line-height:1.8}.foot{color:#8f8a82;text-align:center;font-size:12px;margin-top:34px}
-@media(max-width:700px){header{padding:18px 15px}.safe{font-size:10px}main{padding:16px 15px 40px}.hero{padding:25px 20px}.ages,.tracks{grid-template-columns:1fr}.age{display:grid;grid-template-columns:44px 1fr;column-gap:8px}.age .emoji{grid-row:span 2}.age h3{margin:0}.age p{grid-column:2}.lessons{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
-
-.student-welcome{position:fixed;inset:0;z-index:10000;display:none;place-items:center;padding:18px;background:rgba(5,5,9,.94)}.student-welcome.show{display:grid}.welcome-card{width:min(430px,100%);padding:28px 22px;text-align:center;border:1px solid #b88b43;border-radius:22px;background:linear-gradient(145deg,#292016,#15151d);box-shadow:0 20px 70px #000b}.welcome-card h2{color:var(--gold2);margin:0 0 8px}.welcome-card p{color:var(--muted);margin:0 0 16px}.welcome-card input{width:100%;padding:13px;border-radius:11px;border:1px solid #80632f;background:#101014;color:white;font:inherit;text-align:center;margin-bottom:12px}.welcome-card button{width:100%}.welcome-error{min-height:24px;color:#ffb3a9;font-size:13px}
+:root{color-scheme:dark;--bg:#101015;--panel:#1b1a22;--text:#f7f3eb;--muted:#c5c0b8;--pink:#e99ac0;--blue:#83c8f5}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#24212d 0%,#101015 65%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;display:grid;place-items:center;padding:28px 18px}
+main{width:min(1120px,100%)}
+h1{text-align:center;font-size:clamp(25px,4vw,38px);margin:0 0 34px;font-weight:800}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
+.course{position:relative;display:flex;flex-direction:column;align-items:center;min-height:560px;padding:56px 34px 38px;background:linear-gradient(145deg,#1d1c25,#17161e);border:2px solid #383640;border-radius:42px;color:inherit;text-decoration:none;text-align:center;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.course:before{content:"";position:absolute;top:0;left:0;right:0;height:8px;border-radius:40px 40px 0 0;background:var(--accent)}
+.course:hover,.course:focus-visible{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 18px 48px #0007;outline:none}
+.icon{font-size:76px;line-height:1.2;margin:12px 0 40px}
+.course h2{font-size:clamp(25px,3vw,38px);line-height:1.6;margin:0 0 20px}
+.course p{font-size:clamp(18px,2vw,25px);line-height:2;color:var(--muted);margin:0;max-width:440px}
+.hint{margin-top:auto;padding-top:28px;color:var(--accent);font-weight:800;font-size:17px}
+.english{--accent:var(--blue)}.manners{--accent:var(--pink)}
+@media(max-width:720px){body{padding:24px 14px}.choices{grid-template-columns:1fr;gap:20px}.course{min-height:390px;padding:38px 25px 28px;border-radius:30px}.icon{font-size:62px;margin:4px 0 18px}.course h2{margin-bottom:12px}.course p{font-size:18px}.hint{padding-top:20px}}
 </style>
 </head>
 <body>
-<div class="student-welcome" id="studentWelcome" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle"><div class="welcome-card"><div style="font-size:38px;color:#ffdf91">⭐</div><h2 id="welcomeTitle">أهلاً بك في SMART EDU 365</h2><p>قبل أن نبدأ رحلة التعلّم، اكتب اسم الطالب ليظهر في عبارات التشجيع والنجاح.</p><input id="welcomeStudentName" maxlength="30" autocomplete="given-name" placeholder="اكتب اسم الطالب هنا" aria-label="اسم الطالب"><button class="btn primary" id="saveWelcomeName" type="button">ابدأ التعلّم</button><div class="welcome-error" id="welcomeError" aria-live="polite"></div></div></div>
-<header><div class="brand"><div class="logo" aria-hidden="true">✦</div><div><b>SMART EDU 365</b><small>English • الاحترام وحُسن التعامل</small></div></div><div class="actions" style="margin:0"><button class="btn secondary" id="installAppBtn" type="button" hidden>ثبّت التطبيق على هاتفك</button><div class="safe">بيئة تعليمية تراعي سلامة الطفل</div></div></header>
 <main>
-<section class="hero"><div class="eyebrow" id="studentGreeting">رحلتك نحو المعرفة والشخصية الجميلة</div><h1>ثقّف طفلك مع SMART EDU 365</h1><p>منصة تعليمية تركّز على مسارين: تعلّم اللغة الإنجليزية من الصفر إلى التمكّن، وتعلّم الاحترام وحُسن التعامل باللغة العربية، بدروس وأنشطة تناسب عمر كل متعلّم.</p><div class="actions"><a class="btn primary" href="english-course.html" style="text-decoration:none;display:inline-block">دروس اللغة الإنجليزية 🔤</a><a class="btn secondary" href="manners-course.html" style="text-decoration:none;display:inline-block">الأخلاق والسلوك واحترام الوالدين 🤝</a></div></section>
-<section id="ages"><div class="section-head"><div><h2>اختر فئتك العمرية</h2><p>نكيّف الشرح والأنشطة بحسب المرحلة.</p></div></div><div class="ages">
-<button class="age active" data-age="5–7"><div class="emoji">🧸</div><h3>البدايات الممتعة</h3><p>الحروف والأصوات والكلمات وآداب التعامل اليومية.</p><div class="range">من 5 إلى 7 سنوات</div></button>
-<button class="age" data-age="8–11"><div class="emoji">🚀</div><h3>مرحلة الاستكشاف</h3><p>القراءة والمحادثة والتعبير، والحوار والعمل الجماعي.</p><div class="range">من 8 إلى 11 سنة</div></button>
-<button class="age" data-age="12–15"><div class="emoji">🌟</div><h3>مرحلة التمكّن</h3><p>التواصل بطلاقة، والحوار الواعي، وتحمل المسؤولية.</p><div class="range">من 12 إلى 15 سنة</div></button>
-</div></section>
-<section id="tracks"><div class="section-head"><div><h2>مسارا المنصة</h2><p id="age-label">المحتوى المعروض مناسب للفئة: 5–7 سنوات</p></div></div><div class="tracks" style="grid-template-columns:repeat(2,minmax(0,1fr))">
-<article class="track"><div class="emoji">🔤</div><h3>اللغة الإنجليزية</h3><p>من الحروف وأصواتها إلى القراءة والكتابة والمفردات والقواعد والمحادثة والخطاب والتواصل المتقدم.</p></article>
-<article class="track"><div class="emoji">🤝</div><h3>الاحترام وحُسن التعامل</h3><p>من أساسيات الأدب والكلمة الطيبة إلى احترام الآخرين والحوار والاعتذار والتسامح وحل الخلافات. جميع الشروحات والقصص والأنشطة والاختبارات باللغة العربية.</p></article>
-</div></section>
-<section><div class="section-head"><div><h2>نماذج من الدروس</h2><p>محتوى أولي قابل للتوسّع حسب العمر.</p></div></div><div class="lessons" id="lessons">
-<div class="lesson"><b>🇬🇧 الإنجليزية: الحروف من البداية</b><span>ابدأ بالحرف A وa، وتعرّف إلى اسمه وصوته وكلمة تبدأ به، ثم تدرب على تمييزه وكتابته.</span></div>
-<div class="lesson"><b>🔊 الإنجليزية: الاستماع والنطق</b><span>تدرّب على سماع الأصوات وتقليدها والتمييز بين اسم الحرف وصوته.</span></div>
-<div class="lesson"><b>💛 الاحترام: أستمع عندما يتحدث الآخر</b><span>نتعلّم باللغة العربية كيف ننصت دون مقاطعة وننتظر دورنا في الكلام.</span></div>
-<div class="lesson"><b>🌷 حُسن التعامل: أستخدم الكلمات الطيبة</b><span>نتدرّب على قول من فضلك وشكراً وآسف، واختيار كلام لطيف في المواقف اليومية.</span></div>
-</div></section>
-<div class="note"><b>سلامة المتعلّمين أولاً:</b> يُفضّل أن يتابع ولي الأمر رحلة الطفل التعليمية. لا تشارك بياناتك الشخصية، وإذا واجهت موقفاً مزعجاً فأخبر شخصاً بالغاً موثوقاً. المحتوى التعليمي مصمم للتعلّم والتشجيع، ويمكن لولي الأمر مراجعته ومناقشته مع الطفل.</div>
-<div class="foot">SMART EDU 365 · نتعلّم اليوم لنصنع غداً أفضل</div>
-<a class="btn secondary" href="achievements.html" style="text-decoration:none;display:inline-block">لوحة إنجازاتي ⭐</a>
-<a class="btn secondary" href="smart-review.html" style="text-decoration:none;display:inline-block">المراجعة الذكية ⭐</a>
-<a class="card" href="advanced-listening.html"><h3>الاستماع المتقدم</h3><p>فهم المحادثات الأطول والتدرب على الاستماع</p></a>
+<h1>ثَقِّف طفلك – SMART EDU 360</h1>
+<div class="choices" aria-label="اختر الدورة">
+<a class="course english" href="english-course.html">
+<div class="icon" aria-hidden="true">🔤</div>
+<h2>اللغة الإنجليزية</h2>
+<p>من الحروف وأصواتها إلى القراءة والكتابة والمفردات والقواعد والمحادثة والخطاب والتواصل.</p>
+<span class="hint">اضغط لفتح الدورة ←</span>
+</a>
+<a class="course manners" href="manners-course.html">
+<div class="icon" aria-hidden="true">🤝</div>
+<h2>الاحترام والأخلاق وحُسن التعامل</h2>
+<p>نتعلّم الأدب والكلمة الطيبة واحترام الآخرين والوالدين والحوار والاعتذار والتسامح وحل الخلافات.</p>
+<span class="hint">اضغط لفتح الدورة ←</span>
+</a>
+</div>
 </main>
-<script>
-const welcome=document.getElementById('studentWelcome'),welcomeInput=document.getElementById('welcomeStudentName');
-function updateStudentGreeting(){let n='';try{n=(localStorage.getItem('smartEdu365StudentName')||'').trim()}catch(e){}document.getElementById('studentGreeting').textContent=n?'أهلاً يا '+n+'! رحلتك نحو المعرفة والشخصية الجميلة':'رحلتك نحو المعرفة والشخصية الجميلة';}
-try{const saved=(localStorage.getItem('smartEdu365StudentName')||'').trim();if(!saved)welcome.classList.add('show');else updateStudentGreeting();}catch(e){welcome.classList.add('show');}
-document.getElementById('saveWelcomeName').addEventListener('click',()=>{const n=welcomeInput.value.trim().slice(0,30);if(!n){document.getElementById('welcomeError').textContent='اكتب اسم الطالب أولاً لنبدأ.';welcomeInput.focus();return;}try{localStorage.setItem('smartEdu365StudentName',n);welcome.classList.remove('show');updateStudentGreeting();}catch(e){document.getElementById('welcomeError').textContent='تعذر حفظ الاسم في هذا المتصفح. حاول مرة أخرى.';}});
-welcomeInput.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('saveWelcomeName').click();});
-document.querySelectorAll('.age').forEach(button=>button.addEventListener('click',()=>{
- document.querySelectorAll('.age').forEach(x=>x.classList.remove('active'));
- button.classList.add('active');
- document.getElementById('age-label').textContent='المحتوى المعروض مناسب للفئة: '+button.dataset.age+' سنوات';
-}));
-
-let deferredInstallPrompt=null;
-const installButton=document.getElementById('installAppBtn');
-installButton.hidden=false;
-window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;installButton.hidden=false;});
-installButton.addEventListener('click',async()=>{if(!deferredInstallPrompt){alert('للتثبيت: على iPhone افتح زر المشاركة ثم «إضافة إلى الشاشة الرئيسية». وعلى Android افتح قائمة المتصفح واختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».');return;}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;installButton.hidden=true;});
-window.addEventListener('appinstalled',()=>{installButton.hidden=true;});
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
-</script>
-</body></html>
+</body>
+</html>
