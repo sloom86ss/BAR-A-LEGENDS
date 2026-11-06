@@ -45,4 +45,58 @@ $("play").onclick=()=>speak(.82);$("slow").onclick=()=>speak(.52);$("reveal").on
 
 // عداد وقت التعلم: مؤشر لطيف للمدة المقترحة وليس حداً زمنياً.
 (()=>{const out=document.getElementById("studyElapsed"),bar=document.getElementById("studyTimeBar"),hint=document.getElementById("studyTimeHint"),pause=document.getElementById("studyPause");if(!out||!bar||!pause)return;let seconds=0,running=true;const target=8*60;function draw(){const m=String(Math.floor(seconds/60)).padStart(2,"0"),ss=String(seconds%60).padStart(2,"0");out.textContent=m+":"+ss;bar.style.width=Math.min(100,seconds/target*100)+"%";hint.textContent=seconds<target?"خذ وقتك؛ لا يوجد اختبار سرعة.": "أحسنت الاستمرار! يمكنك المتابعة براحتك.";pause.textContent=running?"إيقاف مؤقت":"متابعة";}setInterval(()=>{if(running){seconds++;draw()}},1000);pause.addEventListener("click",()=>{running=!running;draw()});draw()})();
-</script></body></html>
+</script><script>
+/* SMART EDU 360: تحسين نطق الإنجليزية وتشغيل المقاطع الطويلة دون انقطاع */
+(()=> {
+ const synth=window.speechSynthesis;
+ if(!synth||synth.__smartEdu360Patched)return;
+ const nativeSpeak=synth.speak.bind(synth);
+ function selectEnglishVoice(u){
+  const lang=(u.lang||"en-US").toLowerCase();
+  if(!lang.startsWith("en"))return;
+  if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;
+  const voices=synth.getVoices()||[];
+  const voice=voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-us")||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-gb")||voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en-"))||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en");
+  if(voice){u.voice=voice;u.lang=voice.lang;}
+ }
+ function splitSpeech(value){
+  const sentences=(value.match(/[^.!?]+[.!?]?/g)||[value]).map(s=>s.trim()).filter(Boolean);
+  const out=[];
+  for(const sentence of sentences){
+   if(sentence.length<=115){out.push(sentence);continue;}
+   const clauses=sentence.split(/(?<=[,;:])\s+/);
+   for(const clause of clauses){
+    if(clause.length<=115){out.push(clause);continue;}
+    let part="";
+    for(const word of clause.split(/\s+/)){
+     if(part&&(part+" "+word).length>105){out.push(part);part=word;}
+     else part=part?part+" "+word:word;
+    }
+    if(part)out.push(part);
+   }
+  }
+  return out.length?out:[value];
+ }
+ synth.speak=function(original){
+  if(!original||typeof original.text!=="string")return nativeSpeak(original);
+  if(!(original.lang||"en-US").toLowerCase().startsWith("en"))return nativeSpeak(original);
+  selectEnglishVoice(original);
+  const chunks=splitSpeech(original.text.trim());
+  if(chunks.length<=1)return nativeSpeak(original);
+  let index=0;
+  const next=()=>{
+   if(index>=chunks.length)return;
+   const part=new SpeechSynthesisUtterance(chunks[index]);
+   part.lang=original.lang||"en-US";part.rate=original.rate;part.pitch=original.pitch;part.volume=original.volume;
+   if(original.voice)part.voice=original.voice;
+   if(index===0&&original.onstart)part.onstart=e=>original.onstart(e);
+   part.onend=e=>{if(index===chunks.length-1){if(original.onend)original.onend(e);}else{index++;next();}};
+   part.onerror=e=>{if(original.onerror)original.onerror(e);};
+   nativeSpeak(part);
+  };
+  next();
+ };
+ synth.__smartEdu360Patched=true;
+})();
+</script>
+</body></html>
