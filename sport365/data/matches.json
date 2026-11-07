@@ -9,7 +9,7 @@
     "dfb"
   ],
   "updatedAt": "2026-11-07T16:48:54.437Z",
-  "retrievedAt": "2026-11-07T15:50:16.650Z",
+  "retrievedAt": "2026-11-07T16:22:46.518Z",
   "sourceFreshness": "fresh",
   "ageSeconds": 0,
   "matches": [
@@ -77,7 +77,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T19:55:03.25",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87620",
@@ -119,7 +119,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T19:53:10.027",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87624",
@@ -153,7 +153,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T20:00:34.25",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87625",
@@ -203,7 +203,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T19:56:09.1",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87621",
@@ -261,7 +261,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:35:09.803",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87623",
@@ -319,7 +319,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:45:27.777",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87626",
@@ -353,7 +353,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:39:33.707",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87632",
@@ -387,7 +387,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-27T22:39:40.023",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87619",
@@ -421,7 +421,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:52:05.163",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87622",
@@ -455,7 +455,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:55:42.393",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87630",
@@ -481,7 +481,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:56:26.427",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87631",
@@ -539,7 +539,41 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T19:57:07.563",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
+    },
+    {
+      "id": "87629",
+      "league": "DFB Pokal 2026/2027",
+      "home": "Hannover 96",
+      "away": "1. FC Kaiserslautern",
+      "status": "انتهت",
+      "statusConfidence": "source_confirmed",
+      "minute": null,
+      "kickoff": "2026-10-28T19:45:00Z",
+      "homeScore": 0,
+      "awayScore": 2,
+      "finished": true,
+      "events": [
+        {
+          "type": "هدف",
+          "minute": 14,
+          "player": "Miloš Lukovic",
+          "team": "away",
+          "detail": null,
+          "confidence": "source_recorded"
+        },
+        {
+          "type": "هدف",
+          "minute": 86,
+          "player": "I. Prtajin",
+          "team": "away",
+          "detail": null,
+          "confidence": "source_recorded"
+        }
+      ],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-10-28T22:38:01.033",
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87627",
@@ -565,16 +599,8 @@
         {
           "type": "هدف",
           "minute": 0,
-          "player": "Phil Harres",
-          "team": null,
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 0,
-          "player": "A. Prass",
-          "team": null,
+          "player": "I. Nekic",
+          "team": "home",
           "detail": "ركلة جزاء",
           "confidence": "source_recorded"
         },
@@ -582,15 +608,7 @@
           "type": "هدف",
           "minute": 0,
           "player": "F. Asllani",
-          "team": null,
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 0,
-          "player": "I. Nekic",
-          "team": null,
+          "team": "away",
           "detail": "ركلة جزاء",
           "confidence": "source_recorded"
         },
@@ -598,7 +616,7 @@
           "type": "هدف",
           "minute": 0,
           "player": "G. Balzi",
-          "team": null,
+          "team": "home",
           "detail": "ركلة جزاء",
           "confidence": "source_recorded"
         },
@@ -606,6 +624,22 @@
           "type": "هدف",
           "minute": 0,
           "player": "Gyan de Regt",
+          "team": "home",
+          "detail": "ركلة جزاء",
+          "confidence": "source_recorded"
+        },
+        {
+          "type": "هدف",
+          "minute": 0,
+          "player": "A. Prass",
+          "team": "away",
+          "detail": "ركلة جزاء",
+          "confidence": "source_recorded"
+        },
+        {
+          "type": "هدف",
+          "minute": 0,
+          "player": "Phil Harres",
           "team": "home",
           "detail": "ركلة جزاء",
           "confidence": "source_recorded"
@@ -629,7 +663,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T23:33:58.95",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87628",
@@ -703,41 +737,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T22:39:34.577",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "87629",
-      "league": "DFB Pokal 2026/2027",
-      "home": "Hannover 96",
-      "away": "1. FC Kaiserslautern",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-10-28T19:45:00Z",
-      "homeScore": 0,
-      "awayScore": 2,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 14,
-          "player": "Miloš Lukovic",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 86,
-          "player": "I. Prtajin",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-10-28T22:38:01.033",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "87633",
@@ -811,7 +811,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-10-28T22:38:06.823",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83684",
@@ -853,7 +853,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-06T20:23:19.807",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83687",
@@ -870,7 +870,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-06T20:19:51.78",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84870",
@@ -952,57 +952,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-06T21:00:39.827",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83234",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "Hamburger SV",
-      "away": "Borussia Mönchengladbach",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-06T19:30:00Z",
-      "homeScore": 3,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 11,
-          "player": "M. Muheim",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 44,
-          "player": "J. Scally",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 60,
-          "player": "Shafiq Nandja",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 70,
-          "player": "A. Grønbæk",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-07T13:20:22.493",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83682",
@@ -1036,7 +986,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T14:56:20.01",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83685",
@@ -1078,7 +1028,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T14:56:26.88",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83688",
@@ -1104,7 +1054,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T14:56:30.943",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84866",
@@ -1130,49 +1080,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T15:57:48.867",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "84867",
-      "league": "3. Liga 2026/2027",
-      "home": "Hansa Rostock",
-      "away": "SG Sonnenhof Großaspach",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-07T13:00:00Z",
-      "homeScore": 3,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 63,
-          "player": "K. Fatkic",
-          "team": "home",
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 79,
-          "player": "A. Voglsammer",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 94,
-          "player": "Maximilian Krauß",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-07T15:55:54.07",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84868",
@@ -1214,7 +1122,49 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T15:51:35.367",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
+    },
+    {
+      "id": "84867",
+      "league": "3. Liga 2026/2027",
+      "home": "Hansa Rostock",
+      "away": "SG Sonnenhof Großaspach",
+      "status": "انتهت",
+      "statusConfidence": "source_confirmed",
+      "minute": null,
+      "kickoff": "2026-11-07T13:00:00Z",
+      "homeScore": 3,
+      "awayScore": 0,
+      "finished": true,
+      "events": [
+        {
+          "type": "هدف",
+          "minute": 63,
+          "player": "K. Fatkic",
+          "team": "home",
+          "detail": "ركلة جزاء",
+          "confidence": "source_recorded"
+        },
+        {
+          "type": "هدف",
+          "minute": 79,
+          "player": "A. Voglsammer",
+          "team": "home",
+          "detail": null,
+          "confidence": "source_recorded"
+        },
+        {
+          "type": "هدف",
+          "minute": 94,
+          "player": "Maximilian Krauß",
+          "team": "home",
+          "detail": null,
+          "confidence": "source_recorded"
+        }
+      ],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-07T15:55:54.07",
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84869",
@@ -1256,7 +1206,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T15:54:28.753",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84871",
@@ -1314,151 +1264,7 @@
       ],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T15:57:52.087",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83228",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "Borussia Dortmund",
-      "away": "SV 07 Elversberg",
-      "status": "موعد البداية مضى — الحالة غير مؤكدة",
-      "statusConfidence": "unknown",
-      "minute": null,
-      "kickoff": "2026-11-07T14:30:00Z",
-      "homeScore": 1,
-      "awayScore": 0,
-      "finished": false,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 55,
-          "player": "F. Nmecha",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-07T16:46:27.123",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83229",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "RB Leipzig",
-      "away": "FC Augsburg",
-      "status": "موعد البداية مضى — الحالة غير مؤكدة",
-      "statusConfidence": "unknown",
-      "minute": null,
-      "kickoff": "2026-11-07T14:30:00Z",
-      "homeScore": 3,
-      "awayScore": 1,
-      "finished": false,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 1,
-          "player": "A. Kade",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 34,
-          "player": "E. Banzuzi",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 35,
-          "player": "C. Nkunku",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 46,
-          "player": "D. Raum",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-07T16:18:49.57",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83233",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "1. FSV Mainz 05",
-      "away": "FC Bayern München",
-      "status": "موعد البداية مضى — الحالة غير مؤكدة",
-      "statusConfidence": "unknown",
-      "minute": null,
-      "kickoff": "2026-11-07T14:30:00Z",
-      "homeScore": 0,
-      "awayScore": 1,
-      "finished": false,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 0,
-          "player": null,
-          "team": null,
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 14,
-          "player": "J. Kimmich",
-          "team": null,
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-07T16:47:02.383",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83236",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "SC Paderborn 07",
-      "away": "Eintracht Frankfurt",
-      "status": "موعد البداية مضى — الحالة غير مؤكدة",
-      "statusConfidence": "unknown",
-      "minute": null,
-      "kickoff": "2026-11-07T14:30:00Z",
-      "homeScore": 1,
-      "awayScore": 1,
-      "finished": false,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 23,
-          "player": "J. Burkardt",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 45,
-          "player": "R. Obermair",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-07T16:18:06.477",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84865",
@@ -1475,24 +1281,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-07T16:48:54.437",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83230",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "VfB Stuttgart",
-      "away": "SV Werder Bremen",
-      "status": "لم تبدأ",
-      "statusConfidence": "time_based",
-      "minute": null,
-      "kickoff": "2026-11-07T17:30:00Z",
-      "homeScore": null,
-      "awayScore": null,
-      "finished": false,
-      "events": [],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-09-10T17:28:25.883",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83681",
@@ -1509,7 +1298,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:41:58.847",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83683",
@@ -1526,7 +1315,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:41:47.92",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83678",
@@ -1543,7 +1332,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:41:18.867",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "83686",
@@ -1560,7 +1349,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:42:15.113",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84873",
@@ -1577,24 +1366,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:21.797",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83235",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "1. FC Köln",
-      "away": "Bayer 04 Leverkusen",
-      "status": "لم تبدأ",
-      "statusConfidence": "time_based",
-      "minute": null,
-      "kickoff": "2026-11-08T14:30:00Z",
-      "homeScore": null,
-      "awayScore": null,
-      "finished": false,
-      "events": [],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-09-10T17:28:40.24",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84872",
@@ -1611,41 +1383,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:34.72",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83232",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "SC Freiburg",
-      "away": "1. FC Union Berlin",
-      "status": "لم تبدأ",
-      "statusConfidence": "time_based",
-      "minute": null,
-      "kickoff": "2026-11-08T16:30:00Z",
-      "homeScore": null,
-      "awayScore": null,
-      "finished": false,
-      "events": [],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-09-10T17:28:56.027",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
-    },
-    {
-      "id": "83231",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "TSG Hoffenheim",
-      "away": "FC Schalke 04",
-      "status": "لم تبدأ",
-      "statusConfidence": "time_based",
-      "minute": null,
-      "kickoff": "2026-11-08T18:30:00Z",
-      "homeScore": null,
-      "awayScore": null,
-      "finished": false,
-      "events": [],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-09-10T17:29:08.703",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     },
     {
       "id": "84874",
@@ -1662,11 +1400,16 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-28T16:50:51.423",
-      "recordUpdatedAt": "2026-11-07T15:50:16.650Z"
+      "recordUpdatedAt": "2026-11-07T16:22:46.518Z"
     }
   ],
   "reason": null,
-  "warnings": [],
+  "warnings": [
+    {
+      "league": "bl1",
+      "message": "The operation was aborted due to timeout"
+    }
+  ],
   "limitations": [
     "تغطية أولية محدودة ببطولات OpenLigaDB المحددة فقط.",
     "المصدر مجتمعي وقد يتأخر؛ لا يمثل بثاً مباشراً مضموناً.",
