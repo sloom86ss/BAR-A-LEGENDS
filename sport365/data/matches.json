@@ -8,832 +8,11 @@
     "bl3",
     "dfb"
   ],
-  "updatedAt": "2026-11-22T21:36:19.327Z",
-  "retrievedAt": "2026-11-25T10:51:25.908Z",
+  "updatedAt": "2026-11-20T12:00:17.863Z",
+  "retrievedAt": "2026-11-25T11:44:37.055Z",
   "sourceFreshness": "stale",
-  "ageSeconds": 220506,
+  "ageSeconds": 431059,
   "matches": [
-    {
-      "id": "84883",
-      "league": "3. Liga 2026/2027",
-      "home": "TSV Havelse",
-      "away": "Viktoria Köln",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-20T18:00:00Z",
-      "homeScore": 1,
-      "awayScore": 6,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 21,
-          "player": "N. Castelle",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 27,
-          "player": "D. Otto",
-          "team": "away",
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 49,
-          "player": "J. Amann",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 56,
-          "player": "A. Guiddir",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 58,
-          "player": "D. Otto",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 62,
-          "player": "D. Otto",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 67,
-          "player": "P. Fallmann",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-20T20:52:08.243",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83237",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "FC Bayern München",
-      "away": "1. FC Köln",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-20T19:30:00Z",
-      "homeScore": 1,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 12,
-          "player": "M. Moore",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 37,
-          "player": "N. Brown",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T18:21:38.077",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84875",
-      "league": "3. Liga 2026/2027",
-      "home": "SC Verl",
-      "away": "Rot-Weiss Essen",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T13:00:00Z",
-      "homeScore": 0,
-      "awayScore": 3,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 23,
-          "player": "M. Janssen",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 62,
-          "player": "J. Hofmann",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 81,
-          "player": "Jaka Potocnik",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T15:58:11.533",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84876",
-      "league": "3. Liga 2026/2027",
-      "home": "Fortuna Düsseldorf",
-      "away": "SG Sonnenhof Großaspach",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T13:00:00Z",
-      "homeScore": 3,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 9,
-          "player": "H. Anhari",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 16,
-          "player": "F. Gerezgiher",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 23,
-          "player": "J. Hendrix",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 53,
-          "player": "L. Öztunali",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T15:57:58.963",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84879",
-      "league": "3. Liga 2026/2027",
-      "home": "Jahn Regensburg",
-      "away": "Würzburger Kickers",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T13:00:00Z",
-      "homeScore": 2,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 20,
-          "player": "Ivan Franjic",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 34,
-          "player": "L. Hermes",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 78,
-          "player": "L. Hermes",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T15:58:22.277",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84882",
-      "league": "3. Liga 2026/2027",
-      "home": "TSG 1899 Hoffenheim II",
-      "away": "Preußen Münster",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T13:00:00Z",
-      "homeScore": 4,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 32,
-          "player": "Sean Dulic",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 47,
-          "player": "B. Makanda",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 48,
-          "player": "J. Fields",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 53,
-          "player": "Yasin Zor",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T15:58:29.487",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84884",
-      "league": "3. Liga 2026/2027",
-      "home": "Fortuna Köln",
-      "away": "SV Meppen",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T13:00:00Z",
-      "homeScore": 2,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 11,
-          "player": "K. Ghawilu",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 36,
-          "player": "T. Geerkens",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 57,
-          "player": "R. Aigbekaen",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T15:58:42.08",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83241",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "1. FC Union Berlin",
-      "away": "RB Leipzig",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T14:30:00Z",
-      "homeScore": 1,
-      "awayScore": 5,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 18,
-          "player": "A. Nusa",
-          "team": "away",
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 41,
-          "player": "M. Aebischer",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 50,
-          "player": "Romulo",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 72,
-          "player": "B. Gruda",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 76,
-          "player": "R. Reitz",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 89,
-          "player": "R. Baku",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T17:25:48.093",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83238",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "Bayer 04 Leverkusen",
-      "away": "SC Paderborn 07",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T14:30:00Z",
-      "homeScore": 4,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 14,
-          "player": "A. Moreira",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 47,
-          "player": "A. Moreira",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 51,
-          "player": "P. Schick",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 59,
-          "player": "E. Fernández",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T17:22:45.207",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83239",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "Eintracht Frankfurt",
-      "away": "TSG Hoffenheim",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T14:30:00Z",
-      "homeScore": 1,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 25,
-          "player": "J. Burkardt",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T17:24:50.76",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83242",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "Borussia Mönchengladbach",
-      "away": "Borussia Dortmund",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T14:30:00Z",
-      "homeScore": 0,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 80,
-          "player": "F. Nmecha",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T17:22:13.223",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83245",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "SV 07 Elversberg",
-      "away": "SC Freiburg",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T14:30:00Z",
-      "homeScore": 0,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 68,
-          "player": "I. Matanovic",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T17:21:32.747",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84878",
-      "league": "3. Liga 2026/2027",
-      "home": "Alemannia Aachen",
-      "away": "SV Waldhof Mannheim",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T15:30:00Z",
-      "homeScore": 3,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 50,
-          "player": "M. Schroers",
-          "team": "home",
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 52,
-          "player": "M. Schroers",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 93,
-          "player": "K. Izekor",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T18:22:32.51",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83244",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "FC Schalke 04",
-      "away": "VfB Stuttgart",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-21T17:30:00Z",
-      "homeScore": 0,
-      "awayScore": 0,
-      "finished": true,
-      "events": [],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-21T20:22:10.937",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84880",
-      "league": "3. Liga 2026/2027",
-      "home": "VfB Stuttgart II",
-      "away": "FC Ingolstadt 04",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-22T12:30:00Z",
-      "homeScore": 5,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 22,
-          "player": "J. Malanga",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 53,
-          "player": "D. Zagadou",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 68,
-          "player": "N. Sessa",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 73,
-          "player": "Tim van der Leij",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 91,
-          "player": "J. Diehl",
-          "team": "home",
-          "detail": "ركلة جزاء",
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-22T15:28:37.75",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83240",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "FC Augsburg",
-      "away": "1. FSV Mainz 05",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-22T14:30:00Z",
-      "homeScore": 3,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 19,
-          "player": "M. Gregoritsch",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 35,
-          "player": "J. Bah",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 48,
-          "player": "M. Gregoritsch",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 51,
-          "player": "R. Königsdörffer",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-22T17:25:18.087",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84881",
-      "league": "3. Liga 2026/2027",
-      "home": "1. FC Saarbrücken",
-      "away": "SV Wehen Wiesbaden",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-22T15:30:00Z",
-      "homeScore": 2,
-      "awayScore": 1,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 2,
-          "player": "S. Voet",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 80,
-          "player": "L. Schleimer",
-          "team": "away",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 91,
-          "player": "F. Pick",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-22T18:32:54.977",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "83243",
-      "league": "1. Fußball-Bundesliga 2026/2027",
-      "home": "SV Werder Bremen",
-      "away": "Hamburger SV",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-22T16:30:00Z",
-      "homeScore": 4,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 55,
-          "player": "M. Friedl",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 66,
-          "player": "J. Njinmah",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 70,
-          "player": "J. Njinmah",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 92,
-          "player": "N. Füllkrug",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-22T19:30:39.223",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
-    {
-      "id": "84877",
-      "league": "3. Liga 2026/2027",
-      "home": "MSV Duisburg",
-      "away": "Hansa Rostock",
-      "status": "انتهت",
-      "statusConfidence": "source_confirmed",
-      "minute": null,
-      "kickoff": "2026-11-22T18:30:00Z",
-      "homeScore": 2,
-      "awayScore": 0,
-      "finished": true,
-      "events": [
-        {
-          "type": "هدف",
-          "minute": 68,
-          "player": "D. Kother",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        },
-        {
-          "type": "هدف",
-          "minute": 90,
-          "player": "L. Lobinger",
-          "team": "home",
-          "detail": null,
-          "confidence": "source_recorded"
-        }
-      ],
-      "source": "OpenLigaDB",
-      "sourceUpdatedAt": "2026-11-22T21:36:19.327",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
-    },
     {
       "id": "83707",
       "league": "2. Fußball-Bundesliga 2026/2027",
@@ -849,7 +28,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:45:41.86",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83709",
@@ -866,7 +45,41 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:45:53.413",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84888",
+      "league": "3. Liga 2026/2027",
+      "home": "Hansa Rostock",
+      "away": "TSV Havelse",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-27T18:00:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:54:42.217",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83253",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "SV Werder Bremen",
+      "away": "Borussia Mönchengladbach",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-27T19:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:56:25.813",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83708",
@@ -883,7 +96,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:46:07.68",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83710",
@@ -900,7 +113,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:46:16.067",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83712",
@@ -917,7 +130,194 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:46:23.48",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84885",
+      "league": "3. Liga 2026/2027",
+      "home": "Würzburger Kickers",
+      "away": "Fortuna Düsseldorf",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T13:00:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:54:57.593",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84886",
+      "league": "3. Liga 2026/2027",
+      "home": "Preußen Münster",
+      "away": "SC Verl",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T13:00:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:55:25.533",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84887",
+      "league": "3. Liga 2026/2027",
+      "home": "Rot-Weiss Essen",
+      "away": "TSG 1899 Hoffenheim II",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T13:00:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:55:40.07",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84890",
+      "league": "3. Liga 2026/2027",
+      "home": "SV Waldhof Mannheim",
+      "away": "VfB Stuttgart II",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T13:00:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:55:57.037",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84893",
+      "league": "3. Liga 2026/2027",
+      "home": "1. FC Saarbrücken",
+      "away": "Alemannia Aachen",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T13:00:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:56:09.67",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83250",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "1. FSV Mainz 05",
+      "away": "1. FC Union Berlin",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T14:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:58:22.52",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83251",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "Hamburger SV",
+      "away": "FC Bayern München",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T14:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:57:14.017",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83252",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "1. FC Köln",
+      "away": "SV 07 Elversberg",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T14:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:56:51.85",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83254",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "SC Paderborn 07",
+      "away": "FC Schalke 04",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T14:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:57:33.83",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84894",
+      "league": "3. Liga 2026/2027",
+      "home": "SG Sonnenhof Großaspach",
+      "away": "MSV Duisburg",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T15:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:56:23.23",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83247",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-28T17:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:58:53.153",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83722",
@@ -934,7 +334,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-09-10T17:46:38.25",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83715",
@@ -951,7 +351,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:45:32.22",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83717",
@@ -968,7 +368,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:45:42.787",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "83719",
@@ -985,7 +385,109 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-07-03T15:45:52.8",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84891",
+      "league": "3. Liga 2026/2027",
+      "home": "Viktoria Köln",
+      "away": "Fortuna Köln",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-29T12:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:56:42.91",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83249",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "SC Freiburg",
+      "away": "RB Leipzig",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-29T14:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T11:59:24.427",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84889",
+      "league": "3. Liga 2026/2027",
+      "home": "SV Wehen Wiesbaden",
+      "away": "SV Meppen",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-29T15:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:56:54.013",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83248",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "TSG Hoffenheim",
+      "away": "FC Augsburg",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-29T16:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-10T17:31:33.25",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "83246",
+      "league": "1. Fußball-Bundesliga 2026/2027",
+      "home": "Borussia Dortmund",
+      "away": "Bayer 04 Leverkusen",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-29T18:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-11-20T12:00:17.863",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
+    },
+    {
+      "id": "84892",
+      "league": "3. Liga 2026/2027",
+      "home": "FC Ingolstadt 04",
+      "away": "Jahn Regensburg",
+      "status": "لم تبدأ",
+      "statusConfidence": "time_based",
+      "minute": null,
+      "kickoff": "2026-11-29T18:30:00Z",
+      "homeScore": null,
+      "awayScore": null,
+      "finished": false,
+      "events": [],
+      "source": "OpenLigaDB",
+      "sourceUpdatedAt": "2026-09-28T16:57:11.823",
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88750",
@@ -1002,7 +504,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:51:07.937",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88755",
@@ -1019,7 +521,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:51:35.26",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88752",
@@ -1036,7 +538,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:51:53.953",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88753",
@@ -1053,7 +555,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:52:10.57",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88751",
@@ -1070,7 +572,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:52:34.18",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88754",
@@ -1087,7 +589,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:52:53.35",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88749",
@@ -1104,7 +606,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:53:15.503",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     },
     {
       "id": "88756",
@@ -1121,7 +623,7 @@
       "events": [],
       "source": "OpenLigaDB",
       "sourceUpdatedAt": "2026-11-04T16:53:29.83",
-      "recordUpdatedAt": "2026-11-25T10:51:25.908Z"
+      "recordUpdatedAt": "2026-11-25T11:44:37.055Z"
     }
   ],
   "reason": null,
